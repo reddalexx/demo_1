@@ -4,12 +4,6 @@ pushd ../
 
 source .env
 
-echo "=== Setting up ssl certs ==="
-
-sudo add-apt-repository ppa:certbot/certbot -y
-sudo apt-get update
-sudo apt-get install -y certbot
-
 echo "=== Stopping docker service ==="
 
 sudo service docker stop

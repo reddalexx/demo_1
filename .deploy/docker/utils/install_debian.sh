@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "=== Install DOCKER ==="
+
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
 sudo apt-get update
@@ -20,3 +22,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo docker swarm init
 
 sudo docker network create --driver overlay demo_network
+
+
+echo "=== Setting up ssl certs ==="
+
+sudo add-apt-repository ppa:certbot/certbot -y
+sudo apt-get update
+sudo apt-get install -y certbot
