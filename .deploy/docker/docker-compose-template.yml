@@ -15,6 +15,7 @@ services:
     image: demo_main_app
     command: bash start.sh daphne
     environment:
+      HOST: "${HOST}"
       DJANGO_DEBUG: "${DJANGO_DEBUG}"
       DB_HOST: "${DB_HOST}"
       DB_PORT: "${DB_PORT}"
@@ -53,6 +54,8 @@ services:
   jupyter:
     image: jupyter/minimal-notebook
     command: "start-notebook.sh --NotebookApp.token=${JUPYTER_TOKEN} --NotebookApp.base_url=${JUPYTER_URL}"
+    environment:
+      JUPYTER_PORT: "${JUPYTER_PORT}"
     volumes:
       - django_apps:/project/apps
 #    ports:
@@ -122,6 +125,7 @@ services:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "${KAFKA_TOPIC}:1:1"
+      KAFKA_HEAP_OPTS: "-Xmx256M -Xms128M"
     depends_on:
       - zookeeper
     restart: on-failure
