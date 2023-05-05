@@ -1,0 +1,128 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <style>
+        .problem-def p {
+            font-size: 15px;
+        }
+        .problem-def-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+        }
+        .problem-def-right img {
+            width: 100%;
+        }
+        .fastapi-img {
+            background-color: #203068;
+        }
+        div p:last-child {
+            margin-bottom: 0
+        }
+    </style>
+{% endblock %}
+
+{% block page_name %}Overview{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item"><a href="#!">Hotels</a></li>
+<li class="breadcrumb-item"><a href="{% url 'hotels:overview' %}">Overview</a></li>
+{% endblock %}
+
+{% block main_content %}
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Problem Definition</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8 problem-def">
+                        <p>The very usual task for those programmers who deal with <b>scraping information from websites</b> is
+                            using various techniques to fetch and parse data and optimize this time-consuming process.</p>
+                        <p>Scraping work may be divided into two parts - requesting web page and parsing it.</p>
+                        <p>The <u>first step</u> is mostly <b>I/O bound</b> operation - a program waits for response from web resource to get html page.</p>
+                        <p>The <u>second step</u> is usually <b>CPU bound</b> - a program makes some computations over fetched html to extract required data.</p>
+                        <p>So if the aim is parsing 10s or 100s or even more website pages - it may take huge amount of time.</p>
+                        <p>This is the place where concurrency and parallelism should help.</p>
+                        <p>Here is a good article about <a target="_blank" href="https://oxylabs.io/blog/concurrency-vs-parallelism">concurrency vs parallelism</a>.</p>
+                        <p>Let's consider asyncio, aiohttp for asynchronous requests, as well as multithreading and multiprocessing.</p>
+                    </div>
+                    <div class="col-4 problem-def-right">
+                        <img style="" src="{% static 'dashboard_theme/custom/web-scraping.png' %}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>FastAPI</h3>
+            </div>
+            <div class="card-body">
+                <p>Let's take <a target="_blank" href="https://fastapi.tiangolo.com/">FastAPI</a> framework as it's very fast, intuitive and easy to code.</p>
+                <p>The main thing you need to run a FastAPI application in a remote server or local machine is an ASGI server program like Uvicorn.</p>
+                <p><a target="_blank" href="https://fastapi.tiangolo.com/deployment/server-workers/">Uvicorn + Gunicorn</a> is a good option for a server to handle FastAPI-based applications.</p>
+                <p>It is easy to use directly of via Docker containers.</p>
+            </div>
+            <img class="img-fluid card-img-bottom fastapi-img" src="{% static 'dashboard_theme/custom/fastapi.png' %}">
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Asyncio</h3>
+            </div>
+            <div class="card-body">
+                <p>As <a target="_blank" href="https://docs.python.org/3/library/asyncio.html">documentation</a> says, asyncio is a library to write concurrent code using the async/await syntax.</p>
+                <blockquote class="blockquote">
+                    <p class="mb-2">asyncio is used as a foundation for multiple Python asynchronous frameworks
+                        that provide high-performance network and web-servers, database connection libraries,
+                        distributed task queues, etc.</p>
+                    <p>Asyncio is often a perfect fit for IO-bound and high-level structured network code.</p>
+                </blockquote>
+                <p>And let's use <a target="_blank" href="https://docs.aiohttp.org/en/stable/">aiohttp</a> as asynchronous HTTP Client/Server for asyncio.</p>
+            </div>
+            <img class="img-fluid card-img-bottom" src="{% static 'dashboard_theme/custom/asyncio.png' %}">
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Multithreading</h3>
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote">
+                    <p class="mb-2">Multithreading is a threading technique in Python programming to run multiple
+                        threads concurrently by rapidly switching between threads with a CPU help (called context switching).</p>
+                    <footer class="blockquote-footer">See <a target="_blank" href="https://www.javatpoint.com/multithreading-in-python-3">the source</a></footer>
+                </blockquote>
+                <p>Multithreading allows the programmer to divide application tasks into sub-tasks and simultaneously run them in a program.</p>
+                <p>But the Python Global Interpreter Lock (GIL) allows running a single thread at a time, even the machine has multiple processor,
+                    anyway multithreading perfectly helps to solve I/O bound operations.</p>
+                <p>Let's use <a target="_blank" href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> standard python module, it provides a high-level interface for asynchronously executing callables.</p>
+                <p>P.S.: See <a target="_blank" href="https://www.javatpoint.com/preemptive-vs-cooperative-multitasking#:~:text=Preemptive%20multitasking%20forces%20apps%20to,all%20of%20the%20processor%20resources.">this article</a> to learn differences between <b>preemptive multitasking</b> and <b>cooperative multitasking</b>.</p>
+            </div>
+            <img class="img-fluid card-img-bottom" src="{% static 'dashboard_theme/custom/multithreading.jpg' %}">
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>MultiProcessing</h3>
+            </div>
+            <div class="card-body">
+                <p class="mb-2">MultiProcessing is process-based parallelism and thi technique perfectly suits for CPU bound operations.</p>
+                <p>Multiprocessing refers to a system that has more than two central processing units (CPUs).</p>
+                <p>Every additional CPU added to a system increases its speed, power and memory. This allows users to run multiple processes simultaneously.</p>
+                <p>Let's use the same <a target="_blank" href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> as it implements a simple, intuitive, and frankly a great API to deal with processes as well as threads.</p>
+            </div>
+            <img style="border-top: #ccc solid 1px;" class="img-fluid card-img-bottom" src="{% static 'dashboard_theme/custom/speed.jpg' %}">
+        </div>
+    </div>
+</div>
+{% endblock %}

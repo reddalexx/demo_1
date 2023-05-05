@@ -1,0 +1,306 @@
+{% extends "dashboard/base/base_form.html" %}
+{% load static project_tags %}
+
+{% block page_name %}Search Hotels{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item"><a href="#!">Hotels</a></li>
+<li class="breadcrumb-item"><a href="{% url 'hotels:search' %}">Search</a></li>
+{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.2/css/select.dataTables.min.css">
+    <style>
+        .child-status-value {
+            text-align: center;
+        }
+        #tasks_grid td {
+            padding: 0 5px;
+        }
+        .hidden {
+            display: none;
+        }
+        .tasks-loading, .results-loading {
+            margin-left: 20px;
+            font-size: 10px;
+        }
+        .save-btn {
+            float: right;
+            margin: 0 10px;
+        }
+        .select-checkbox:before, .select-checkbox:after {
+            top: auto !important;
+        }
+        .modal {
+            left: auto !important
+        }
+    </style>
+{% endblock %}
+
+{% block main_content %}
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <a class="btn btn-primary m-t-5 mb-4 collapsed" data-toggle="collapse" href="#tech_stack" role="button" aria-expanded="false" aria-controls="collapseExample">Tech Stack</a>
+        <div class="collapse" id="tech_stack" style="">
+            <div class="card">
+                <h4 class="card-header">How It Works</h4>
+                <div class="card-body">
+                    <div>
+                        <p>This application demonstrates using several technologies on one page.</p>
+                        <p>It aims to show how we can achieve the same result using different features like asyncio, multithreading, multiprocessing, using Celery for parallel processing along with
+                        redis and websocket connection for realtime data updates.</p>
+                    </div>
+                    <hr />
+                    <div>
+                        <h4>Processing strategies</h4>
+                        <p>Here is implemented a simple example of how to extract data from web resource using 2 different ways.</p>
+                    </div>
+                    <ul class="nav nav-tabs mb-3" id="tech_stack_Tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase active" id="asyncio-tab" data-toggle="tab" href="#asyncio" role="tab" aria-controls="asyncio" aria-selected="true">Asyncio + aiohttp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="celery-tab" data-toggle="tab" href="#celery" role="tab" aria-controls="celery" aria-selected="false">Celery + redis + websockets</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="tech_stack_Content">
+                        <div class="tab-pane fade active show" id="asyncio" role="tabpanel" aria-labelledby="asyncio-tab">
+                            <p class="mb-0">This approach uses simple pipeline Client -> Ajax request -> FastAPI -> AsyncIO+aiohttp -> Json response -> Client.</p>
+                            <p class="mb-0">The main benefit is in using concurrency while waiting responses from multiple web resources on the one hand
+                                and processing extracted web pages in parallel using multiprocessing.</p>
+                            <p class="mb-2">
+                                But as you see, such request may hang if scraped data includes a lot of pages, so it suits for fast-running tasks.
+                            </p>
+                            <img src="{% static 'dashboard_theme/custom/hotels_app_arch_asyncio.png' %}" />
+                        </div>
+                        <div class="tab-pane fade" id="celery" role="tabpanel" aria-labelledby="celery-tab">
+                            <p class="mb-0">This way is a bit more complex and in fact it uses parallel processing for each web page including requesting page and parsing its content.</p>
+                            <p class="mb-0">Here HTTP request is asyncronous - i.e. it doesn't wait for a task response.</p>
+                            <p class="mb-0">Instead, it just runs background Celery task and immediately returns task ID.</p>
+                            <p class="mb-0">Celery tasks store their results in Redis.</p>
+                            <p class="mb-0">Client communicates with FastAPI via websockets and when Celery tasks are done, websockets collect results from redis cache and return them to Client.</p>
+                            <p class="mb-2">This Approach allows to use long-running tasks, especially with CPU bound processing.</p>
+                            <img src="{% static 'dashboard_theme/custom/hotels_app_arch_celery.png' %}" />
+                        </div>
+                    </div>
+                    <hr />
+                    <div>
+                        <h4>Event-driven approach, Pub/Sub</h4>
+                        <p>An Event Driven Architecture (EDA) is a microservices-based architectural paradigm that is becoming more prominent
+                            with rising in Big Data and Cloud environments. This isn’t just a coincidence. From the standpoint of Developers,
+                            EDA provides an efficient technique of linking microservices, which can aid in the development of future-proof systems.
+                            Furthermore, event-driven systems when integrated with robust streaming services such as Apache Kafka become more agile,
+                            durable, and efficient than prior messaging approaches.
+                            [<a href="https://hevodata.com/learn/kafka-event-driven-architecture/" target="_blank">source</a>]</p>
+                        <p>We can use this Pub/Sub technique to simplify communication between different services like django[daphne] and fastapi[gunicorn].</p>
+                        <p>In this way fastapi service just publishes a message into Kafka, and immediately returns a response to a Client.</p>
+                        <p>Another service, "Consumer", in its turn, fetches this messages and processes it.</p>
+                        <img src="{% static 'dashboard_theme/custom/pubsub_schema.png' %}" />
+                        <p>So after a user got hotels data from TripAdviser site, he/she is able to select favourite hotels and click "Save" button to store selected records.</p>
+                    </div>
+
+                    <hr />
+                    <h4>Tech Stack</h4>
+                    <ul class="nav nav-tabs mb-3" id="features_Tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase active" id="django-features-tab" data-toggle="tab" href="#django_feature" role="tab" aria-controls="django_feature" aria-selected="true">Django</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="fastapi-features-tab" data-toggle="tab" href="#fastapi_feature" role="tab" aria-controls="fastapi_feature" aria-selected="false">FastAPI</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="postgres-features-tab" data-toggle="tab" href="#postgres_feature" role="tab" aria-controls="postgres_feature" aria-selected="false">PostgreSQL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="celery-features-tab" data-toggle="tab" href="#celery_feature" role="tab" aria-controls="celery_feature" aria-selected="false">Celery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="redis-features-tab" data-toggle="tab" href="#redis_feature" role="tab" aria-controls="redis_feature" aria-selected="false">Redis</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="websockets-features-tab" data-toggle="tab" href="#websockets_feature" role="tab" aria-controls="websockets_feature" aria-selected="false">Websockets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="kafka-features-tab" data-toggle="tab" href="#kafka_feature" role="tab" aria-controls="websockets_feature" aria-selected="false">Kafka Pub/Sub</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="features_Content">
+                        <div class="tab-pane fade active show" id="django_feature" role="tabpanel" aria-labelledby="django-feature-tab">
+                            <p class="mb-0">This page uses Django to get HTML content which is inherited from base template with menus, breadcrumbs, etc.,
+                                and includes form and result blocks, as well as javascript and css styles.</p>
+                            <p class="mb-0">The Form block is based on Database records from City model (db table), so Django models make sense here.</p>
+                            <p class="mb-2">
+                                As well as Django Template Language, which is used to generate html page using inheritance,
+                                "include", "extend", "url", "static" template tags and context processors.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="fastapi_feature" role="tabpanel" aria-labelledby="fastapi-feature-tab">
+                            <p class="mb-0">FastAPI does API requests processing as well as deals with websockets.</p>
+                            <p class="mb-0">It includes only few endpoints to process user request either using Asyncio+aiohttp OR via Celery+Redis+Websockets.</p>
+                            <p class="mb-0">One is API endpoint to scrape hotels data using AsyncIO+aiohttp, i.e. it receives form data and returns json response with parsed results.</p>
+                            <p class="mb-0">The second is API to start Celery background task, it receives form data and returns just Celery task id, other work is done through websockets.</p>
+                            <p class="mb-0">See <a href="/fastapi/docs" target="_blank">FastAPI Swagger page</a> for details.</p>
+                            <p class="mb-2">FastAPI application is ran under Gunicorn[Uvicorn] as a separate service.</p>
+                        </div>
+                        <div class="tab-pane fade" id="postgres_feature" role="tabpanel" aria-labelledby="postgres-feature-tab">
+                            <p class="mb-0">PostgreSQL is used as a database for Django.</p>
+                            <p class="mb-2">We may use any other RDBM like MySQL, MSSQL, Sqlite.</p>
+                        </div>
+                        <div class="tab-pane fade" id="celery_feature" role="tabpanel" aria-labelledby="celery-feature-tab">
+                            <p class="mb-0">Celery allows to speed up a program via parallel tasks processing.</p>
+                            <p class="mb-0">So let's create one parent task - <b>Get Hotels Urls</b> which prepares initial data for scraping - i.e. provides list of urls for scraping.</p>
+                            <p class="mb-0">And after this task is done, it starts 30 parallel <b>Parse Hotel Data</b> subtasks to extract details for a certain hotel.</p>
+                            <p class="mb-2">Note that Celery result backend is Redis, and we can easily collect subtasks results from it and send them through websockets to the web application.</p>
+                        </div>
+                        <div class="tab-pane fade" id="redis_feature" role="tabpanel" aria-labelledby="redis-feature-tab">
+                            <p class="mb-0">Redis acts as a simple cache, broker and result backend for Celery.</p>
+                            <p class="mb-0">I.e. FastAPI application puts tasks into Redis queue, Celery takes them one by one from that queue and executes.</p>
+                            <p class="mb-0">After a task is done, its results go into Redis as well.</p>
+                            <p class="mb-2">And also we use Redis simply as cache to store tasks state.</p>
+                        </div>
+                        <div class="tab-pane fade" id="websockets_feature" role="tabpanel" aria-labelledby="websockets-feature-tab">
+                            <p class="mb-2">Websockets help to notify Client when Celery processed all pages and ready to provide results.</p>
+                        </div>
+                        <div class="tab-pane fade" id="kafka_feature" role="tabpanel" aria-labelledby="kafka-feature-tab">
+                            <p class="mb-2">Event-driven approach (Pub/sub with Kafka) helps us to decouple components, events become pivots around which the architecture can be built, making it more flexible.</p>
+                            <p class="mb-2">In this case FastAPI service doesn't depend on django's ORM, so API service now is distantiated from data processing logic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <div class="card">
+            <h4 class="card-header">Scrape hotels data from TripAdviser</h4>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        {% for hidden in form.hidden_fields %}
+                            {{ hidden }}
+                        {% endfor %}
+                        {% for field in form %}
+                        <div class="col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>{{ field.label.title }}</label>
+                                {{ field|add_class:'form-control' }}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <div class="col-2">
+                            <div class="btn-group" style="margin-top: 30px;">
+                                <button type="button" class="btn btn-primary">Search</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a id="search_asyncio" class="dropdown-item" href="#!">Using Asyncio + Aiohttp</a>
+                                    <a id="search_celery" class="dropdown-item" href="#!">Using Celery</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row hidden" id="celery_tasks">
+    <div class="col-md-12 col-lg-12">
+        <div class="card">
+            <h4 class="card-header">Celery Tasks<span class="tasks-loading text-primary"></span></h4>
+            <div class="card-body">
+                <table width="300" id="tasks_grid" class="table-bordered">
+                    <tr style="height: 40px;">
+                        <td id="master_task_name">Get Hotels Urls</td>
+                        <td id="master_task_status" colspan="2" style="text-align: center;"></td>
+                    </tr>
+                    <tr>
+                        <td id="child_task_name" rowspan="4">Parse Hotel Data</td>
+                        <td style="color: goldenrod" width="80">PENDING</td>
+                        <td class="child-status-value" id="pending" width="40"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: green">SUCCESS</td>
+                        <td class="child-status-value" id="success"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: red">FAILURE</td>
+                        <td class="child-status-value" id="failure"></td>
+                    </tr>
+                    <tr>
+                        <td>TOTAL</td>
+                        <td class="child-status-value" id="total"></td>
+                    </tr>
+                </table>
+
+                <div class="progress" style="height: 20px; margin-top: 10px;">
+                    <div id="task_progress" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <div class="card">
+            <h4 class="card-header">Results<span class="results-loading text-primary"></span></h4>
+            <div class="card-body">
+                <div class="table-responsive">
+                <table id="hotels_grid" class="hover row-border">
+                    <thead style="background: lightgrey">
+                        <tr>
+                            <th></th>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Stars</th>
+                            <th>Rank</th>
+                            <th>Reviews</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal_alert" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.6.2/js/dataTables.select.min.js"></script>
+
+<script type="text/javascript">
+    {% include "hotels/search.js" %}
+</script>
+{% endblock %}

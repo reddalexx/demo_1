@@ -1,0 +1,162 @@
+{% extends "main/base.html"  %}
+{% load static %}
+
+{% block extra_css %}
+    <style>
+        .p-links p:hover {
+            color: var(--bs-gray-dark);
+        }
+        .explain-img-div img {
+            filter: brightness(0.9);
+        }
+        img.brightness-70 {
+            filter: brightness(0.7);
+        }
+
+    </style>
+{% endblock %}
+
+{% block main_content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">About</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Demonstrate Start -->
+    <div class="container pt-5">
+        <div class="text-center">
+            <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+            <h1 class="display-5 mb-5">Demonstrate</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 col-md-6" style="">
+                    <div class="position-relative" style="">
+                        <img class="img-fluid" src="{% static 'main_theme/img/presentation.jpg' %}" alt="presentation">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 about-text py-1 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="py-lg-5 px-lg-5 p-links">
+                        <h4 class="mb-4">This site aims to...</h4>
+                        <p>demonstrate modern solutions in web applications world,</p>
+                        <p>show how using most famous python web frameworks may help in fast application development,</p>
+                        <p>exemplify how to optimize and speed up things with multithreading and multiprocessing,</p>
+                        <p>demonstrate how different services work together under the hood of one application,</p>
+                        <p>... and simply to utilize knowledge and skills.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Demonstrate End -->
+
+    <!-- Explain Start -->
+    <div class="container pt-5">
+        <div class="text-center">
+            <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+            <h1 class="display-5 mb-5">Explain</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 col-md-6 about-text py-1 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="py-lg-5 px-lg-5 p-links">
+                        <p>This site consists of two parts:</p>
+                        <p>- the first one is well animated and nice presentation - see pages
+                            <a href="{% url 'about' %}">About</a>, <a href="{% url 'architecture' %}">Architecture</a>, <a href="{% url 'features' %}">Features</a>, etc.
+                        </p>
+                        <p>- the second part demonstrates concrete technologies and has different UI - see <a href="{% url 'dashboard' %}">Dashboard</a> page.</p>
+                        <p>And everything related to demoing tech stack you will find there:</p>
+                        <p>- Django-based pages which use pure class-based views and Django templates, with simple visualization via tables and charts,</p>
+                        <p>- DRF-based API which interacts with PostgreSQL database,</p>
+                        <p>- FastaAPI application with its own API endpoints and logic,</p>
+                        <p>- In its turn FastAPI processes user requests using different ways: via asyncio, multithreading, multiprocessing and Celery,</p>
+                        <p>- Event-driven approach is represented by event Producer in FastAPI view, Kafka as message broker and Consumer service.</p>
+                        <p>- And finally there are some other useful pages like Django
+                            <a href="{% url 'admin:index' %}">Admin site</a>, <a href="{{ settings.ADMINER_URL }}">Adminer</a> DBM,
+                            <a href="{% url 'silk:summary' %}">Silk</a> profiler, <a href="{{ settings.JUPYTER_URL }}">JupiterLab</a>,
+                            and Swagger-based API docs for both <a href="{% url 'drf-swagger-ui' %}">DRF</a> and <a href="/fastapi/docs">FastAPI</a> endpoints.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 explain-img-div">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 pe-1 pb-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-main.png' %}" alt="UI-main">
+                        </div>
+                        <div class="col-lg-6 col-md-6 ps-1 pb-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-dashboard.png' %}" alt="UI-dashboard">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 pe-1 py-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-admin-site.png' %}" alt="UI-admin-site">
+                        </div>
+                        <div class="col-lg-6 col-md-6 ps-1 py-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-silk.png' %}" alt="UI-silk">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 pe-1 pt-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-swagger-drf.png' %}" alt="UI-swagger-drf">
+                        </div>
+                        <div class="col-lg-6 col-md-6 ps-1 pt-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-jupyter.png' %}" alt="UI-jupyter">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Explain End -->
+
+    <!-- Visualize Start -->
+    <div class="container pt-5">
+        <div class="text-center">
+            <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+            <h1 class="display-5 mb-5">Visualize</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 col-md-6">
+                    <div class="position-relative">
+                        <img class="img-fluid brightness-70" src="{% static 'main_theme/img/visualize.jpg' %}" alt="visualization">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 about-text py-1 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="py-lg-5 px-lg-5 p-links">
+                        <p>Usually such things like application structure, its services and deployment remain under the hood without any explanation.</p>
+                        <p>And this demo site shows, explains and <i>visualizes</i> such sometimes implicit things like:</p>
+                        <p>- application architecture,</p>
+                        <p>- different approaches to parallelize user tasks,</p>
+                        <p>- services orchestration and deployment</p>
+                        <p>via schemas, charts and tables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Visualize End -->
+
+{% endblock %}

@@ -1,0 +1,2492 @@
+[
+{
+    "model": "geo.country",
+    "pk": 1,
+    "fields": {
+        "name": "Afghanistan",
+        "iso3": "AFG",
+        "population": 38928346,
+        "area": 652860
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 2,
+    "fields": {
+        "name": "Albania",
+        "iso3": "ALB",
+        "population": 2877797,
+        "area": 27400
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 3,
+    "fields": {
+        "name": "Algeria",
+        "iso3": "DZA",
+        "population": 43851044,
+        "area": 2381740
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 4,
+    "fields": {
+        "name": "American Samoa",
+        "iso3": "ASM",
+        "population": 55191,
+        "area": 200
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 5,
+    "fields": {
+        "name": "Andorra",
+        "iso3": "AND",
+        "population": 77265,
+        "area": 470
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 6,
+    "fields": {
+        "name": "Angola",
+        "iso3": "AGO",
+        "population": 32866272,
+        "area": 1246700
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 7,
+    "fields": {
+        "name": "Anguilla",
+        "iso3": "AIA",
+        "population": 15003,
+        "area": 90
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 8,
+    "fields": {
+        "name": "Antarctica",
+        "iso3": "ATA",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 9,
+    "fields": {
+        "name": "Antigua and Barbuda",
+        "iso3": "ATG",
+        "population": 97929,
+        "area": 440
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 10,
+    "fields": {
+        "name": "Argentina",
+        "iso3": "ARG",
+        "population": 45195774,
+        "area": 2736690
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 11,
+    "fields": {
+        "name": "Armenia",
+        "iso3": "ARM",
+        "population": 2963243,
+        "area": 28470
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 12,
+    "fields": {
+        "name": "Aruba",
+        "iso3": "ABW",
+        "population": 106766,
+        "area": 180
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 13,
+    "fields": {
+        "name": "Australia",
+        "iso3": "AUS",
+        "population": 25499884,
+        "area": 7682300
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 14,
+    "fields": {
+        "name": "Austria",
+        "iso3": "AUT",
+        "population": 9006398,
+        "area": 82409
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 15,
+    "fields": {
+        "name": "Azerbaijan",
+        "iso3": "AZE",
+        "population": 10139177,
+        "area": 82658
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 16,
+    "fields": {
+        "name": "Bahamas",
+        "iso3": "BHS",
+        "population": 393244,
+        "area": 10010
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 17,
+    "fields": {
+        "name": "Bahrain",
+        "iso3": "BHR",
+        "population": 1701575,
+        "area": 760
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 18,
+    "fields": {
+        "name": "Bangladesh",
+        "iso3": "BGD",
+        "population": 164689383,
+        "area": 130170
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 19,
+    "fields": {
+        "name": "Barbados",
+        "iso3": "BRB",
+        "population": 287375,
+        "area": 430
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 20,
+    "fields": {
+        "name": "Belarus",
+        "iso3": "BLR",
+        "population": 9449323,
+        "area": 202910
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 21,
+    "fields": {
+        "name": "Belgium",
+        "iso3": "BEL",
+        "population": 11589623,
+        "area": 30280
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 22,
+    "fields": {
+        "name": "Belize",
+        "iso3": "BLZ",
+        "population": 397628,
+        "area": 22810
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 23,
+    "fields": {
+        "name": "Benin",
+        "iso3": "BEN",
+        "population": 12123200,
+        "area": 112760
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 24,
+    "fields": {
+        "name": "Bermuda",
+        "iso3": "BMU",
+        "population": 62278,
+        "area": 50
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 25,
+    "fields": {
+        "name": "Bhutan",
+        "iso3": "BTN",
+        "population": 771608,
+        "area": 38117
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 26,
+    "fields": {
+        "name": "Bolivia",
+        "iso3": "BOL",
+        "population": 11673021,
+        "area": 1083300
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 27,
+    "fields": {
+        "name": "Bonaire, Sint Eustatius and Saba",
+        "iso3": "BES",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 28,
+    "fields": {
+        "name": "Bosnia and Herzegovina",
+        "iso3": "BIH",
+        "population": 3280819,
+        "area": 51000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 29,
+    "fields": {
+        "name": "Botswana",
+        "iso3": "BWA",
+        "population": 2351627,
+        "area": 566730
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 30,
+    "fields": {
+        "name": "Bouvet Island",
+        "iso3": "BVT",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 31,
+    "fields": {
+        "name": "Brazil",
+        "iso3": "BRA",
+        "population": 212559417,
+        "area": 8358140
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 32,
+    "fields": {
+        "name": "British Indian Ocean Territory",
+        "iso3": "IOT",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 33,
+    "fields": {
+        "name": "Brunei",
+        "iso3": "BRN",
+        "population": 437479,
+        "area": 5270
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 34,
+    "fields": {
+        "name": "Bulgaria",
+        "iso3": "BGR",
+        "population": 6948445,
+        "area": 108560
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 35,
+    "fields": {
+        "name": "Burkina Faso",
+        "iso3": "BFA",
+        "population": 20903273,
+        "area": 273600
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 36,
+    "fields": {
+        "name": "Burundi",
+        "iso3": "BDI",
+        "population": 11890784,
+        "area": 25680
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 37,
+    "fields": {
+        "name": "Cabo Verde",
+        "iso3": "CPV",
+        "population": 555987,
+        "area": 4030
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 38,
+    "fields": {
+        "name": "Cambodia",
+        "iso3": "KHM",
+        "population": 16718965,
+        "area": 176520
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 39,
+    "fields": {
+        "name": "Cameroon",
+        "iso3": "CMR",
+        "population": 26545863,
+        "area": 472710
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 40,
+    "fields": {
+        "name": "Canada",
+        "iso3": "CAN",
+        "population": 37742154,
+        "area": 9093510
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 41,
+    "fields": {
+        "name": "Cayman Islands",
+        "iso3": "CYM",
+        "population": 65722,
+        "area": 240
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 42,
+    "fields": {
+        "name": "Central African Republic",
+        "iso3": "CAF",
+        "population": 4829767,
+        "area": 622980
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 43,
+    "fields": {
+        "name": "Chad",
+        "iso3": "TCD",
+        "population": 16425864,
+        "area": 1259200
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 44,
+    "fields": {
+        "name": "Chile",
+        "iso3": "CHL",
+        "population": 19116201,
+        "area": 743532
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 45,
+    "fields": {
+        "name": "China",
+        "iso3": "CHN",
+        "population": 1439323776,
+        "area": 9388211
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 46,
+    "fields": {
+        "name": "Christmas Island",
+        "iso3": "CXR",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 47,
+    "fields": {
+        "name": "Cocos (Keeling) Islands",
+        "iso3": "CCK",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 48,
+    "fields": {
+        "name": "Colombia",
+        "iso3": "COL",
+        "population": 50882891,
+        "area": 1109500
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 49,
+    "fields": {
+        "name": "Comoros",
+        "iso3": "COM",
+        "population": 869601,
+        "area": 1861
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 50,
+    "fields": {
+        "name": "Congo",
+        "iso3": "COG",
+        "population": 5518087,
+        "area": 341500
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 51,
+    "fields": {
+        "name": "DR Congo",
+        "iso3": "COD",
+        "population": 89561403,
+        "area": 2267050
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 52,
+    "fields": {
+        "name": "Cook Islands",
+        "iso3": "COK",
+        "population": 17564,
+        "area": 240
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 53,
+    "fields": {
+        "name": "Costa Rica",
+        "iso3": "CRI",
+        "population": 5094118,
+        "area": 51060
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 54,
+    "fields": {
+        "name": "Croatia",
+        "iso3": "HRV",
+        "population": 4105267,
+        "area": 55960
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 55,
+    "fields": {
+        "name": "Cuba",
+        "iso3": "CUB",
+        "population": 11326616,
+        "area": 106440
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 56,
+    "fields": {
+        "name": "Curaçao",
+        "iso3": "CUW",
+        "population": 164093,
+        "area": 444
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 57,
+    "fields": {
+        "name": "Cyprus",
+        "iso3": "CYP",
+        "population": 1207359,
+        "area": 9240
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 58,
+    "fields": {
+        "name": "Czechia",
+        "iso3": "CZE",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 59,
+    "fields": {
+        "name": "Côte d'Ivoire",
+        "iso3": "CIV",
+        "population": 26378274,
+        "area": 318000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 60,
+    "fields": {
+        "name": "Denmark",
+        "iso3": "DNK",
+        "population": 5792202,
+        "area": 42430
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 61,
+    "fields": {
+        "name": "Djibouti",
+        "iso3": "DJI",
+        "population": 988000,
+        "area": 23180
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 62,
+    "fields": {
+        "name": "Dominica",
+        "iso3": "DMA",
+        "population": 71986,
+        "area": 750
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 63,
+    "fields": {
+        "name": "Dominican Republic",
+        "iso3": "DOM",
+        "population": 10847910,
+        "area": 48320
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 64,
+    "fields": {
+        "name": "Ecuador",
+        "iso3": "ECU",
+        "population": 17643054,
+        "area": 248360
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 65,
+    "fields": {
+        "name": "Egypt",
+        "iso3": "EGY",
+        "population": 102334404,
+        "area": 995450
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 66,
+    "fields": {
+        "name": "El Salvador",
+        "iso3": "SLV",
+        "population": 6486205,
+        "area": 20720
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 67,
+    "fields": {
+        "name": "Equatorial Guinea",
+        "iso3": "GNQ",
+        "population": 1402985,
+        "area": 28050
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 68,
+    "fields": {
+        "name": "Eritrea",
+        "iso3": "ERI",
+        "population": 3546421,
+        "area": 101000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 69,
+    "fields": {
+        "name": "Estonia",
+        "iso3": "EST",
+        "population": 1326535,
+        "area": 42390
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 70,
+    "fields": {
+        "name": "Eswatini",
+        "iso3": "SWZ",
+        "population": 1160164,
+        "area": 17200
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 71,
+    "fields": {
+        "name": "Ethiopia",
+        "iso3": "ETH",
+        "population": 114963588,
+        "area": 1000000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 72,
+    "fields": {
+        "name": "Falkland Islands",
+        "iso3": "FLK",
+        "population": 3480,
+        "area": 12170
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 73,
+    "fields": {
+        "name": "Faroe Islands",
+        "iso3": "FRO",
+        "population": 50710,
+        "area": 1383
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 74,
+    "fields": {
+        "name": "Fiji",
+        "iso3": "FJI",
+        "population": 896445,
+        "area": 18270
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 75,
+    "fields": {
+        "name": "Finland",
+        "iso3": "FIN",
+        "population": 5540720,
+        "area": 303890
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 76,
+    "fields": {
+        "name": "France",
+        "iso3": "FRA",
+        "population": 65273511,
+        "area": 547557
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 77,
+    "fields": {
+        "name": "French Guiana",
+        "iso3": "GUF",
+        "population": 298682,
+        "area": 82200
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 78,
+    "fields": {
+        "name": "French Polynesia",
+        "iso3": "PYF",
+        "population": 280908,
+        "area": 3660
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 79,
+    "fields": {
+        "name": "French Southern Territories",
+        "iso3": "ATF",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 80,
+    "fields": {
+        "name": "Gabon",
+        "iso3": "GAB",
+        "population": 2225734,
+        "area": 257670
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 81,
+    "fields": {
+        "name": "Gambia",
+        "iso3": "GMB",
+        "population": 2416668,
+        "area": 10120
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 82,
+    "fields": {
+        "name": "Georgia",
+        "iso3": "GEO",
+        "population": 3989167,
+        "area": 69490
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 83,
+    "fields": {
+        "name": "Germany",
+        "iso3": "DEU",
+        "population": 83783942,
+        "area": 348560
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 84,
+    "fields": {
+        "name": "Ghana",
+        "iso3": "GHA",
+        "population": 31072940,
+        "area": 227540
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 85,
+    "fields": {
+        "name": "Gibraltar",
+        "iso3": "GIB",
+        "population": 33691,
+        "area": 10
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 86,
+    "fields": {
+        "name": "Greece",
+        "iso3": "GRC",
+        "population": 10423054,
+        "area": 128900
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 87,
+    "fields": {
+        "name": "Greenland",
+        "iso3": "GRL",
+        "population": 56770,
+        "area": 410450
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 88,
+    "fields": {
+        "name": "Grenada",
+        "iso3": "GRD",
+        "population": 112523,
+        "area": 340
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 89,
+    "fields": {
+        "name": "Guadeloupe",
+        "iso3": "GLP",
+        "population": 400124,
+        "area": 1690
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 90,
+    "fields": {
+        "name": "Guam",
+        "iso3": "GUM",
+        "population": 168775,
+        "area": 540
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 91,
+    "fields": {
+        "name": "Guatemala",
+        "iso3": "GTM",
+        "population": 17915568,
+        "area": 107160
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 92,
+    "fields": {
+        "name": "Guernsey",
+        "iso3": "GGY",
+        "population": 61925,
+        "area": 81
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 93,
+    "fields": {
+        "name": "Guinea",
+        "iso3": "GIN",
+        "population": 13132795,
+        "area": 245720
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 94,
+    "fields": {
+        "name": "Guinea-Bissau",
+        "iso3": "GNB",
+        "population": 1968001,
+        "area": 28120
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 95,
+    "fields": {
+        "name": "Guyana",
+        "iso3": "GUY",
+        "population": 786552,
+        "area": 196850
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 96,
+    "fields": {
+        "name": "Haiti",
+        "iso3": "HTI",
+        "population": 11402528,
+        "area": 27560
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 97,
+    "fields": {
+        "name": "Heard Island and McDonald Islands",
+        "iso3": "HMD",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 98,
+    "fields": {
+        "name": "Holy See",
+        "iso3": "VAT",
+        "population": 801,
+        "area": 0
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 99,
+    "fields": {
+        "name": "Honduras",
+        "iso3": "HND",
+        "population": 9904607,
+        "area": 111890
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 100,
+    "fields": {
+        "name": "Hong Kong",
+        "iso3": "HKG",
+        "population": 7496981,
+        "area": 1050
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 101,
+    "fields": {
+        "name": "Hungary",
+        "iso3": "HUN",
+        "population": 9660351,
+        "area": 90530
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 102,
+    "fields": {
+        "name": "Iceland",
+        "iso3": "ISL",
+        "population": 341243,
+        "area": 100250
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 103,
+    "fields": {
+        "name": "India",
+        "iso3": "IND",
+        "population": 1380004385,
+        "area": 2973190
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 104,
+    "fields": {
+        "name": "Indonesia",
+        "iso3": "IDN",
+        "population": 273523615,
+        "area": 1811570
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 105,
+    "fields": {
+        "name": "Iran",
+        "iso3": "IRN",
+        "population": 83992949,
+        "area": 1628550
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 106,
+    "fields": {
+        "name": "Iraq",
+        "iso3": "IRQ",
+        "population": 40222493,
+        "area": 434320
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 107,
+    "fields": {
+        "name": "Ireland",
+        "iso3": "IRL",
+        "population": 4937786,
+        "area": 68890
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 108,
+    "fields": {
+        "name": "Isle of Man",
+        "iso3": "IMN",
+        "population": 85033,
+        "area": 570
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 109,
+    "fields": {
+        "name": "Israel",
+        "iso3": "ISR",
+        "population": 8655535,
+        "area": 21640
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 110,
+    "fields": {
+        "name": "Italy",
+        "iso3": "ITA",
+        "population": 60461826,
+        "area": 294140
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 111,
+    "fields": {
+        "name": "Jamaica",
+        "iso3": "JAM",
+        "population": 2961167,
+        "area": 10830
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 112,
+    "fields": {
+        "name": "Japan",
+        "iso3": "JPN",
+        "population": 126476461,
+        "area": 364555
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 113,
+    "fields": {
+        "name": "Jersey",
+        "iso3": "JEY",
+        "population": 95589,
+        "area": 113
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 114,
+    "fields": {
+        "name": "Jordan",
+        "iso3": "JOR",
+        "population": 10203134,
+        "area": 88780
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 115,
+    "fields": {
+        "name": "Kazakhstan",
+        "iso3": "KAZ",
+        "population": 18776707,
+        "area": 2699700
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 116,
+    "fields": {
+        "name": "Kenya",
+        "iso3": "KEN",
+        "population": 53771296,
+        "area": 569140
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 117,
+    "fields": {
+        "name": "Kiribati",
+        "iso3": "KIR",
+        "population": 119449,
+        "area": 810
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 118,
+    "fields": {
+        "name": "North Korea",
+        "iso3": "PRK",
+        "population": 25778816,
+        "area": 120410
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 119,
+    "fields": {
+        "name": "South Korea",
+        "iso3": "KOR",
+        "population": 51269185,
+        "area": 97230
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 120,
+    "fields": {
+        "name": "Kuwait",
+        "iso3": "KWT",
+        "population": 4270571,
+        "area": 17820
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 121,
+    "fields": {
+        "name": "Kyrgyzstan",
+        "iso3": "KGZ",
+        "population": 6524195,
+        "area": 191800
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 122,
+    "fields": {
+        "name": "Laos",
+        "iso3": "LAO",
+        "population": 7275560,
+        "area": 230800
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 123,
+    "fields": {
+        "name": "Latvia",
+        "iso3": "LVA",
+        "population": 1886198,
+        "area": 62200
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 124,
+    "fields": {
+        "name": "Lebanon",
+        "iso3": "LBN",
+        "population": 6825445,
+        "area": 10230
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 125,
+    "fields": {
+        "name": "Lesotho",
+        "iso3": "LSO",
+        "population": 2142249,
+        "area": 30360
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 126,
+    "fields": {
+        "name": "Liberia",
+        "iso3": "LBR",
+        "population": 5057681,
+        "area": 96320
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 127,
+    "fields": {
+        "name": "Libya",
+        "iso3": "LBY",
+        "population": 6871292,
+        "area": 1759540
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 128,
+    "fields": {
+        "name": "Liechtenstein",
+        "iso3": "LIE",
+        "population": 38128,
+        "area": 160
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 129,
+    "fields": {
+        "name": "Lithuania",
+        "iso3": "LTU",
+        "population": 2722289,
+        "area": 62674
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 130,
+    "fields": {
+        "name": "Luxembourg",
+        "iso3": "LUX",
+        "population": 625978,
+        "area": 2590
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 131,
+    "fields": {
+        "name": "Macao",
+        "iso3": "MAC",
+        "population": 649335,
+        "area": 30
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 132,
+    "fields": {
+        "name": "Madagascar",
+        "iso3": "MDG",
+        "population": 27691018,
+        "area": 581795
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 133,
+    "fields": {
+        "name": "Malawi",
+        "iso3": "MWI",
+        "population": 19129952,
+        "area": 94280
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 134,
+    "fields": {
+        "name": "Malaysia",
+        "iso3": "MYS",
+        "population": 32365999,
+        "area": 328550
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 135,
+    "fields": {
+        "name": "Maldives",
+        "iso3": "MDV",
+        "population": 540544,
+        "area": 300
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 136,
+    "fields": {
+        "name": "Mali",
+        "iso3": "MLI",
+        "population": 20250833,
+        "area": 1220190
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 137,
+    "fields": {
+        "name": "Malta",
+        "iso3": "MLT",
+        "population": 441543,
+        "area": 320
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 138,
+    "fields": {
+        "name": "Marshall Islands",
+        "iso3": "MHL",
+        "population": 59190,
+        "area": 180
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 139,
+    "fields": {
+        "name": "Martinique",
+        "iso3": "MTQ",
+        "population": 375265,
+        "area": 1060
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 140,
+    "fields": {
+        "name": "Mauritania",
+        "iso3": "MRT",
+        "population": 4649658,
+        "area": 1030700
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 141,
+    "fields": {
+        "name": "Mauritius",
+        "iso3": "MUS",
+        "population": 1271768,
+        "area": 2030
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 142,
+    "fields": {
+        "name": "Mayotte",
+        "iso3": "MYT",
+        "population": 272815,
+        "area": 375
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 143,
+    "fields": {
+        "name": "Mexico",
+        "iso3": "MEX",
+        "population": 128932753,
+        "area": 1943950
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 144,
+    "fields": {
+        "name": "Micronesia",
+        "iso3": "FSM",
+        "population": 548914,
+        "area": 700
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 145,
+    "fields": {
+        "name": "Moldova",
+        "iso3": "MDA",
+        "population": 4033963,
+        "area": 32850
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 146,
+    "fields": {
+        "name": "Monaco",
+        "iso3": "MCO",
+        "population": 39242,
+        "area": 1
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 147,
+    "fields": {
+        "name": "Mongolia",
+        "iso3": "MNG",
+        "population": 3278290,
+        "area": 1553560
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 148,
+    "fields": {
+        "name": "Montenegro",
+        "iso3": "MNE",
+        "population": 628066,
+        "area": 13450
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 149,
+    "fields": {
+        "name": "Montserrat",
+        "iso3": "MSR",
+        "population": 4992,
+        "area": 100
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 150,
+    "fields": {
+        "name": "Morocco",
+        "iso3": "MAR",
+        "population": 36910560,
+        "area": 446300
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 151,
+    "fields": {
+        "name": "Mozambique",
+        "iso3": "MOZ",
+        "population": 31255435,
+        "area": 786380
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 152,
+    "fields": {
+        "name": "Myanmar",
+        "iso3": "MMR",
+        "population": 54409800,
+        "area": 653290
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 153,
+    "fields": {
+        "name": "Namibia",
+        "iso3": "NAM",
+        "population": 2540905,
+        "area": 823290
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 154,
+    "fields": {
+        "name": "Nauru",
+        "iso3": "NRU",
+        "population": 10824,
+        "area": 20
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 155,
+    "fields": {
+        "name": "Nepal",
+        "iso3": "NPL",
+        "population": 29136808,
+        "area": 143350
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 156,
+    "fields": {
+        "name": "Netherlands",
+        "iso3": "NLD",
+        "population": 17134872,
+        "area": 33720
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 157,
+    "fields": {
+        "name": "New Caledonia",
+        "iso3": "NCL",
+        "population": 285498,
+        "area": 18280
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 158,
+    "fields": {
+        "name": "New Zealand",
+        "iso3": "NZL",
+        "population": 4822233,
+        "area": 263310
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 159,
+    "fields": {
+        "name": "Nicaragua",
+        "iso3": "NIC",
+        "population": 6624554,
+        "area": 120340
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 160,
+    "fields": {
+        "name": "Niger",
+        "iso3": "NER",
+        "population": 24206644,
+        "area": 1266700
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 161,
+    "fields": {
+        "name": "Nigeria",
+        "iso3": "NGA",
+        "population": 206139589,
+        "area": 910770
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 162,
+    "fields": {
+        "name": "Niue",
+        "iso3": "NIU",
+        "population": 1626,
+        "area": 260
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 163,
+    "fields": {
+        "name": "Norfolk Island",
+        "iso3": "NFK",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 164,
+    "fields": {
+        "name": "North Macedonia",
+        "iso3": "MKD",
+        "population": 2083374,
+        "area": 25220
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 165,
+    "fields": {
+        "name": "Northern Mariana Islands",
+        "iso3": "MNP",
+        "population": 57559,
+        "area": 460
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 166,
+    "fields": {
+        "name": "Norway",
+        "iso3": "NOR",
+        "population": 5421241,
+        "area": 365268
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 167,
+    "fields": {
+        "name": "Oman",
+        "iso3": "OMN",
+        "population": 5106626,
+        "area": 309500
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 168,
+    "fields": {
+        "name": "Pakistan",
+        "iso3": "PAK",
+        "population": 220892340,
+        "area": 770880
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 169,
+    "fields": {
+        "name": "Palau",
+        "iso3": "PLW",
+        "population": 18094,
+        "area": 460
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 170,
+    "fields": {
+        "name": "State of Palestine",
+        "iso3": "PSE",
+        "population": 5101414,
+        "area": 6020
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 171,
+    "fields": {
+        "name": "Panama",
+        "iso3": "PAN",
+        "population": 4314767,
+        "area": 74340
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 172,
+    "fields": {
+        "name": "Papua New Guinea",
+        "iso3": "PNG",
+        "population": 8947024,
+        "area": 452860
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 173,
+    "fields": {
+        "name": "Paraguay",
+        "iso3": "PRY",
+        "population": 7132538,
+        "area": 397300
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 174,
+    "fields": {
+        "name": "Peru",
+        "iso3": "PER",
+        "population": 32971854,
+        "area": 1280000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 175,
+    "fields": {
+        "name": "Philippines",
+        "iso3": "PHL",
+        "population": 109581078,
+        "area": 298170
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 176,
+    "fields": {
+        "name": "Pitcairn",
+        "iso3": "PCN",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 177,
+    "fields": {
+        "name": "Poland",
+        "iso3": "POL",
+        "population": 37846611,
+        "area": 306230
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 178,
+    "fields": {
+        "name": "Portugal",
+        "iso3": "PRT",
+        "population": 10196709,
+        "area": 91590
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 179,
+    "fields": {
+        "name": "Puerto Rico",
+        "iso3": "PRI",
+        "population": 2860853,
+        "area": 8870
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 180,
+    "fields": {
+        "name": "Qatar",
+        "iso3": "QAT",
+        "population": 2881053,
+        "area": 11610
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 181,
+    "fields": {
+        "name": "Romania",
+        "iso3": "ROU",
+        "population": 19237691,
+        "area": 230170
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 182,
+    "fields": {
+        "name": "Russia",
+        "iso3": "RUS",
+        "population": 145934462,
+        "area": 16376870
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 183,
+    "fields": {
+        "name": "Rwanda",
+        "iso3": "RWA",
+        "population": 12952218,
+        "area": 24670
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 184,
+    "fields": {
+        "name": "Réunion",
+        "iso3": "REU",
+        "population": 895312,
+        "area": 2500
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 185,
+    "fields": {
+        "name": "Saint Barthélemy",
+        "iso3": "BLM",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 186,
+    "fields": {
+        "name": "Saint Helena",
+        "iso3": "SHN",
+        "population": 6077,
+        "area": 390
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 187,
+    "fields": {
+        "name": "Saint Kitts and Nevis",
+        "iso3": "KNA",
+        "population": 53199,
+        "area": 260
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 188,
+    "fields": {
+        "name": "Saint Lucia",
+        "iso3": "LCA",
+        "population": 183627,
+        "area": 610
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 189,
+    "fields": {
+        "name": "Saint Martin",
+        "iso3": "MAF",
+        "population": 38666,
+        "area": 53
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 190,
+    "fields": {
+        "name": "Saint Pierre and Miquelon",
+        "iso3": "SPM",
+        "population": 5794,
+        "area": 230
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 191,
+    "fields": {
+        "name": "Saint Vincent and the Grenadines",
+        "iso3": "VCT",
+        "population": 112085,
+        "area": 390
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 192,
+    "fields": {
+        "name": "Samoa",
+        "iso3": "WSM",
+        "population": 198414,
+        "area": 2830
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 193,
+    "fields": {
+        "name": "San Marino",
+        "iso3": "SMR",
+        "population": 33931,
+        "area": 60
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 194,
+    "fields": {
+        "name": "Sao Tome and Principe",
+        "iso3": "STP",
+        "population": 219159,
+        "area": 960
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 195,
+    "fields": {
+        "name": "Saudi Arabia",
+        "iso3": "SAU",
+        "population": 34813871,
+        "area": 2149690
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 196,
+    "fields": {
+        "name": "Senegal",
+        "iso3": "SEN",
+        "population": 16743927,
+        "area": 192530
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 197,
+    "fields": {
+        "name": "Serbia",
+        "iso3": "SRB",
+        "population": 8737371,
+        "area": 87460
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 198,
+    "fields": {
+        "name": "Seychelles",
+        "iso3": "SYC",
+        "population": 98347,
+        "area": 460
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 199,
+    "fields": {
+        "name": "Sierra Leone",
+        "iso3": "SLE",
+        "population": 7976983,
+        "area": 72180
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 200,
+    "fields": {
+        "name": "Singapore",
+        "iso3": "SGP",
+        "population": 5850342,
+        "area": 700
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 201,
+    "fields": {
+        "name": "Sint Maarten",
+        "iso3": "SXM",
+        "population": 42876,
+        "area": 34
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 202,
+    "fields": {
+        "name": "Slovakia",
+        "iso3": "SVK",
+        "population": 5459642,
+        "area": 48088
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 203,
+    "fields": {
+        "name": "Slovenia",
+        "iso3": "SVN",
+        "population": 2078938,
+        "area": 20140
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 204,
+    "fields": {
+        "name": "Solomon Islands",
+        "iso3": "SLB",
+        "population": 686884,
+        "area": 27990
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 205,
+    "fields": {
+        "name": "Somalia",
+        "iso3": "SOM",
+        "population": 15893222,
+        "area": 627340
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 206,
+    "fields": {
+        "name": "South Africa",
+        "iso3": "ZAF",
+        "population": 59308690,
+        "area": 1213090
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 207,
+    "fields": {
+        "name": "South Georgia and the South Sandwich Islands",
+        "iso3": "SGS",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 208,
+    "fields": {
+        "name": "South Sudan",
+        "iso3": "SSD",
+        "population": 11193725,
+        "area": 610952
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 209,
+    "fields": {
+        "name": "Spain",
+        "iso3": "ESP",
+        "population": 46754778,
+        "area": 498800
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 210,
+    "fields": {
+        "name": "Sri Lanka",
+        "iso3": "LKA",
+        "population": 21413249,
+        "area": 62710
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 211,
+    "fields": {
+        "name": "Sudan",
+        "iso3": "SDN",
+        "population": 43849260,
+        "area": 1765048
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 212,
+    "fields": {
+        "name": "Suriname",
+        "iso3": "SUR",
+        "population": 586632,
+        "area": 156000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 213,
+    "fields": {
+        "name": "Svalbard and Jan Mayen",
+        "iso3": "SJM",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 214,
+    "fields": {
+        "name": "Sweden",
+        "iso3": "SWE",
+        "population": 10099265,
+        "area": 410340
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 215,
+    "fields": {
+        "name": "Switzerland",
+        "iso3": "CHE",
+        "population": 8654622,
+        "area": 39516
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 216,
+    "fields": {
+        "name": "Syria",
+        "iso3": "SYR",
+        "population": 17500658,
+        "area": 183630
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 217,
+    "fields": {
+        "name": "Taiwan",
+        "iso3": "TWN",
+        "population": 23816775,
+        "area": 35410
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 218,
+    "fields": {
+        "name": "Tajikistan",
+        "iso3": "TJK",
+        "population": 9537645,
+        "area": 139960
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 219,
+    "fields": {
+        "name": "Tanzania",
+        "iso3": "TZA",
+        "population": 59734218,
+        "area": 885800
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 220,
+    "fields": {
+        "name": "Thailand",
+        "iso3": "THA",
+        "population": 69799978,
+        "area": 510890
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 221,
+    "fields": {
+        "name": "Timor-Leste",
+        "iso3": "TLS",
+        "population": 1318445,
+        "area": 14870
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 222,
+    "fields": {
+        "name": "Togo",
+        "iso3": "TGO",
+        "population": 8278724,
+        "area": 54390
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 223,
+    "fields": {
+        "name": "Tokelau",
+        "iso3": "TKL",
+        "population": 1357,
+        "area": 10
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 224,
+    "fields": {
+        "name": "Tonga",
+        "iso3": "TON",
+        "population": 105695,
+        "area": 720
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 225,
+    "fields": {
+        "name": "Trinidad and Tobago",
+        "iso3": "TTO",
+        "population": 1399488,
+        "area": 5130
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 226,
+    "fields": {
+        "name": "Tunisia",
+        "iso3": "TUN",
+        "population": 11818619,
+        "area": 155360
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 227,
+    "fields": {
+        "name": "Turkey",
+        "iso3": "TUR",
+        "population": 84339067,
+        "area": 769630
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 228,
+    "fields": {
+        "name": "Turkmenistan",
+        "iso3": "TKM",
+        "population": 6031200,
+        "area": 469930
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 229,
+    "fields": {
+        "name": "Turks and Caicos",
+        "iso3": "TCA",
+        "population": 38717,
+        "area": 950
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 230,
+    "fields": {
+        "name": "Tuvalu",
+        "iso3": "TUV",
+        "population": 11792,
+        "area": 30
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 231,
+    "fields": {
+        "name": "Uganda",
+        "iso3": "UGA",
+        "population": 45741007,
+        "area": 199810
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 232,
+    "fields": {
+        "name": "Ukraine",
+        "iso3": "UKR",
+        "population": 43733762,
+        "area": 579320
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 233,
+    "fields": {
+        "name": "United Arab Emirates",
+        "iso3": "ARE",
+        "population": 9890402,
+        "area": 83600
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 234,
+    "fields": {
+        "name": "United Kingdom",
+        "iso3": "GBR",
+        "population": 67886011,
+        "area": 241930
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 235,
+    "fields": {
+        "name": "United States",
+        "iso3": "USA",
+        "population": 331002651,
+        "area": 9147420
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 236,
+    "fields": {
+        "name": "United States Minor Outlying Islands",
+        "iso3": "UMI",
+        "population": null,
+        "area": null
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 237,
+    "fields": {
+        "name": "Uruguay",
+        "iso3": "URY",
+        "population": 3473730,
+        "area": 175020
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 238,
+    "fields": {
+        "name": "Uzbekistan",
+        "iso3": "UZB",
+        "population": 33469203,
+        "area": 425400
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 239,
+    "fields": {
+        "name": "Vanuatu",
+        "iso3": "VUT",
+        "population": 307145,
+        "area": 12190
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 240,
+    "fields": {
+        "name": "Venezuela",
+        "iso3": "VEN",
+        "population": 28435940,
+        "area": 882050
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 241,
+    "fields": {
+        "name": "Vietnam",
+        "iso3": "VNM",
+        "population": 97338579,
+        "area": 310070
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 242,
+    "fields": {
+        "name": "British Virgin Islands",
+        "iso3": "VGB",
+        "population": 30231,
+        "area": 150
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 243,
+    "fields": {
+        "name": "U.S. Virgin Islands",
+        "iso3": "VIR",
+        "population": 104425,
+        "area": 350
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 244,
+    "fields": {
+        "name": "Wallis and Futuna",
+        "iso3": "WLF",
+        "population": 11239,
+        "area": 140
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 245,
+    "fields": {
+        "name": "Western Sahara",
+        "iso3": "ESH",
+        "population": 597339,
+        "area": 266000
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 246,
+    "fields": {
+        "name": "Yemen",
+        "iso3": "YEM",
+        "population": 29825964,
+        "area": 527970
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 247,
+    "fields": {
+        "name": "Zambia",
+        "iso3": "ZMB",
+        "population": 18383955,
+        "area": 743390
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 248,
+    "fields": {
+        "name": "Zimbabwe",
+        "iso3": "ZWE",
+        "population": 14862924,
+        "area": 386850
+    }
+},
+{
+    "model": "geo.country",
+    "pk": 249,
+    "fields": {
+        "name": "Åland Islands",
+        "iso3": "ALA",
+        "population": null,
+        "area": null
+    }
+}
+]

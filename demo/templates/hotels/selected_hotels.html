@@ -1,0 +1,63 @@
+{% extends "dashboard/base/base_list.html" %}
+
+{% block page_name %}Selected Hotels{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item"><a href="#!">Hotels</a></li>
+<li class="breadcrumb-item"><a href="{% url 'geo:city-list' %}">Selected Hotels</a></li>
+{% endblock %}
+
+{% block main_content %}
+    {% include "geo/_tech_stack.html" %}
+
+    <div class="row">
+        <div class="table-responsive">
+        <table id="grid" class="hover row-border">
+            <thead style="background: lightgrey">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Stars</th>
+                    <th>Rating</th>
+                    <th>Rank</th>
+                    <th>Reviews</th>
+                    <th>City</th>
+                    <th>Country</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+        </table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#grid').DataTable({
+                ajax: {
+                    url: "{% url "hotels:drf-api-hotel-list" %}",
+                    dataSrc: ""
+                },
+                order: [[1, 'asc']],
+                columns: [
+                    { data: 'id', className: "text-right",
+                      render: function(data, type, row, meta) {
+                        return '<a href="' + row.url + '" target="_blank">' + row.id + '</a>';} },
+                    { data: 'name' },
+                    { data: 'stars' },
+                    { data: 'rating' },
+                    { data: 'rank' },
+                    { data: 'reviews' },
+                    { data: 'city_name' },
+                    { data: 'country_name', className: "text-right" },
+                    { data: 'description', render: function ( data, type, row ) {
+                        subs = data.length > 20 ? data.substr( 0, 20 ) +'…' : data;
+                        return '<span title="' + data + '">' + subs + '</span>'} }
+                ]
+            });
+        })
+    </script>
+{% endblock %}
+

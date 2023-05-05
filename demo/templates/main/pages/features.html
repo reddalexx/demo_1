@@ -1,0 +1,360 @@
+{% extends "main/base.html"  %}
+{% load static %}
+
+{% block extra_css %}
+{{ block.super }}
+<style>
+    .todo i.fa-eye {
+        background-color: #e3dd30;
+        border-color: #e3dd30;
+    }
+    .a-todo {
+        background-color: #e3dd30;
+        border-color: #e3dd30;
+    }
+</style>
+{% endblock %}
+
+{% block main_content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Features</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Features</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">All</li>
+                        <li class="mx-2" data-filter=".backend">Backend</li>
+                        <li class="mx-2" data-filter=".frontend">Frontend</li>
+                        <li class="mx-2" data-filter=".done">DONE</li>
+                        <li class="mx-2" data-filter=".todo">TODO</li>
+                   </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/django.jpg' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Django</p>
+                            <h5 class="lh-base mb-0">Back-end server side web framework.</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Django</p>
+                            <h5 class="lh-base mb-3">Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'dashboard' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.djangoproject.com/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" style="margin: 35px 0 36px 0" src="{% static 'main_theme/img/drf.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">RESTful API</p>
+                            <h5 class="lh-base mb-0">Django REST framework is a powerful and flexible toolkit for building Web APIs</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Django REST framework</p>
+                            <h5 class="lh-base mb-3">DRF brings flexibility and high level of customizations for API</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'geo:country-list' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.django-rest-framework.org/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/aiohttp_and_asyncio.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">AsyncIO</p>
+                            <h5 class="lh-base mb-0">Asynchronous programming with coroutine-based concurrency.</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">AIOHTTP</p>
+                            <h5 class="lh-base mb-3">Asynchronous HTTP Client/Server for asyncio and Python.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://docs.python.org/3/library/asyncio.html" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/fastapi.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">FastAPI</p>
+                            <h5 class="lh-base mb-0">High performance, easy to learn, fast to code, ready for production</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">FastAPI Framework</p>
+                            <h5 class="lh-base mb-3">FastAPI is a modern, fast (high-performance), web framework for building APIs</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'geo:country-list' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://fastapi.tiangolo.com/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/celery.jpg' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Celery</p>
+                            <h5 class="lh-base mb-0">Celery is used to run the tasks asynchronously</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Celery</p>
+                            <h5 class="lh-base mb-3">It is a task queue that holds the tasks and distributes them to the workers in a proper manner.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://docs.celeryq.dev" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" style="margin: 30px 0 30px 0" src="{% static 'main_theme/img/kafka.jpg' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Kafka</p>
+                            <h5 class="lh-base mb-0">Apache Kafka is an open-source distributed event streaming platform</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Kafka-python</p>
+                            <h5 class="lh-base mb-3">Python client for the Apache Kafka distributed stream processing system.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:search' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://kafka.apache.org/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend todo wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" style="margin: 30px 0 30px 0" src="{% static 'main_theme/img/pandas.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Pandas</p>
+                            <h5 class="lh-base mb-0">High performance for data processing</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Pandas</p>
+                            <h5 class="lh-base mb-3">is a fast, powerful, flexible and easy to use tool for data analysis </h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1 a-todo" href="#!"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://pandas.pydata.org/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/websockets.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">WebSockets</p>
+                            <h5 class="lh-base mb-0">helps to web application more interactive</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Websockets</p>
+                            <h5 class="lh-base mb-3">extends abilities beyond HTTP - to handle WebSockets, chat protocols, IoT protocols, and more</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://channels.readthedocs.io/en/stable/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/swagger.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Swagger UI</p>
+                            <h5 class="lh-base mb-0">Visualize your API</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Interactive API UI</p>
+                            <h5 class="lh-base mb-3">Swagger UI allows to visualize and interact with the API’s resources.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'drf-swagger-ui' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://swagger.io/tools/swagger-ui/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/redis.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Redis</p>
+                            <h5 class="lh-base mb-0">Caching data is one way to relieve stress on the server</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Redis</p>
+                            <h5 class="lh-base mb-3">Caching data helps to improve application performance</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://github.com/redis/redis-py" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/htmlcssjs.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Frontend</p>
+                            <h5 class="lh-base mb-0">HTML, CSS, Javascript</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Web development basis</p>
+                            <h5 class="lh-base mb-3">HTML-5, CSS-3, Javascript, Django Template Language with Jinja2</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'home' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.w3schools.com/html/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/bootstrap.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Frontend</p>
+                            <h5 class="lh-base mb-0">Bootstrap-4 Templates</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Bootstrap-4 Templates</p>
+                            <h5 class="lh-base mb-3">Free Bootstrap-4 Templates. Bootstrap-4 is the world’s most popular framework for building responsive, mobile-backend sites.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'dashboard' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://datatables.net/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/datatables.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Frontend</p>
+                            <h5 class="lh-base mb-0">Datatables</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Datatables</p>
+                            <h5 class="lh-base mb-3">DataTables is a highly flexible tool, that adds various range of advanced features to any HTML table.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'geo:country-list' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://datatables.net/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/apexchart.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Frontend</p>
+                            <h5 class="lh-base mb-0">Apexcharts</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Modern & Interactive Open-source Charts</p>
+                            <h5 class="lh-base mb-3">ApexCharts is a modern charting library that helps developers to create beautiful and interactive visualizations for web pages.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'geo:country-list' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://datatables.net/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/sql_profiling.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">SQL</p>
+                            <h5 class="lh-base mb-0">Profiling and Optimization</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Django-silk</p>
+                            <h5 class="lh-base mb-3">Silk is a live profiling and inspection tool for the Django framework.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'silk:summary' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://github.com/jazzband/django-silk" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/nginx.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Nginx</p>
+                            <h5 class="lh-base mb-0">Web serving, reverse proxying, caching, load balancing, etc.</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">NGINX</p>
+                            <h5 class="lh-base mb-3">NGINX is open source software for web serving, reverse proxying, caching, load balancing, media streaming, and more.</h5>
+                            <div class="d-flex justify-content-center">
+<!--                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fa fa-eye"></i></a>-->
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.nginx.com/resources/glossary/nginx/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/jupyter_mid.png' %}" alt="jupyter">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Jupyter</p>
+                            <h5 class="lh-base mb-0">Interactive output, creating and sharing computational documents.</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">JupyterLab</p>
+                            <h5 class="lh-base mb-3">JupyterLab is the latest web-based interactive development environment for notebooks, code, and data.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{{ settings.JUPYTER_URL }}" target="_blank"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://jupyter.org/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/multi_mid.png' %}" alt="multiprocessing vs multithreading">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Multiprocessing & multithreading</p>
+                            <h5 class="lh-base mb-0">Parallelism and concurrency.</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Parallelism vs concurrency.</p>
+                            <h5 class="lh-base mb-3">Process-based parallelism and Thread-based parallelism.</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.indeed.com/career-advice/career-development/multithreading-vs-multiprocessing" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+    <div class="container-fluid py-5 mb-5"></div>
+{% endblock %}

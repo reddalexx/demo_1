@@ -1,0 +1,227 @@
+{% extends "main/base.html"  %}
+{% load static %}
+
+{% block main_content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Architecture</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Architecture</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Architecture Start -->
+    <div class="container pt-5">
+        <div class="text-center">
+            <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+            <h1 class="display-5 mb-5">Our Services</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-8" style="min-height: 400px; background-color: #d3d1d1; padding: 10px;">
+                    <div class="position-relative" style="">
+                        <img class="img-fluid" src="{% static 'main_theme/img/architecture.png' %}" style="margin: auto; display: block;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 about-text py-1 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="py-lg-3 px-lg-5 footer">
+                        <div class="service">
+                            <a class="btn btn-link" href="">Nginx (API Gateway)</a>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Main App (Daphne -> Django)</a>
+                            <p class="ps-4 collapse">It is based on pure Django Framework, works with DB CRUD operations, provides class-based views both Django and Django Rest Framework, admin site UI, etc.</p>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Fastapi App</a>
+                            <p class="ps-4 collapse">Demonstrates asynchronous tasks based on Celery, concurrent processing with AsyncIO, multithreading, and multiprocessing. It also includes message Producer for event-driven approach, and uses websockets for interactive connection from/to Client and Server.</p>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">PostgreSQL (Database)</a>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Redis</a>
+                            <p class="ps-4 collapse">Redis takes care about cache and is used as Celery broker and Celery Results storage.</p>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Celery</a>
+                            <p class="ps-4 collapse">Allows to process long-running tasks in background and parallelize tasks processing.</p>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Kafka</a>
+                            <p class="ps-4 collapse">This is distributed event streaming platform which allows to implement Pub/Sub service that decouples services producing messages from services processing those messages.</p>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Consumer Service</a>
+                            <p class="ps-4 collapse">Processes user requests received prom Producer via Kafka.</p>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Adminer (DB Manager)</a>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Webdav (File Storage)</a>
+                        </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Jupyter (Interactive Computing)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Architecture End -->
+
+    <!-- Docker Start -->
+    <div class="container pt-5">
+        <div class="text-center">
+            <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+            <h1 class="display-5 mb-5">Docker Orchestration</h1>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-4 about-text py-1 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="py-lg-3 px-lg-5 footer">
+                        <p class="">Tools to <i>manage, scale, and maintain containerized applications are called orchestrators</i>,
+                            and the most common examples of these are Kubernetes and <a href="https://docs.docker.com/engine/swarm/" target="_blank">Docker Swarm</a>.</p>
+                        <p class="">Here our application services are run under docker, in <i>Docker Swarm</i>, for now each service is represented by only one container.</p>
+                        <p class="">But in the future, docker swarm orchestration will provide an opportunity to move and scale our containerized applications across clouds and datacenters.</p>
+                        <p class="">Such autoscaling feature could be applied f.e. for Celery service via AWS Autoscaling groups.</p>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <table class="table table-dark table-bordered table-smx table-striped">
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Image Type</th>
+                                <th>Image Name</th>
+                                <th>Image Size</th>
+                                <th>Ports</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>demo_nginx</td>
+                                <td>custom</td>
+                                <td>demo_nginx</td>
+                                <td>142MB</td>
+                                <td>80, 443</td>
+                            </tr>
+                            <tr>
+                                <td>demo_daphne</td>
+                                <td>custom</td>
+                                <td>demo_main_app:latest</td>
+                                <td>1.32GB</td>
+                                <td>3355</td>
+                            </tr>
+                            <tr>
+                                <td>demo_fastapi</td>
+                                <td>custom</td>
+                                <td>demo_fastapi:latest</td>
+                                <td>957MB</td>
+                                <td>8112</td>
+                            </tr>
+                            <tr>
+                                <td>demo_celery</td>
+                                <td>custom</td>
+                                <td>demo_fastapi:latest</td>
+                                <td>957MB</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>demo_consumer</td>
+                                <td>custom</td>
+                                <td>demo_main_app:latest</td>
+                                <td>1.32GB</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>demo_db</td>
+                                <td>native</td>
+                                <td>postgres:latest</td>
+                                <td>379MB</td>
+                                <td>5432</td>
+                            </tr>
+                            <tr>
+                                <td>demo_redis</td>
+                                <td>native</td>
+                                <td>redis:latest</td>
+                                <td>117MB</td>
+                                <td>6379</td>
+                            </tr>
+                            <tr>
+                                <td>demo_kafka</td>
+                                <td>native</td>
+                                <td>confluent/kafka:latest</td>
+                                <td>584MB</td>
+                                <td>9092</td>
+                            </tr>
+                            <tr>
+                                <td>demo_zookeeper</td>
+                                <td>native</td>
+                                <td>confluent/zookeeper:latest</td>
+                                <td>584MB</td>
+                                <td>2181</td>
+                            </tr>
+                            <tr>
+                                <td>demo_webdav</td>
+                                <td>native</td>
+                                <td>bytemark/webdav:latest</td>
+                                <td>95.6MB</td>
+                                <td>80, 443</td>
+                            </tr>
+                            <tr>
+                                <td>demo_adminer</td>
+                                <td>native</td>
+                                <td>adminer:latest</td>
+                                <td>250MB</td>
+                                <td>8080</td>
+                            </tr>
+                            <tr>
+                                <td>demo_jupyter</td>
+                                <td>native</td>
+                                <td>jupyter/minimal-notebook:latest</td>
+                                <td>1.48GB</td>
+                                <td>8888</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Docker End -->
+
+{% endblock %}
+
+{% block extra_js %}
+   {{ block.super }}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".footer .service").hover(
+                function(el) {
+                    $('.service p').collapse('hide');
+                    $(el.currentTarget).find('p').collapse('show');
+                },
+                function(elm) {
+                    $(elm.currentTarget).find('p').collapse('hide');
+                }
+            );
+        });
+    </script>
+{% endblock %}

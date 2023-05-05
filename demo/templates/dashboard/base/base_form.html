@@ -1,0 +1,136 @@
+{% extends "dashboard/base.html" %}
+{% load static project_tags %}
+
+{% block extra_css %}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css">
+  <style>
+    .chosen-single {
+        height: calc(1.5em + 1.25rem + 4px) !important;
+        padding: 10px !important;
+    }
+    .chosen-container-single .chosen-single {
+        height: calc(1.5em + 1.25rem + 4px) !important;
+        padding: 10px !important;
+    }
+    .chosen-container-single {
+        width: 100% !important;
+    }
+    .chosen-container-single .chosen-single div {
+        height: calc(1.5em + 1.25rem + 4px - 10px) !important;
+        padding: 10px !important;
+    }
+  </style>
+  {{ block.super }}
+{% endblock %}
+
+{% block main_content %}
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+
+      {% block form_body %}
+      <form class="form-horizontal offset-md-{% block form_offset %}0{% endblock %}"
+            {% if not is_detail %}method="POST" enctype="multipart/form-data"{% endif %}>
+        <input type="hidden" name="next" value="{{ request.GET.next }}" />
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        {% block form_extra %}{% endblock %}
+        {% block form_fields %}
+          {% for field in form %}
+            {% if field.is_hidden %}
+              {{ field }}
+            {% else %}
+              {% include "dashboard/base/_form_field.html" with is_detail=is_detail field=field only %}
+            {% endif %}
+          {% endfor %}
+        {% endblock %}
+
+        {% if formset %}
+          {{ formset.management_form }}
+          <legend>{{ formset.title }}</legend>
+          {{ formset.help_text|linebreak_replace }}
+          {{ formset.non_form_errors.as_ul }}
+          <table class="table table-hover formset">
+            {% for form in formset.forms %}
+              {% if forloop.first %}
+                <thead><tr>
+                  {% for field in form.visible_fields %}
+                    <th>{{ field.label.title }}</th>
+                  {% endfor %}
+                </tr></thead>
+              {% endif %}
+              <tr class="choice">
+                {% for field in form.visible_fields %}
+                  <td>
+                    {# Include the hidden fields in the form #}
+                    {% if forloop.first %}
+                      {% for hidden in form.hidden_fields %}
+                        {{ hidden }}
+                      {% endfor %}
+                    {% endif %}
+                    {{ field|add_class:'form-control' }}
+                    {{ field.errors.as_ul }}
+                  </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </table>
+          <span class="add-choice fa fa-plus btn-u btn-xs btn-l">&nbsp;&nbsp;Add Choice</span>
+        {% endif %}
+
+        {% block form_extra_below %}{% endblock %}
+        <div class="row col-md-6">
+          <p class="form-required-field"><i class="text-red">*</i> Indicates a required field</p>
+        </div>
+
+        <div class="row form-group form-actions">
+          <div class="col-md-6">
+            {% block buttons %}
+              {% block cancel_button %}
+              {% if back_url %}
+                <a class="btn btn-secondary" href="{{ back_url }}">Back</a>
+              {% else %}
+                <button class="btn btn-secondary">Cancel</button>
+              {% endif %}
+              {% endblock %}
+              {% block action_button %}
+                <button class="btn btn-primary" type="submit">
+                  {% if object %}Update{% else %}Create{% endif %}
+                </button>
+              {% endblock %}
+              {% block buttons_addon %}{% endblock %}
+            {% endblock %}
+          </div>
+        </div>
+      </form>
+      {% endblock %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-xl-12">
+  {% block form_addon %}{% endblock %}
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+  {{ block.super }}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.1/chosen.jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // enable chosen plugin for select
+      $('select:enabled:not(.ui-multi, .not-chosen)').chosen();
+      $('select[multiple=multiple]:enabled:not(.ui-multi, .not-chosen)')
+          .parent().append(
+            '<button type="button" class="chosen-toggle btn-u btn-xs select">Select all</button>' +
+            '<button type="button" class="chosen-toggle btn-u btn-xs btn-l deselect">Deselect all</button>');
+      $('.chosen-toggle').each(function() {
+        $(this).on('click', function () {
+          $(this).parent().find('option').prop('selected', $(this).hasClass('select')).parent().trigger('chosen:updated');
+        });
+      });
+      // focus on first form input
+      $('form input:text, form textarea').first().focus();
+    })
+  </script>
+{% endblock %}

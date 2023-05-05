@@ -1,0 +1,533 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block main_content %}
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'main_theme/img/carousel-1.png' %}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Python's elegance and simplicity</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">- Fast development, key features, rich standard library and ecosystem make it a great option for web development.</p>
+                                <a href="#!" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="https://survey.stackoverflow.co/2022/#section-most-popular-technologies-programming-scripting-and-markup-languages" target="_blank" class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'main_theme/img/carousel-2.jpg' %}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Best coding practices</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">- Smart frameworks like Django, Flask, FastAPI make it easier to build better web apps more quickly and with less code.</p>
+                                <a href="#!" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="https://www.djangoproject.com/" target="_blank" class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="{% static 'main_theme/img/carousel-3.jpg' %}" alt="">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Smart Solutions for Delivery</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">- Docker, Jenkins, AWS CodeDeploy and other modern CI/CD engines allow to deliver new features to Customers quickly.</p>
+                                <a href="#!" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="https://www.cloudways.com/blog/continuous-deployment-tools/" class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight" target="_blank">Source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 text-green">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100 bg-dark bg-semi-dark p-4 p-xl-5">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="btn-square rounded-circle" style="width: 64px; height: 64px; background: #000000;">
+                                <i class="fa fa-database text-32"></i>
+                            </div>
+                            <h1 class="display-1 mb-0" style="color: #000000;">01</h1>
+                        </div>
+                        <h5 class="text-white">Store</h5>
+                        <hr class="w-25">
+                        <span class="text-16">Wide range of Database Storages - PostgreSQL, MySQL, SQLite, NoSQL</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="h-100 bg-dark bg-semi-dark p-4 p-xl-5">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="btn-square rounded-circle" style="width: 64px; height: 64px; background: #000000;">
+                                <i class="fa fa-table text-32"></i>
+                            </div>
+                            <h1 class="display-1 mb-0" style="color: #000000;">02</h1>
+                        </div>
+                        <h5 class="text-white">Analyse</h5>
+                        <hr class="w-25">
+                        <span class="text-16">User Data Analysis using Numpy, Pandas, Sklearn, NLTK, ...</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100 bg-dark bg-semi-dark p-4 p-xl-5">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <div class="btn-square rounded-circle" style="width: 64px; height: 64px; background: #000000;">
+                                <i class="fa fa-eye text-32"></i>
+                            </div>
+                            <h1 class="display-1 mb-0" style="color: #000000;">03</h1>
+                        </div>
+                        <h5 class="text-white">Visualize</h5>
+                        <hr class="w-25">
+                        <span class="text-16">Via Website or Jupyter Notebooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts Start -->
+
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container about px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'main_theme/img/microservices.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        <h1 class="display-5 mb-4">Microservice Architecture</h1>
+                        <p class="mb-4 pb-2">- enables an organization to deliver large, complex applications rapidly, frequently, reliably and sustainably - a necessity for competing and winning in today’s world.</p>
+                        <div class="row g-4 mb-4 pb-3">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
+                                        <img class="img-fluid" src="{% static 'main_theme/img/icon/icon-5.png' %}" alt="Icon">
+                                    </div>
+                                    <div class="ms-4">
+                                        <h2 class="mb-1" data-toggle="counter-up">100</h2>
+                                        <p class="fw-medium text-primary mb-0">Hundreds Ready-to-use services</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://microservices.io/patterns/microservices.html" target="_blank" class="btn btn-primary rounded-pill py-3 px-5">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Key Services</h1>
+            </div>
+            <div class="row g-0 service-row">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <i class="fa fa-database text-green text-32"></i>
+                        </div>
+                        <h4 class="mb-3">PostgreSQL</h4>
+                        <p class="mb-4">as Database storage for user data</p>
+                        <a class="btn" href="https://hub.docker.com/_/postgres" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <i class="fa fa-file-alt text-green text-32"></i>
+                        </div>
+                        <h4 class="mb-3">Webdav</h4>
+                        <p class="mb-4">as a file storage for user files</p>
+                        <a class="btn" href="https://hub.docker.com/r/bytemark/webdav/" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <i class="fa fa-chart-line text-green text-32"></i>
+                        </div>
+                        <h4 class="mb-3">Celery, Asyncio</h4>
+                        <p class="mb-4">for asynchronous tasks, multiprocessing and multithreading</p>
+                        <a class="btn" href="https://docs.celeryq.dev/en/stable/" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <i class="fa fa-clock text-green text-32"></i>
+                        </div>
+                        <h4 class="mb-3">Kafka</h4>
+                        <p class="mb-4">as a distributed streaming platform for event-driven applications</p>
+                        <a class="btn" href="https://www.ibm.com/se-en/topics/apache-kafka" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Docker Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container feature px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        <h1 class="display-5 mb-5">Docker</h1>
+                        <p class="mb-4 pb-2 text-16">is used throughout the development lifecycle for fast, easy and portable application development – desktop and cloud.</p>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
+                                        <i class="fa fa-boxes text-green text-32"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-primary mb-2">Organize</p>
+                                        <h5 class="mb-0">Containerize</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
+                                        <i class="fa fa-box text-green text-32"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-primary mb-2">Efficiently</p>
+                                        <h5 class="mb-0">Build</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
+                                        <i class="fa fa-share text-green text-32"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-primary mb-2">Easily</p>
+                                        <h5 class="mb-0">Share</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="btn-square bg-white rounded-circle" style="width: 64px; height: 64px;">
+                                        <i class="fa fa-laptop text-green text-32"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="text-primary mb-2">Easily</p>
+                                        <h5 class="mb-0">Deploy</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.docker.com/" target="_blank" style="margin-top: 40px" class="btn btn-primary rounded-pill py-3 px-5">Read Source</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'main_theme/img/docker.png' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Docker End -->
+
+    <!-- Features Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Features</h1>
+            </div>
+            <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-5" id="portfolio-flters">
+                        <li class="mx-2 active" data-filter="*">All</li>
+                        <li class="mx-2" data-filter=".first">Backend</li>
+                        <li class="mx-2" data-filter=".second">Frontend</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container">
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/redis.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Redis</p>
+                            <h5 class="lh-base mb-0">Caching data is one way to relieve stress on the server</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Redis</p>
+                            <h5 class="lh-base mb-3">Caching data helps to improve application performance</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://github.com/redis/redis-py" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" style="margin: 35px 0 36px 0" src="{% static 'main_theme/img/drf.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">RESTful API</p>
+                            <h5 class="lh-base mb-0">Django REST framework is a powerful and flexible toolkit for building Web APIs</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Django REST framework</p>
+                            <h5 class="lh-base mb-3">DRF brings flexibility and high level of customizations for API</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'geo:country-list' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.django-rest-framework.org/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/fastapi.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">FastAPI</p>
+                            <h5 class="lh-base mb-0">High performance, easy to learn, fast to code, ready for production</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">FastAPI Framework</p>
+                            <h5 class="lh-base mb-3">FastAPI is a modern, fast (high-performance), web framework for building APIs</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-3.jpg' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://fastapi.tiangolo.com/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" style="margin: 30px 0 30px 0" src="{% static 'main_theme/img/pandas.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Pandas</p>
+                            <h5 class="lh-base mb-0">High performance for data processing</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Pandas</p>
+                            <h5 class="lh-base mb-3">is a fast, powerful, flexible and easy to use tool for data analysis </h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-4.jpg' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://pandas.pydata.org/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/websockets.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">WebSockets</p>
+                            <h5 class="lh-base mb-0">Django-channels augments Django to bring WebSocket, long-poll HTTP.</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Django Channels</p>
+                            <h5 class="lh-base mb-3">extends Django abilities beyond HTTP - to handle WebSockets, chat protocols, IoT protocols, and more</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-5.jpg' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://channels.readthedocs.io/en/stable/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="portfolio-inner">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/front.png' %}" alt="">
+                        <div class="text-center p-4">
+                            <p class="text-primary mb-2">Frontend</p>
+                            <h5 class="lh-base mb-0">HTML, CSS, Javascript, Django Template Language (Jinja2)</h5>
+                        </div>
+                        <div class="portfolio-text text-center bg-white p-4">
+                            <p class="text-primary mb-2">Bootstrap 4</p>
+                            <h5 class="lh-base mb-3">Free Bootstrap4 template</h5>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-6.jpg' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://themewagon.com/" target="_blank"><i class="fa fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Quote Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+        <div class="container quote px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{% static 'main_theme/img/PEP_20.jpg' %}" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        <h1 class="display-5 mb-5">Guiding principles</h1>
+                        <ul>
+                            <li>Beautiful is better than ugly.</li>
+                            <li>Explicit is better than implicit.</li>
+                            <li>Simple is better than complex.</li>
+                            <li>Complex is better than complicated.</li>
+                            <li>Flat is better than nested.</li>
+                            <li>Sparse is better than dense.</li>
+                            <li>Readability counts.</li>
+                            <li>Special cases aren't special enough to break the rules.</li>
+                            <li>Although practicality beats purity.</li>
+                            <li>Errors should never pass silently.</li>
+                            <li>Unless explicitly silenced.</li>
+                            <li>In the face of ambiguity, refuse the temptation to guess.</li>
+                            <li>There should be one-- and preferably only one --obvious way to do it.</li>
+                            <li>Although that way may not be obvious at first unless you're Dutch.</li>
+                            <li>Now is better than never.</li>
+                            <li>Although never is often better than *right* now.</li>
+                            <li>If the implementation is hard to explain, it's a bad idea.</li>
+                            <li>If the implementation is easy to explain, it may be a good idea.</li>
+                            <li>Namespaces are one honking great idea -- let's do more of those!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Team Members</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid w-100" src="{% static 'main_theme/img/team-1.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Energy</h5>
+                            <span class="text-primary">and Power</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid w-100" src="{% static 'main_theme/img/team-2.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Midnight</h5>
+                            <span class="text-primary">Worker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid w-100" src="{% static 'main_theme/img/team-3.png' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Nice</h5>
+                            <span class="text-primary">and Perfect</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid w-100" src="{% static 'main_theme/img/team-4.jpg' %}" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Crazy</h5>
+                            <span class="text-primary">Ideas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Quotes</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-1.jpg' %}' alt=''>">
+                    <p class="fs-5">Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
+                    <h4>Martin Fowler</h4>
+                    <span class="text-primary">Software Developer</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-2.png' %}' alt=''>">
+                    <p class="fs-5">Experience is the name everyone gives to their mistakes.</p>
+                    <h4>Oscar Wilde</h4>
+                    <span class="text-primary">Famous authority</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-3.jpg' %}' alt=''>">
+                    <p class="fs-5">I’m going to keep going until I succeed—or I die. Don’t think I don’t know how this might end. I’ve known it for years.</p>
+                    <h4>Harry Potter</h4>
+                    <span class="text-primary">Lead Wizard</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+{% endblock %}

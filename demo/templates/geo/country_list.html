@@ -1,0 +1,49 @@
+{% extends "dashboard/base/base_list.html" %}
+
+{% block page_name %}Countries{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item"><a href="#!">Geo</a></li>
+<li class="breadcrumb-item"><a href="{% url 'geo:country-list' %}">Countries</a></li>
+{% endblock %}
+
+{% block main_content %}
+    {% include "geo/_tech_stack.html" %}
+
+    <div class="row">
+        <div class="table-responsive">
+        <table id="grid" class="hover row-border">
+            <thead style="background: lightgrey">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>ISO3</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+        </table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#grid').DataTable({
+                ajax: {
+                    url: "{% url "geo:drf-api-country-list" %}",
+                    dataSrc: ""
+                },
+                order: [],
+                columns: [
+                    { data: 'id', className: "text-right" },
+                    { data: 'name' },
+                    { data: 'iso3' },
+                    { data: 'population', type: 'integer', render: DataTable.render.number(), className: "text-right" }
+                ]
+            });
+        })
+    </script>
+{% endblock %}
+

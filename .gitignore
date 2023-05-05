@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+
+.pkg_wheels/
+.data/
+photo
+media
+
+# Jupyter Notebook
+.ipynb_checkpoints
+notebooks/*.ipynb
+
+# celery beat schedule file
+celerybeat-schedule*
+
+# dotenv, virtualenv
+.env
+.venv/
+ve/
+fve/
+venv/
+ENV/
+
+**/.idea/*
+**/.vs_code/*
+**/.vscode/*
+**/samples/
+
+# deploy
+*local_settings.py
+
+# logs, pid files
+celery_log
+*.log*
+*.log_json*
+log.txt
+*.pid
+logs/
+
+demo/staticfiles/
+
+.cache/
+
+# temp files
+**/etc/
+**/tmp/
+**/temp/
+
+.DS_Store

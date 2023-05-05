@@ -1,0 +1,23 @@
+{% load project_tags %}
+
+<div class="row form-group col-md-6{% if field.errors %} has-error{% endif %}{% if field.field.required %} required{% endif %}">
+
+    {% if field|get_field_type == 'booleanfield' %}
+      <div class="form-check">
+        {{ field|add_class:"form-check-input" }}
+        <label for="{{ field.auto_id }}" class="form-check-label">{{ field.label.title }}</label>
+      </div>
+    {% else %}
+      <label>{{ field.label.title }}</label>
+      {{ field|add_class:'form-control' }}
+    {% endif %}
+    <div class="formfield-help-text">{% if field.help_text %}<small>{{ field.help_text|linebreak_replace }}</small>{% endif %}</div>
+    {% if field.errors %}
+      <ul class="errorlist">
+        {% for error in field.errors %}
+          <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+</div>

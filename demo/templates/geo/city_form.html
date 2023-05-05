@@ -1,0 +1,9 @@
+{% extends "dashboard/base/base_form.html" %}
+
+{% block page_name %}City <b>{{ object.name }}</b>{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item"><a href="#!">Geo</a></li>
+<li class="breadcrumb-item"><a href="{% url 'geo:city-list' %}">Cities</a></li>
+<li class="breadcrumb-item"><a href="{% url 'geo:city-update' object.pk %}">{{ object.name }}</a></li>
+{% endblock %}

@@ -1,0 +1,3602 @@
+[
+{
+    "model": "geo.city",
+    "pk": 1,
+    "fields": {
+        "name": "Abidjan",
+        "country": 59,
+        "is_capital": true,
+        "lat": 5.3167,
+        "lng": -4.0333,
+        "population": 5168966
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 2,
+    "fields": {
+        "name": "Abuja",
+        "country": 161,
+        "is_capital": true,
+        "lat": 9.0667,
+        "lng": 7.4833,
+        "population": 3999687
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 3,
+    "fields": {
+        "name": "Addis Ababa",
+        "country": 71,
+        "is_capital": true,
+        "lat": 9.03,
+        "lng": 38.74,
+        "population": 3307856
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 4,
+    "fields": {
+        "name": "Ahmedabad",
+        "country": 103,
+        "is_capital": false,
+        "lat": 23.03,
+        "lng": 72.58,
+        "population": 8995538
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 5,
+    "fields": {
+        "name": "Alexandria",
+        "country": 65,
+        "is_capital": false,
+        "lat": 31.1975,
+        "lng": 29.8925,
+        "population": 5052786
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 6,
+    "fields": {
+        "name": "Algiers",
+        "country": 3,
+        "is_capital": true,
+        "lat": 36.7539,
+        "lng": 3.0589,
+        "population": 3364332
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 7,
+    "fields": {
+        "name": "Amman",
+        "country": 114,
+        "is_capital": true,
+        "lat": 31.9497,
+        "lng": 35.9328,
+        "population": 4016728
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 8,
+    "fields": {
+        "name": "Ankara",
+        "country": 227,
+        "is_capital": true,
+        "lat": 39.93,
+        "lng": 32.85,
+        "population": 5486227
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 9,
+    "fields": {
+        "name": "Anqing",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.5,
+        "lng": 117.0333,
+        "population": 4332407
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 10,
+    "fields": {
+        "name": "Anshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 41.1066,
+        "lng": 122.9895,
+        "population": 3824282
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 11,
+    "fields": {
+        "name": "Athens",
+        "country": 86,
+        "is_capital": true,
+        "lat": 37.9842,
+        "lng": 23.7281,
+        "population": 2990605
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 12,
+    "fields": {
+        "name": "Atlanta",
+        "country": 235,
+        "is_capital": false,
+        "lat": 33.7628,
+        "lng": -84.422,
+        "population": 5196462
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 13,
+    "fields": {
+        "name": "Baghdad",
+        "country": 106,
+        "is_capital": true,
+        "lat": 33.3153,
+        "lng": 44.3661,
+        "population": 6143820
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 14,
+    "fields": {
+        "name": "Baicheng",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.901,
+        "lng": 106.6194,
+        "population": 3875840
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 15,
+    "fields": {
+        "name": "Bangalore",
+        "country": 103,
+        "is_capital": false,
+        "lat": 12.9789,
+        "lng": 77.5917,
+        "population": 14521834
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 16,
+    "fields": {
+        "name": "Bangkok",
+        "country": 220,
+        "is_capital": true,
+        "lat": 13.7525,
+        "lng": 100.4942,
+        "population": 19885374
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 17,
+    "fields": {
+        "name": "Baoding",
+        "country": 45,
+        "is_capital": false,
+        "lat": 38.8671,
+        "lng": 115.4845,
+        "population": 12160275
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 18,
+    "fields": {
+        "name": "Baojishi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.3609,
+        "lng": 107.1751,
+        "population": 3942152
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 19,
+    "fields": {
+        "name": "Baotou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 40.6562,
+        "lng": 109.8345,
+        "population": 2477934
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 20,
+    "fields": {
+        "name": "Barcelona",
+        "country": 209,
+        "is_capital": false,
+        "lat": 41.3825,
+        "lng": 2.1769,
+        "population": 5248694
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 21,
+    "fields": {
+        "name": "Bazhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.8576,
+        "lng": 106.7559,
+        "population": 2991488
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 22,
+    "fields": {
+        "name": "Beijing",
+        "country": 45,
+        "is_capital": true,
+        "lat": 39.904,
+        "lng": 116.4075,
+        "population": 18545457
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 23,
+    "fields": {
+        "name": "Belo Horizonte",
+        "country": 31,
+        "is_capital": false,
+        "lat": -19.9167,
+        "lng": -43.9333,
+        "population": 5322407
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 24,
+    "fields": {
+        "name": "Bengbu",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.9354,
+        "lng": 117.3531,
+        "population": 3299184
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 25,
+    "fields": {
+        "name": "Berlin",
+        "country": 83,
+        "is_capital": true,
+        "lat": 52.52,
+        "lng": 13.405,
+        "population": 4198243
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 26,
+    "fields": {
+        "name": "Bijie",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.3019,
+        "lng": 105.2863,
+        "population": 6380119
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 27,
+    "fields": {
+        "name": "Binzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 37.3806,
+        "lng": 118.0125,
+        "population": 3795321
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 28,
+    "fields": {
+        "name": "Birmingham",
+        "country": 234,
+        "is_capital": false,
+        "lat": 52.48,
+        "lng": -1.9025,
+        "population": 2843588
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 29,
+    "fields": {
+        "name": "Boankra",
+        "country": 84,
+        "is_capital": false,
+        "lat": 6.6944,
+        "lng": -1.4028,
+        "population": 3068888
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 30,
+    "fields": {
+        "name": "Bogota",
+        "country": 48,
+        "is_capital": true,
+        "lat": 4.7111,
+        "lng": -74.0722,
+        "population": 8131481
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 31,
+    "fields": {
+        "name": "Boston",
+        "country": 235,
+        "is_capital": false,
+        "lat": 42.3188,
+        "lng": -71.0852,
+        "population": 4129518
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 32,
+    "fields": {
+        "name": "Bozhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.8626,
+        "lng": 115.7742,
+        "population": 5099230
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 33,
+    "fields": {
+        "name": "Brasilia",
+        "country": 31,
+        "is_capital": true,
+        "lat": -15.7939,
+        "lng": -47.8828,
+        "population": 2991553
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 34,
+    "fields": {
+        "name": "Brooklyn",
+        "country": 235,
+        "is_capital": false,
+        "lat": 40.6501,
+        "lng": -73.9496,
+        "population": 2642518
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 35,
+    "fields": {
+        "name": "Budapest",
+        "country": 101,
+        "is_capital": true,
+        "lat": 47.4925,
+        "lng": 19.0514,
+        "population": 3044535
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 36,
+    "fields": {
+        "name": "Buenos Aires",
+        "country": 10,
+        "is_capital": true,
+        "lat": -34.5997,
+        "lng": -58.3819,
+        "population": 17701043
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 37,
+    "fields": {
+        "name": "Bursa",
+        "country": 227,
+        "is_capital": false,
+        "lat": 40.1833,
+        "lng": 29.05,
+        "population": 2911611
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 38,
+    "fields": {
+        "name": "Busan",
+        "country": 119,
+        "is_capital": false,
+        "lat": 35.18,
+        "lng": 129.075,
+        "population": 3649963
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 39,
+    "fields": {
+        "name": "Cairo",
+        "country": 65,
+        "is_capital": true,
+        "lat": 30.0444,
+        "lng": 31.2358,
+        "population": 21613038
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 40,
+    "fields": {
+        "name": "Cangzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 38.3037,
+        "lng": 116.8452,
+        "population": 7441612
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 41,
+    "fields": {
+        "name": "Casablanca",
+        "country": 150,
+        "is_capital": false,
+        "lat": 33.5333,
+        "lng": -7.5833,
+        "population": 4693321
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 42,
+    "fields": {
+        "name": "Changchun",
+        "country": 45,
+        "is_capital": false,
+        "lat": 43.9,
+        "lng": 125.2,
+        "population": 4245118
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 43,
+    "fields": {
+        "name": "Changde",
+        "country": 45,
+        "is_capital": false,
+        "lat": 29.0397,
+        "lng": 111.6839,
+        "population": 5661661
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 44,
+    "fields": {
+        "name": "Changsha",
+        "country": 45,
+        "is_capital": false,
+        "lat": 28.1987,
+        "lng": 112.9709,
+        "population": 4704970
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 45,
+    "fields": {
+        "name": "Changzhi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.1953,
+        "lng": 113.097,
+        "population": 3313958
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 46,
+    "fields": {
+        "name": "Changzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.8122,
+        "lng": 119.9692,
+        "population": 3636092
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 47,
+    "fields": {
+        "name": "Chaoyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 41.5757,
+        "lng": 120.4486,
+        "population": 2926190
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 48,
+    "fields": {
+        "name": "Chattogram",
+        "country": 18,
+        "is_capital": false,
+        "lat": 22.335,
+        "lng": 91.8325,
+        "population": 7244120
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 49,
+    "fields": {
+        "name": "Chengdu",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.66,
+        "lng": 104.0633,
+        "population": 15903035
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 50,
+    "fields": {
+        "name": "Chennai",
+        "country": 103,
+        "is_capital": false,
+        "lat": 13.0825,
+        "lng": 80.275,
+        "population": 12062090
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 51,
+    "fields": {
+        "name": "Chenzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.7989,
+        "lng": 113.0267,
+        "population": 4542598
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 52,
+    "fields": {
+        "name": "Chicago",
+        "country": 235,
+        "is_capital": false,
+        "lat": 41.8375,
+        "lng": -87.6866,
+        "population": 8968932
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 53,
+    "fields": {
+        "name": "Chifeng",
+        "country": 45,
+        "is_capital": false,
+        "lat": 42.2663,
+        "lng": 118.9223,
+        "population": 4442884
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 54,
+    "fields": {
+        "name": "Chongqing",
+        "country": 45,
+        "is_capital": false,
+        "lat": 29.55,
+        "lng": 106.5069,
+        "population": 13557954
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 55,
+    "fields": {
+        "name": "Chuzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.3062,
+        "lng": 118.3115,
+        "population": 4066503
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 56,
+    "fields": {
+        "name": "Dalian",
+        "country": 45,
+        "is_capital": false,
+        "lat": 38.9,
+        "lng": 121.6,
+        "population": 5872037
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 57,
+    "fields": {
+        "name": "Dallas",
+        "country": 235,
+        "is_capital": false,
+        "lat": 32.7935,
+        "lng": -96.7667,
+        "population": 5186749
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 58,
+    "fields": {
+        "name": "Daqing",
+        "country": 45,
+        "is_capital": false,
+        "lat": 46.5979,
+        "lng": 125.008,
+        "population": 2862161
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 59,
+    "fields": {
+        "name": "Dar es Salaam",
+        "country": 219,
+        "is_capital": true,
+        "lat": -6.8161,
+        "lng": 39.2803,
+        "population": 7563604
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 60,
+    "fields": {
+        "name": "Dazhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.2152,
+        "lng": 107.4947,
+        "population": 5636076
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 61,
+    "fields": {
+        "name": "Delhi",
+        "country": 103,
+        "is_capital": false,
+        "lat": 28.61,
+        "lng": 77.23,
+        "population": 33101392
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 62,
+    "fields": {
+        "name": "Detroit",
+        "country": 235,
+        "is_capital": false,
+        "lat": 42.3834,
+        "lng": -83.1024,
+        "population": 3585019
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 63,
+    "fields": {
+        "name": "Deyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.1289,
+        "lng": 104.395,
+        "population": 4041621
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 64,
+    "fields": {
+        "name": "Dezhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 37.4513,
+        "lng": 116.3105,
+        "population": 5630567
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 65,
+    "fields": {
+        "name": "Dhaka",
+        "country": 18,
+        "is_capital": true,
+        "lat": 23.7639,
+        "lng": 90.3889,
+        "population": 18740328
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 66,
+    "fields": {
+        "name": "Dongguan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.0475,
+        "lng": 113.7493,
+        "population": 9699137
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 67,
+    "fields": {
+        "name": "Douala",
+        "country": 39,
+        "is_capital": false,
+        "lat": 4.05,
+        "lng": 9.7,
+        "population": 5952206
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 68,
+    "fields": {
+        "name": "Dubai",
+        "country": 233,
+        "is_capital": false,
+        "lat": 25.2631,
+        "lng": 55.2972,
+        "population": 2777824
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 69,
+    "fields": {
+        "name": "Faisalabad",
+        "country": 168,
+        "is_capital": false,
+        "lat": 31.4167,
+        "lng": 73.0911,
+        "population": 3498023
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 70,
+    "fields": {
+        "name": "Foshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.0292,
+        "lng": 113.1056,
+        "population": 9774635
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 71,
+    "fields": {
+        "name": "Fuyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.8986,
+        "lng": 115.8045,
+        "population": 7419626
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 72,
+    "fields": {
+        "name": "Fuzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.9814,
+        "lng": 116.3577,
+        "population": 3941657
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 73,
+    "fields": {
+        "name": "Fuzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 26.0769,
+        "lng": 119.2917,
+        "population": 3713436
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 74,
+    "fields": {
+        "name": "Ganzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.8292,
+        "lng": 114.9336,
+        "population": 9255992
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 75,
+    "fields": {
+        "name": "Giza",
+        "country": 65,
+        "is_capital": false,
+        "lat": 29.987,
+        "lng": 31.2118,
+        "population": 5666568
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 76,
+    "fields": {
+        "name": "Guadalajara",
+        "country": 143,
+        "is_capital": false,
+        "lat": 20.6767,
+        "lng": -103.3475,
+        "population": 5294721
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 77,
+    "fields": {
+        "name": "Guang'an",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.4673,
+        "lng": 106.6336,
+        "population": 3282131
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 78,
+    "fields": {
+        "name": "Guangzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.13,
+        "lng": 113.26,
+        "population": 28121744
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 79,
+    "fields": {
+        "name": "Guatemala City",
+        "country": 91,
+        "is_capital": true,
+        "lat": 14.6099,
+        "lng": -90.5252,
+        "population": 2928801
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 80,
+    "fields": {
+        "name": "Guayaquil",
+        "country": 64,
+        "is_capital": false,
+        "lat": -2.19,
+        "lng": -79.8875,
+        "population": 2741669
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 81,
+    "fields": {
+        "name": "Guigang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.0961,
+        "lng": 109.6092,
+        "population": 4166574
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 82,
+    "fields": {
+        "name": "Guilin",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.2819,
+        "lng": 110.2864,
+        "population": 4916417
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 83,
+    "fields": {
+        "name": "Guiyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 26.5794,
+        "lng": 106.7078,
+        "population": 3194229
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 84,
+    "fields": {
+        "name": "Haikou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 20.02,
+        "lng": 110.32,
+        "population": 2633552
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 85,
+    "fields": {
+        "name": "Handan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.6116,
+        "lng": 114.4894,
+        "population": 2646715
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 86,
+    "fields": {
+        "name": "Hangzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.25,
+        "lng": 120.1675,
+        "population": 9835836
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 87,
+    "fields": {
+        "name": "Hanoi",
+        "country": 241,
+        "is_capital": true,
+        "lat": 21.0283,
+        "lng": 105.8542,
+        "population": 7415999
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 88,
+    "fields": {
+        "name": "Hanzhong",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.0794,
+        "lng": 107.026,
+        "population": 3371457
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 89,
+    "fields": {
+        "name": "Harbin",
+        "country": 45,
+        "is_capital": false,
+        "lat": 45.75,
+        "lng": 126.6333,
+        "population": 4042446
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 90,
+    "fields": {
+        "name": "Hechi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.6928,
+        "lng": 108.085,
+        "population": 3789589
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 91,
+    "fields": {
+        "name": "Hefei",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.8639,
+        "lng": 117.2808,
+        "population": 4575361
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 92,
+    "fields": {
+        "name": "Hengshui",
+        "country": 45,
+        "is_capital": false,
+        "lat": 37.7348,
+        "lng": 115.686,
+        "population": 4207777
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 93,
+    "fields": {
+        "name": "Hengyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 26.8968,
+        "lng": 112.5857,
+        "population": 7922756
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 94,
+    "fields": {
+        "name": "Heyuan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.7503,
+        "lng": 114.6923,
+        "population": 2894447
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 95,
+    "fields": {
+        "name": "Heze",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.2333,
+        "lng": 115.4333,
+        "population": 9164439
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 96,
+    "fields": {
+        "name": "Ho Chi Minh City",
+        "country": 241,
+        "is_capital": false,
+        "lat": 10.7756,
+        "lng": 106.7019,
+        "population": 15464814
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 97,
+    "fields": {
+        "name": "Hohhot",
+        "country": 45,
+        "is_capital": false,
+        "lat": 40.8151,
+        "lng": 111.6629,
+        "population": 3209733
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 98,
+    "fields": {
+        "name": "Hong Kong",
+        "country": 100,
+        "is_capital": true,
+        "lat": 22.3,
+        "lng": 114.2,
+        "population": 7833576
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 99,
+    "fields": {
+        "name": "Houston",
+        "country": 235,
+        "is_capital": false,
+        "lat": 29.786,
+        "lng": -95.3885,
+        "population": 5178433
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 100,
+    "fields": {
+        "name": "Huaihua",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.5494,
+        "lng": 109.9592,
+        "population": 4695289
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 101,
+    "fields": {
+        "name": "Huanggang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.45,
+        "lng": 114.875,
+        "population": 6099252
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 102,
+    "fields": {
+        "name": "Huanglongsi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.795,
+        "lng": 114.345,
+        "population": 5030302
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 103,
+    "fields": {
+        "name": "Hyderabad",
+        "country": 103,
+        "is_capital": false,
+        "lat": 17.385,
+        "lng": 78.4867,
+        "population": 10583195
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 104,
+    "fields": {
+        "name": "Ibadan",
+        "country": 161,
+        "is_capital": false,
+        "lat": 7.3964,
+        "lng": 3.9167,
+        "population": 3674723
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 105,
+    "fields": {
+        "name": "Incheon",
+        "country": 119,
+        "is_capital": false,
+        "lat": 37.4833,
+        "lng": 126.6333,
+        "population": 2950781
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 106,
+    "fields": {
+        "name": "Istanbul",
+        "country": 227,
+        "is_capital": false,
+        "lat": 41.0136,
+        "lng": 28.955,
+        "population": 17168067
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 107,
+    "fields": {
+        "name": "Izmir",
+        "country": 227,
+        "is_capital": false,
+        "lat": 38.42,
+        "lng": 27.14,
+        "population": 4062891
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 108,
+    "fields": {
+        "name": "Jaipur",
+        "country": 103,
+        "is_capital": false,
+        "lat": 26.9,
+        "lng": 75.8,
+        "population": 3054935
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 109,
+    "fields": {
+        "name": "Jakarta",
+        "country": 104,
+        "is_capital": true,
+        "lat": -6.175,
+        "lng": 106.8275,
+        "population": 33878228
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 110,
+    "fields": {
+        "name": "Jeddah",
+        "country": 195,
+        "is_capital": false,
+        "lat": 21.5433,
+        "lng": 39.1728,
+        "population": 3827639
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 111,
+    "fields": {
+        "name": "Ji'an",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.1172,
+        "lng": 114.9793,
+        "population": 5385546
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 112,
+    "fields": {
+        "name": "Jiangguanchi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.0244,
+        "lng": 113.8201,
+        "population": 4106791
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 113,
+    "fields": {
+        "name": "Jiangmen",
+        "country": 45,
+        "is_capital": false,
+        "lat": 22.5833,
+        "lng": 113.0833,
+        "population": 5044710
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 114,
+    "fields": {
+        "name": "Jiaozuo",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.229,
+        "lng": 113.2304,
+        "population": 3588293
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 115,
+    "fields": {
+        "name": "Jieyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.5533,
+        "lng": 116.3649,
+        "population": 6720826
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 116,
+    "fields": {
+        "name": "Jinan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.6667,
+        "lng": 116.9833,
+        "population": 5529498
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 117,
+    "fields": {
+        "name": "Jining",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.4,
+        "lng": 116.5667,
+        "population": 7272554
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 118,
+    "fields": {
+        "name": "Jinzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 41.1144,
+        "lng": 121.1292,
+        "population": 2807731
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 119,
+    "fields": {
+        "name": "Jiujiang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 29.7048,
+        "lng": 116.0021,
+        "population": 4796314
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 120,
+    "fields": {
+        "name": "Johannesburg",
+        "country": 206,
+        "is_capital": false,
+        "lat": -26.2044,
+        "lng": 28.0456,
+        "population": 7605138
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 121,
+    "fields": {
+        "name": "Kabul",
+        "country": 1,
+        "is_capital": true,
+        "lat": 34.5253,
+        "lng": 69.1783,
+        "population": 4723851
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 122,
+    "fields": {
+        "name": "Kano",
+        "country": 161,
+        "is_capital": false,
+        "lat": 12.0,
+        "lng": 8.5167,
+        "population": 3737705
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 123,
+    "fields": {
+        "name": "Kaohsiung",
+        "country": 217,
+        "is_capital": false,
+        "lat": 22.615,
+        "lng": 120.2975,
+        "population": 2949364
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 124,
+    "fields": {
+        "name": "Karachi",
+        "country": 168,
+        "is_capital": false,
+        "lat": 24.86,
+        "lng": 67.01,
+        "population": 16564753
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 125,
+    "fields": {
+        "name": "Kashan",
+        "country": 105,
+        "is_capital": false,
+        "lat": 33.9833,
+        "lng": 51.4333,
+        "population": 4420654
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 126,
+    "fields": {
+        "name": "Khartoum",
+        "country": 211,
+        "is_capital": true,
+        "lat": 15.5006,
+        "lng": 32.56,
+        "population": 7727982
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 127,
+    "fields": {
+        "name": "Kinshasa",
+        "country": 51,
+        "is_capital": true,
+        "lat": -4.325,
+        "lng": 15.3222,
+        "population": 12971641
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 128,
+    "fields": {
+        "name": "Kolkata",
+        "country": 103,
+        "is_capital": false,
+        "lat": 22.5675,
+        "lng": 88.37,
+        "population": 20066076
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 129,
+    "fields": {
+        "name": "Kuala Lumpur",
+        "country": 134,
+        "is_capital": true,
+        "lat": 3.1478,
+        "lng": 101.6953,
+        "population": 8965544
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 130,
+    "fields": {
+        "name": "Kunming",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.0433,
+        "lng": 102.7061,
+        "population": 4574560
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 131,
+    "fields": {
+        "name": "Kuwait City",
+        "country": 120,
+        "is_capital": true,
+        "lat": 29.3697,
+        "lng": 47.9783,
+        "population": 2837012
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 132,
+    "fields": {
+        "name": "Kyiv",
+        "country": 232,
+        "is_capital": true,
+        "lat": 50.45,
+        "lng": 30.5233,
+        "population": 2945514
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 133,
+    "fields": {
+        "name": "La Paz",
+        "country": 26,
+        "is_capital": true,
+        "lat": -16.5,
+        "lng": -68.15,
+        "population": 2721401
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 134,
+    "fields": {
+        "name": "Lagos",
+        "country": 161,
+        "is_capital": false,
+        "lat": 6.455,
+        "lng": 3.3841,
+        "population": 15855303
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 135,
+    "fields": {
+        "name": "Lahore",
+        "country": 168,
+        "is_capital": false,
+        "lat": 31.5497,
+        "lng": 74.3436,
+        "population": 12878564
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 136,
+    "fields": {
+        "name": "Langfang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 39.5196,
+        "lng": 116.7006,
+        "population": 5664195
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 137,
+    "fields": {
+        "name": "Lanzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.0617,
+        "lng": 103.8318,
+        "population": 3102692
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 138,
+    "fields": {
+        "name": "Leshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 29.5854,
+        "lng": 103.7575,
+        "population": 3292274
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 139,
+    "fields": {
+        "name": "Liaocheng",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.45,
+        "lng": 115.9833,
+        "population": 6050228
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 140,
+    "fields": {
+        "name": "Lima",
+        "country": 174,
+        "is_capital": true,
+        "lat": -12.06,
+        "lng": -77.0375,
+        "population": 9728682
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 141,
+    "fields": {
+        "name": "Linfen",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.0812,
+        "lng": 111.5087,
+        "population": 3994847
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 142,
+    "fields": {
+        "name": "Linyi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.1041,
+        "lng": 118.3502,
+        "population": 10381551
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 143,
+    "fields": {
+        "name": "Lisbon",
+        "country": 178,
+        "is_capital": true,
+        "lat": 38.7253,
+        "lng": -9.15,
+        "population": 2785094
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 144,
+    "fields": {
+        "name": "Liuzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.3264,
+        "lng": 109.4281,
+        "population": 4208625
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 145,
+    "fields": {
+        "name": "London",
+        "country": 234,
+        "is_capital": true,
+        "lat": 51.5072,
+        "lng": -0.1275,
+        "population": 12068117
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 146,
+    "fields": {
+        "name": "Longyan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.0881,
+        "lng": 117.0244,
+        "population": 2770662
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 147,
+    "fields": {
+        "name": "Los Angeles",
+        "country": 235,
+        "is_capital": false,
+        "lat": 34.1141,
+        "lng": -118.4068,
+        "population": 11612697
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 148,
+    "fields": {
+        "name": "Loudi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.7378,
+        "lng": 111.9974,
+        "population": 3718276
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 149,
+    "fields": {
+        "name": "Lu'an",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.7542,
+        "lng": 116.5078,
+        "population": 5522696
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 150,
+    "fields": {
+        "name": "Luanda",
+        "country": 6,
+        "is_capital": true,
+        "lat": -8.8383,
+        "lng": 13.2344,
+        "population": 9647978
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 151,
+    "fields": {
+        "name": "Lucknow",
+        "country": 103,
+        "is_capital": false,
+        "lat": 26.85,
+        "lng": 80.95,
+        "population": 3395464
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 152,
+    "fields": {
+        "name": "Luzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 28.8918,
+        "lng": 105.4409,
+        "population": 4400718
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 153,
+    "fields": {
+        "name": "Madrid",
+        "country": 209,
+        "is_capital": true,
+        "lat": 40.4169,
+        "lng": -3.7033,
+        "population": 6698048
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 154,
+    "fields": {
+        "name": "Malang",
+        "country": 104,
+        "is_capital": false,
+        "lat": -7.98,
+        "lng": 112.62,
+        "population": 2506699
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 155,
+    "fields": {
+        "name": "Manchester",
+        "country": 234,
+        "is_capital": false,
+        "lat": 53.4794,
+        "lng": -2.2453,
+        "population": 2697458
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 156,
+    "fields": {
+        "name": "Manila",
+        "country": 175,
+        "is_capital": true,
+        "lat": 14.5958,
+        "lng": 120.9772,
+        "population": 25339557
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 157,
+    "fields": {
+        "name": "Maoming",
+        "country": 45,
+        "is_capital": false,
+        "lat": 21.6618,
+        "lng": 110.9178,
+        "population": 6201350
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 158,
+    "fields": {
+        "name": "Mashhad",
+        "country": 105,
+        "is_capital": false,
+        "lat": 36.3,
+        "lng": 59.6,
+        "population": 3089161
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 159,
+    "fields": {
+        "name": "Medan",
+        "country": 104,
+        "is_capital": false,
+        "lat": 3.5894,
+        "lng": 98.6739,
+        "population": 3728131
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 160,
+    "fields": {
+        "name": "Meishan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.0575,
+        "lng": 103.8381,
+        "population": 3131516
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 161,
+    "fields": {
+        "name": "Meizhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.2998,
+        "lng": 116.1191,
+        "population": 4272232
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 162,
+    "fields": {
+        "name": "Melbourne",
+        "country": 13,
+        "is_capital": false,
+        "lat": -37.8142,
+        "lng": 144.9631,
+        "population": 4844714
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 163,
+    "fields": {
+        "name": "Mexico City",
+        "country": 143,
+        "is_capital": true,
+        "lat": 19.4333,
+        "lng": -99.1333,
+        "population": 20830021
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 164,
+    "fields": {
+        "name": "Miami",
+        "country": 235,
+        "is_capital": false,
+        "lat": 25.784,
+        "lng": -80.2101,
+        "population": 5489595
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 165,
+    "fields": {
+        "name": "Mianyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.4669,
+        "lng": 104.7385,
+        "population": 4718675
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 166,
+    "fields": {
+        "name": "Minneapolis",
+        "country": 235,
+        "is_capital": false,
+        "lat": 44.9635,
+        "lng": -93.2678,
+        "population": 2791785
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 167,
+    "fields": {
+        "name": "Mogadishu",
+        "country": 205,
+        "is_capital": true,
+        "lat": 2.0392,
+        "lng": 45.3419,
+        "population": 4288236
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 168,
+    "fields": {
+        "name": "Monterrey",
+        "country": 143,
+        "is_capital": false,
+        "lat": 25.6667,
+        "lng": -100.3,
+        "population": 5481949
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 169,
+    "fields": {
+        "name": "Montreal",
+        "country": 40,
+        "is_capital": false,
+        "lat": 45.5089,
+        "lng": -73.5617,
+        "population": 3454861
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 170,
+    "fields": {
+        "name": "Moscow",
+        "country": 182,
+        "is_capital": true,
+        "lat": 55.7558,
+        "lng": 37.6178,
+        "population": 17294385
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 171,
+    "fields": {
+        "name": "Mudanjiang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 44.5861,
+        "lng": 129.5997,
+        "population": 2777910
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 172,
+    "fields": {
+        "name": "Mumbai",
+        "country": 103,
+        "is_capital": false,
+        "lat": 19.0761,
+        "lng": 72.8775,
+        "population": 22344980
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 173,
+    "fields": {
+        "name": "Nagoya",
+        "country": 112,
+        "is_capital": false,
+        "lat": 35.1833,
+        "lng": 136.9,
+        "population": 9039240
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 174,
+    "fields": {
+        "name": "Nairobi",
+        "country": 116,
+        "is_capital": true,
+        "lat": -1.2864,
+        "lng": 36.8172,
+        "population": 5974249
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 175,
+    "fields": {
+        "name": "Nanchang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 28.6842,
+        "lng": 115.8872,
+        "population": 3837422
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 176,
+    "fields": {
+        "name": "Nanchong",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.7991,
+        "lng": 106.0784,
+        "population": 6493305
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 177,
+    "fields": {
+        "name": "Nangandao",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.2992,
+        "lng": 113.8851,
+        "population": 5714984
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 178,
+    "fields": {
+        "name": "Nanjing",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.0608,
+        "lng": 118.7789,
+        "population": 8510137
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 179,
+    "fields": {
+        "name": "Nanning",
+        "country": 45,
+        "is_capital": false,
+        "lat": 22.8192,
+        "lng": 108.315,
+        "population": 4060384
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 180,
+    "fields": {
+        "name": "Nanyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.9987,
+        "lng": 112.5292,
+        "population": 9796593
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 181,
+    "fields": {
+        "name": "Neijiang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 29.5872,
+        "lng": 105.0635,
+        "population": 3751935
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 182,
+    "fields": {
+        "name": "New York",
+        "country": 235,
+        "is_capital": false,
+        "lat": 40.6943,
+        "lng": -73.9249,
+        "population": 19322038
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 183,
+    "fields": {
+        "name": "Ningbo",
+        "country": 45,
+        "is_capital": false,
+        "lat": 29.875,
+        "lng": 121.5492,
+        "population": 3815485
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 184,
+    "fields": {
+        "name": "Ningde",
+        "country": 45,
+        "is_capital": false,
+        "lat": 26.6617,
+        "lng": 119.5228,
+        "population": 2747304
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 185,
+    "fields": {
+        "name": "Omdurman",
+        "country": 211,
+        "is_capital": false,
+        "lat": 15.65,
+        "lng": 32.4833,
+        "population": 2944508
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 186,
+    "fields": {
+        "name": "Osaka",
+        "country": 112,
+        "is_capital": false,
+        "lat": 34.6939,
+        "lng": 135.5022,
+        "population": 14131420
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 187,
+    "fields": {
+        "name": "Paris",
+        "country": 76,
+        "is_capital": true,
+        "lat": 48.8567,
+        "lng": 2.3522,
+        "population": 11422559
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 188,
+    "fields": {
+        "name": "Philadelphia",
+        "country": 235,
+        "is_capital": false,
+        "lat": 40.0077,
+        "lng": -75.1339,
+        "population": 5357685
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 189,
+    "fields": {
+        "name": "Phoenix",
+        "country": 235,
+        "is_capital": false,
+        "lat": 33.5722,
+        "lng": -112.0892,
+        "population": 4124052
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 190,
+    "fields": {
+        "name": "Pingdingshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.735,
+        "lng": 113.2999,
+        "population": 4463418
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 191,
+    "fields": {
+        "name": "Prayagraj",
+        "country": 103,
+        "is_capital": false,
+        "lat": 25.4358,
+        "lng": 81.8464,
+        "population": 6040290
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 192,
+    "fields": {
+        "name": "Pudong",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.2231,
+        "lng": 121.5397,
+        "population": 6071933
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 193,
+    "fields": {
+        "name": "Pune",
+        "country": 103,
+        "is_capital": false,
+        "lat": 18.5203,
+        "lng": 73.8567,
+        "population": 8546262
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 194,
+    "fields": {
+        "name": "Putian",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.4394,
+        "lng": 119.0103,
+        "population": 3188297
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 195,
+    "fields": {
+        "name": "Puyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.7639,
+        "lng": 115.03,
+        "population": 3507058
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 196,
+    "fields": {
+        "name": "Pyongyang",
+        "country": 118,
+        "is_capital": true,
+        "lat": 39.0194,
+        "lng": 125.7381,
+        "population": 3015545
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 197,
+    "fields": {
+        "name": "Qincheng",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.5809,
+        "lng": 105.7311,
+        "population": 3336080
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 198,
+    "fields": {
+        "name": "Qingdao",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.1167,
+        "lng": 120.4,
+        "population": 6365706
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 199,
+    "fields": {
+        "name": "Qingyuan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.6842,
+        "lng": 113.0507,
+        "population": 3561766
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 200,
+    "fields": {
+        "name": "Qinhuangdao",
+        "country": 45,
+        "is_capital": false,
+        "lat": 39.9398,
+        "lng": 119.5881,
+        "population": 3126936
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 201,
+    "fields": {
+        "name": "Qinzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 21.95,
+        "lng": 108.6167,
+        "population": 3020045
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 202,
+    "fields": {
+        "name": "Qiqihar",
+        "country": 45,
+        "is_capital": false,
+        "lat": 47.3398,
+        "lng": 123.9512,
+        "population": 5405886
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 203,
+    "fields": {
+        "name": "Quanzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.9139,
+        "lng": 118.5858,
+        "population": 9702735
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 204,
+    "fields": {
+        "name": "Quezon City",
+        "country": 175,
+        "is_capital": false,
+        "lat": 14.63,
+        "lng": 121.03,
+        "population": 3058767
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 205,
+    "fields": {
+        "name": "Qujing",
+        "country": 45,
+        "is_capital": false,
+        "lat": 25.5102,
+        "lng": 103.8029,
+        "population": 6444718
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 206,
+    "fields": {
+        "name": "Rangoon",
+        "country": 152,
+        "is_capital": true,
+        "lat": 16.795,
+        "lng": 96.16,
+        "population": 5092636
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 207,
+    "fields": {
+        "name": "Rio de Janeiro",
+        "country": 31,
+        "is_capital": false,
+        "lat": -22.9111,
+        "lng": -43.2056,
+        "population": 11620100
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 208,
+    "fields": {
+        "name": "Riyadh",
+        "country": 195,
+        "is_capital": true,
+        "lat": 24.6333,
+        "lng": 46.7167,
+        "population": 7148476
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 209,
+    "fields": {
+        "name": "Rizhao",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.4164,
+        "lng": 119.4331,
+        "population": 3023794
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 210,
+    "fields": {
+        "name": "Rome",
+        "country": 110,
+        "is_capital": true,
+        "lat": 41.8931,
+        "lng": 12.4828,
+        "population": 2996154
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 211,
+    "fields": {
+        "name": "Saint Petersburg",
+        "country": 182,
+        "is_capital": false,
+        "lat": 59.95,
+        "lng": 30.3167,
+        "population": 5686068
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 212,
+    "fields": {
+        "name": "Salvador",
+        "country": 31,
+        "is_capital": false,
+        "lat": -12.9747,
+        "lng": -38.4767,
+        "population": 2880102
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 213,
+    "fields": {
+        "name": "San Diego",
+        "country": 235,
+        "is_capital": false,
+        "lat": 32.8313,
+        "lng": -117.1222,
+        "population": 2942227
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 214,
+    "fields": {
+        "name": "San Francisco",
+        "country": 235,
+        "is_capital": false,
+        "lat": 37.7558,
+        "lng": -122.4449,
+        "population": 3362131
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 215,
+    "fields": {
+        "name": "Sanaa",
+        "country": 246,
+        "is_capital": true,
+        "lat": 15.3483,
+        "lng": 44.2064,
+        "population": 2848292
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 216,
+    "fields": {
+        "name": "Santa Cruz",
+        "country": 26,
+        "is_capital": false,
+        "lat": -17.7892,
+        "lng": -63.1975,
+        "population": 2900847
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 217,
+    "fields": {
+        "name": "Santiago",
+        "country": 44,
+        "is_capital": true,
+        "lat": -33.4372,
+        "lng": -70.6506,
+        "population": 7397313
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 218,
+    "fields": {
+        "name": "Sao Paulo",
+        "country": 31,
+        "is_capital": false,
+        "lat": -23.55,
+        "lng": -46.6333,
+        "population": 21238583
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 219,
+    "fields": {
+        "name": "Seattle",
+        "country": 235,
+        "is_capital": false,
+        "lat": 47.6211,
+        "lng": -122.3244,
+        "population": 3342859
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 220,
+    "fields": {
+        "name": "Seoul",
+        "country": 119,
+        "is_capital": true,
+        "lat": 37.56,
+        "lng": 126.99,
+        "population": 21367147
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 221,
+    "fields": {
+        "name": "Shanghai",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.1667,
+        "lng": 121.4667,
+        "population": 26596051
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 222,
+    "fields": {
+        "name": "Shangqiu",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.4259,
+        "lng": 115.6467,
+        "population": 7770010
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 223,
+    "fields": {
+        "name": "Shangrao",
+        "country": 45,
+        "is_capital": false,
+        "lat": 28.4419,
+        "lng": 117.9633,
+        "population": 7265068
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 224,
+    "fields": {
+        "name": "Shantou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.3735,
+        "lng": 116.6941,
+        "population": 4312292
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 225,
+    "fields": {
+        "name": "Shanwei",
+        "country": 45,
+        "is_capital": false,
+        "lat": 22.7664,
+        "lng": 115.3331,
+        "population": 2960735
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 226,
+    "fields": {
+        "name": "Shaoguan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.8011,
+        "lng": 113.5927,
+        "population": 2991568
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 227,
+    "fields": {
+        "name": "Shaoyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.2418,
+        "lng": 111.4725,
+        "population": 7761436
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 228,
+    "fields": {
+        "name": "Shenyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 41.8025,
+        "lng": 123.4281,
+        "population": 8708001
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 229,
+    "fields": {
+        "name": "Shenzhen",
+        "country": 45,
+        "is_capital": false,
+        "lat": 22.535,
+        "lng": 114.054,
+        "population": 17224848
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 230,
+    "fields": {
+        "name": "Shijiazhuang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 38.0422,
+        "lng": 114.5086,
+        "population": 4167415
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 231,
+    "fields": {
+        "name": "Shiyan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.6351,
+        "lng": 110.7755,
+        "population": 3060942
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 232,
+    "fields": {
+        "name": "Singapore",
+        "country": 200,
+        "is_capital": true,
+        "lat": 1.3,
+        "lng": 103.8,
+        "population": 5646487
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 233,
+    "fields": {
+        "name": "Siping",
+        "country": 45,
+        "is_capital": false,
+        "lat": 43.1715,
+        "lng": 124.3644,
+        "population": 3491278
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 234,
+    "fields": {
+        "name": "Stuttgart",
+        "country": 83,
+        "is_capital": false,
+        "lat": 48.7775,
+        "lng": 9.18,
+        "population": 2999071
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 235,
+    "fields": {
+        "name": "Suihua",
+        "country": 45,
+        "is_capital": false,
+        "lat": 46.6384,
+        "lng": 126.9808,
+        "population": 5233787
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 236,
+    "fields": {
+        "name": "Suining",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.5098,
+        "lng": 105.5737,
+        "population": 3010583
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 237,
+    "fields": {
+        "name": "Suqian",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.9331,
+        "lng": 118.2831,
+        "population": 4719642
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 238,
+    "fields": {
+        "name": "Surabaya",
+        "country": 104,
+        "is_capital": false,
+        "lat": -7.2458,
+        "lng": 112.7378,
+        "population": 6721727
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 239,
+    "fields": {
+        "name": "Surat",
+        "country": 103,
+        "is_capital": false,
+        "lat": 21.1702,
+        "lng": 72.8311,
+        "population": 7098376
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 240,
+    "fields": {
+        "name": "Suzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.3,
+        "lng": 120.6194,
+        "population": 3743877
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 241,
+    "fields": {
+        "name": "Suzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.6333,
+        "lng": 116.9683,
+        "population": 4964058
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 242,
+    "fields": {
+        "name": "Sydney",
+        "country": 13,
+        "is_capital": false,
+        "lat": -33.8678,
+        "lng": 151.21,
+        "population": 4445460
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 243,
+    "fields": {
+        "name": "Tai'an",
+        "country": 45,
+        "is_capital": false,
+        "lat": 36.2001,
+        "lng": 117.0809,
+        "population": 4960258
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 244,
+    "fields": {
+        "name": "Taichung",
+        "country": 217,
+        "is_capital": false,
+        "lat": 24.1439,
+        "lng": 120.6794,
+        "population": 3166767
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 245,
+    "fields": {
+        "name": "Taipei",
+        "country": 217,
+        "is_capital": true,
+        "lat": 25.0375,
+        "lng": 121.5625,
+        "population": 9245714
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 246,
+    "fields": {
+        "name": "Taiyuan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 37.8733,
+        "lng": 112.5425,
+        "population": 3762596
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 247,
+    "fields": {
+        "name": "Taizhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.4831,
+        "lng": 119.9,
+        "population": 5199823
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 248,
+    "fields": {
+        "name": "Tangshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 39.6292,
+        "lng": 118.1742,
+        "population": 3386881
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 249,
+    "fields": {
+        "name": "Tehran",
+        "country": 105,
+        "is_capital": true,
+        "lat": 35.6892,
+        "lng": 51.3889,
+        "population": 15674083
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 250,
+    "fields": {
+        "name": "Tianjin",
+        "country": 45,
+        "is_capital": false,
+        "lat": 39.1467,
+        "lng": 117.2056,
+        "population": 11047552
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 251,
+    "fields": {
+        "name": "Tieling",
+        "country": 45,
+        "is_capital": false,
+        "lat": 42.2841,
+        "lng": 123.8365,
+        "population": 2709691
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 252,
+    "fields": {
+        "name": "Timbio",
+        "country": 48,
+        "is_capital": false,
+        "lat": 2.3445,
+        "lng": -76.6839,
+        "population": 4323572
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 253,
+    "fields": {
+        "name": "Tokyo",
+        "country": 112,
+        "is_capital": true,
+        "lat": 35.6897,
+        "lng": 139.6922,
+        "population": 36791075
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 254,
+    "fields": {
+        "name": "Tongliao",
+        "country": 45,
+        "is_capital": false,
+        "lat": 43.6172,
+        "lng": 122.264,
+        "population": 3264269
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 255,
+    "fields": {
+        "name": "Tongren",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.7233,
+        "lng": 109.1885,
+        "population": 3164160
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 256,
+    "fields": {
+        "name": "Tongshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.261,
+        "lng": 117.1859,
+        "population": 8682762
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 257,
+    "fields": {
+        "name": "Toronto",
+        "country": 40,
+        "is_capital": false,
+        "lat": 43.7417,
+        "lng": -79.3733,
+        "population": 5421872
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 258,
+    "fields": {
+        "name": "Urumqi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 43.8225,
+        "lng": 87.6125,
+        "population": 3943833
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 259,
+    "fields": {
+        "name": "Washington",
+        "country": 235,
+        "is_capital": true,
+        "lat": 38.9047,
+        "lng": -77.0163,
+        "population": 4400285
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 260,
+    "fields": {
+        "name": "Weihai",
+        "country": 45,
+        "is_capital": false,
+        "lat": 37.5,
+        "lng": 122.1,
+        "population": 3106153
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 261,
+    "fields": {
+        "name": "Weinan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.4996,
+        "lng": 109.4684,
+        "population": 5443955
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 262,
+    "fields": {
+        "name": "Wenzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.9991,
+        "lng": 120.6561,
+        "population": 3575004
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 263,
+    "fields": {
+        "name": "Wuhan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.5872,
+        "lng": 114.2881,
+        "population": 10314455
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 264,
+    "fields": {
+        "name": "Wuhu",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.334,
+        "lng": 118.3622,
+        "population": 3850391
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 265,
+    "fields": {
+        "name": "Wuxi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 31.5667,
+        "lng": 120.2833,
+        "population": 3276322
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 266,
+    "fields": {
+        "name": "Wuzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.4833,
+        "lng": 111.3167,
+        "population": 3092547
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 267,
+    "fields": {
+        "name": "Xi'an",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.2667,
+        "lng": 108.9,
+        "population": 12252322
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 268,
+    "fields": {
+        "name": "Xiamen",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.4797,
+        "lng": 118.0819,
+        "population": 3879954
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 269,
+    "fields": {
+        "name": "Xiangtan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.8431,
+        "lng": 112.9228,
+        "population": 2954391
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 270,
+    "fields": {
+        "name": "Xiangyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.0654,
+        "lng": 112.1531,
+        "population": 5151486
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 271,
+    "fields": {
+        "name": "Xianyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.35,
+        "lng": 108.7167,
+        "population": 5004385
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 272,
+    "fields": {
+        "name": "Xiaoganzhan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.9273,
+        "lng": 113.911,
+        "population": 4587594
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 273,
+    "fields": {
+        "name": "Xiaoxita",
+        "country": 45,
+        "is_capital": false,
+        "lat": 30.7083,
+        "lng": 111.2803,
+        "population": 3822199
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 274,
+    "fields": {
+        "name": "Xingtai",
+        "country": 45,
+        "is_capital": false,
+        "lat": 37.0659,
+        "lng": 114.4753,
+        "population": 6688646
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 275,
+    "fields": {
+        "name": "Xinpu",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.5906,
+        "lng": 119.1801,
+        "population": 4688622
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 276,
+    "fields": {
+        "name": "Xinyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.1264,
+        "lng": 114.0672,
+        "population": 6280482
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 277,
+    "fields": {
+        "name": "Xinzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 38.4178,
+        "lng": 112.7233,
+        "population": 3011812
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 278,
+    "fields": {
+        "name": "Yancheng",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.3936,
+        "lng": 120.1339,
+        "population": 7322939
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 279,
+    "fields": {
+        "name": "Yangzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.3912,
+        "lng": 119.4363,
+        "population": 4400490
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 280,
+    "fields": {
+        "name": "Yibin",
+        "country": 45,
+        "is_capital": false,
+        "lat": 28.7596,
+        "lng": 104.64,
+        "population": 4595608
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 281,
+    "fields": {
+        "name": "Yichun",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.8041,
+        "lng": 114.383,
+        "population": 5614117
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 282,
+    "fields": {
+        "name": "Yiyang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 28.5833,
+        "lng": 112.3333,
+        "population": 4539959
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 283,
+    "fields": {
+        "name": "Yokohama",
+        "country": 112,
+        "is_capital": false,
+        "lat": 35.4442,
+        "lng": 139.6381,
+        "population": 3664206
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 284,
+    "fields": {
+        "name": "Yongzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 26.4515,
+        "lng": 111.5953,
+        "population": 5837095
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 285,
+    "fields": {
+        "name": "Yulin",
+        "country": 45,
+        "is_capital": false,
+        "lat": 22.6293,
+        "lng": 110.1507,
+        "population": 6262819
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 286,
+    "fields": {
+        "name": "Yulinshi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 38.2655,
+        "lng": 109.7388,
+        "population": 4035990
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 287,
+    "fields": {
+        "name": "Yuncheng",
+        "country": 45,
+        "is_capital": false,
+        "lat": 35.0304,
+        "lng": 110.998,
+        "population": 5224612
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 288,
+    "fields": {
+        "name": "Zaozhuang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.8667,
+        "lng": 117.55,
+        "population": 3595225
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 289,
+    "fields": {
+        "name": "Zhangjiakou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 40.8108,
+        "lng": 114.8811,
+        "population": 4222922
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 290,
+    "fields": {
+        "name": "Zhangzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 24.5093,
+        "lng": 117.6612,
+        "population": 5410071
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 291,
+    "fields": {
+        "name": "Zhanjiang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 21.1967,
+        "lng": 110.4031,
+        "population": 7383832
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 292,
+    "fields": {
+        "name": "Zhaoqing",
+        "country": 45,
+        "is_capital": false,
+        "lat": 23.05,
+        "lng": 112.4667,
+        "population": 4439454
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 293,
+    "fields": {
+        "name": "Zhaotong",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.3328,
+        "lng": 103.7144,
+        "population": 5424523
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 294,
+    "fields": {
+        "name": "Zhengzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 34.7492,
+        "lng": 113.6605,
+        "population": 5491139
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 295,
+    "fields": {
+        "name": "Zhenjiang",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.2109,
+        "lng": 119.4551,
+        "population": 3332623
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 296,
+    "fields": {
+        "name": "Zhongshan",
+        "country": 45,
+        "is_capital": false,
+        "lat": 22.5333,
+        "lng": 113.35,
+        "population": 2958789
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 297,
+    "fields": {
+        "name": "Zhoukou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 33.625,
+        "lng": 114.6418,
+        "population": 8867381
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 298,
+    "fields": {
+        "name": "Zhumadian",
+        "country": 45,
+        "is_capital": false,
+        "lat": 32.9773,
+        "lng": 114.0253,
+        "population": 7320050
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 299,
+    "fields": {
+        "name": "Zhuzhou",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.8407,
+        "lng": 113.1469,
+        "population": 4029298
+    }
+},
+{
+    "model": "geo.city",
+    "pk": 300,
+    "fields": {
+        "name": "Zunyi",
+        "country": 45,
+        "is_capital": false,
+        "lat": 27.705,
+        "lng": 106.9336,
+        "population": 6710398
+    }
+}
+]

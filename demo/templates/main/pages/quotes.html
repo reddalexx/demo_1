@@ -1,0 +1,63 @@
+{% extends "main/base.html"  %}
+{% load static %}
+
+{% block main_content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Quotes</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#!">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#!">Pages</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Quotes</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Quote Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Quotes</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-1.jpg' %}' alt=''>">
+                    <p class="fs-5">Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</p>
+                    <h4>Martin Fowler</h4>
+                    <span class="text-primary">Software Developer</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-4.jpg' %}' alt=''>">
+                    <p class="fs-5">Now, it's my belief that Python is a lot easier than to teach to students programming and teach them C or C++ or Java at the same time because all the details of the languages are so much harder. Other scripting languages really don't work very well there either.</p>
+                    <h4>Guido van Rossum</h4>
+                    <span class="text-primary">Creator of the Python</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-5.jpg' %}' alt=''>">
+                    <p class="fs-5">Simplicity is the soul of efficiency.</p>
+                    <h4>R. Austin Freeman</h4>
+                    <span class="text-primary">British writer</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-6.jpg' %}' alt=''>">
+                    <p class="fs-5">Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.</p>
+                    <h4>Antoine de Saint–Exupery</h4>
+                    <span class="text-primary">Author of The Little Prince and other timeless works of literature</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-2.png' %}' alt=''>">
+                    <p class="fs-5">Experience is the name everyone gives to their mistakes.</p>
+                    <h4>Oscar Wilde</h4>
+                    <span class="text-primary">Famous authority</span>
+                </div>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='{% static 'main_theme/img/quote-3.jpg' %}' alt=''>">
+                    <p class="fs-5">I’m going to keep going until I succeed—or I die. Don’t think I don’t know how this might end. I’ve known it for years.</p>
+                    <h4>Harry Potter</h4>
+                    <span class="text-primary">Lead Wizard</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote End -->
+
+{% endblock %}

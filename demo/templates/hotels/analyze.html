@@ -1,0 +1,167 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <style>
+        .text-center {text-align: center}
+    </style>
+{% endblock %}
+
+{% block page_name %}Test and Analyze{% endblock %}
+
+{% block breadcrumb_items %}
+<li class="breadcrumb-item"><a href="#!">Hotels</a></li>
+<li class="breadcrumb-item"><a href="{% url 'hotels:analyze' %}">Test and Analyze</a></li>
+{% endblock %}
+
+{% block main_content %}
+<div class="row">
+    <div class="col-md-6 col-xl-6">
+        <div class="card">
+            <h3 class="card-header">Real Example</h3>
+            <div class="card-body">
+                <p>Let's consider scraping <b><a href="https://www.tripadvisor.com/">tripadvisor.com</a></b> to grab hotels data from a certain city.</p>
+            </div>
+            <img class="img-fluid card-img-bottom" style="filter: brightness(80%)" src="{% static 'dashboard_theme/custom/tripadviser.png' %}" />
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-6">
+        <div class="card">
+            <h3 class="card-header">Split process into Steps</h3>
+            <div class="card-body">
+                <ol>
+                    <li>
+                        <h5>Get hotel list page and extract hotel urls</h5>
+                        <p>This step depends on a <b>city</b> and <b>page number</b> from <a href="{% url 'hotels:search' %}">this form</a>,
+                            and it may be done sequentially.</p>
+                    </li>
+                    <li>
+                        <h5>Iterate over hotels and extract html</h5>
+                        <p>Let's use various techniques and try to optimyze it and process multiple pages concurrently</p>
+                    </li>
+                    <li><h5>Parse hotels' html and extract required data</h5></li>
+                </ol>
+                <br />
+                <hr />
+                <p>Extract very simple data like this:</p>
+                <img class="img-fluid" src="{% static 'dashboard_theme/custom/table-sample.png' %}" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-12">
+        <div class="card shadow">
+            <h3 class="card-header">How it works</h3>
+            <div class="card-body">
+                <p>FastAPI works under Gunicorn(Uvicorn) server and accepts user request to parse certain page.</p>
+                <p>User request data includes <code>city[str]</code> and <code>page[int]</code> parameters.</p>
+                <p>Firstly Scraper needs to get Hotel list page according to a user request data, usually one page includes 30 items (hotels).</p>
+                <div>So the 2nd step will deal with 30 http requests to fetch html content for those 30 webpages, and here we have 3 options for use:
+                    <ul>
+                        <li>do it <b>sequentially</b></li>
+                        <li>use async/await syntax within <b>asyncio</b></li>
+                        <li>use <b>multithreading</b> (also a good fit for I/O bound operations)</li>
+                        <li>or take advantages of <b>multiprocessing</b> to parallelize this step</li>
+                    </ul>
+                </div>
+                <div>The 3rd step is CPU-consuming operation because it requires some computations to extract target data from html and it might be performed in 2 ways:
+                    <ul>
+                        <li>parse extracted html <b>sequentially</b> - i.e. process pages one by one</li>
+                        <li>or speed up this process using <b>multiprocessing</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-12">
+        <div class="card">
+            <h3 class="card-header">Measure and Analyze timing</h3>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Approach for step #2</th>
+                            <th>Use multiprocessing for step #3</th>
+                            <th>Step 1 time</th>
+                            <th>Step 2 time</th>
+                            <th>Step 3 time</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-danger">
+                            <td>Sequential</td>
+                            <td class="text-center">No</td>
+                            <td>2.18</td>
+                            <td>33.80</td>
+                            <td>3.34</td>
+                            <td>39.32</td>
+                        </tr>
+                        <tr>
+                            <td>Multithreading</td>
+                            <td class="text-center">No</td>
+                            <td>2.19</td>
+                            <td>7.09</td>
+                            <td>3.37</td>
+                            <td>12.65</td>
+                        </tr>
+                        <tr>
+                            <td>Multithreading</td>
+                            <td class="text-center">Yes</td>
+                            <td>2.18</td>
+                            <td>7.07</td>
+                            <td>1.15</td>
+                            <td>10.32</td>
+                        </tr>
+                        <tr>
+                            <td>Multiprocessing</td>
+                            <td class="text-center">Yes</td>
+                            <td>2.20</td>
+                            <td class="text-center" colspan="2">8.09</td>
+                            <td>10.29</td>
+                        </tr>
+                        <tr>
+                            <td>asyncio+aiohttp</td>
+                            <td class="text-center">No</td>
+                            <td>2.15</td>
+                            <td>1.90</td>
+                            <td>3.36</td>
+                            <td>7.41</td>
+                        </tr>
+                        <tr class="table-success">
+                            <td>asyncio+aiohttp</td>
+                            <td class="text-center">Yes</td>
+                            <td>2.19</td>
+                            <td>1.95</td>
+                            <td>1.14</td>
+                            <td>5.28</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-xl-12">
+        <div class="card shadow">
+            <h3 class="card-header">Outcome</h3>
+            <div class="card-body">
+                <p><b>Asyncio</b> + <b>multiprocessing</b> looks a right choice
+                to build fast and effective application for scraping data from multiple webpages concurrently.</p>
+                <p>Asyncio fits for I/O bound tasks, and multiprocessing - for CPU-consuming things.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 col-xl-12">
+        <div class="alert alert-info" role="alert">
+            <span>There were used the same parameters <code>city = "Dubai"</code> and <code>page = 1</code> for parsing, see <a href="{% url 'hotels:search' %}" class="alert-link">this form</a>.</span><br />
+            <span>These metrics represent average time from 3 runs for each step.</span>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            Note that these metrics depend on internet connection speed and machine CPU - so may vary for different users.
+        </div>
+
+        <a href="{% url 'hotels:search' %}"><button class="btn btn-success">Try it</button></a>
+    </div>
+
+</div>
+{% endblock %}

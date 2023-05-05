@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-md-12 col-lg-12">
+        <a class="btn btn-primary m-t-5 mb-4 collapsed" data-toggle="collapse" href="#tech_stack" role="button" aria-expanded="false" aria-controls="collapseExample">Tech Stack</a>
+        <div class="collapse" id="tech_stack" style="">
+            <div class="card">
+                <h4 class="card-header">How It Works</h4>
+                <div class="card-body">
+                    <div>
+                        <p>This page demonstrates using pure Django and Django-Rest-Framework as backend and DataTables and Django Templates as base for frontend on one page.</p>
+                        <p>Data is initialized through feature files.</p>
+                    </div>
+
+                    <h4>Tech Stack</h4>
+                    <ul class="nav nav-tabs mb-3" id="features_Tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase active" id="django-features-tab" data-toggle="tab" href="#django_feature" role="tab" aria-controls="django_feature" aria-selected="true">Django</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="drf-features-tab" data-toggle="tab" href="#drf_feature" role="tab" aria-controls="drf_feature" aria-selected="false">Django Rest Framework</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="postgres-features-tab" data-toggle="tab" href="#postgres_feature" role="tab" aria-controls="postgres_feature" aria-selected="false">PostgreSQL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="datatables-features-tab" data-toggle="tab" href="#datatables_feature" role="tab" aria-controls="datatables_feature" aria-selected="false">DataTables</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="features_Content">
+                        <div class="tab-pane fade active show" id="django_feature" role="tabpanel" aria-labelledby="django-feature-tab">
+                            <p class="mb-0">This page uses Django to get HTML content which is inherited from base template with menus, breadcrumbs, etc.,
+                                and includes table based on DataTable plugin, as well as javascript and css styles.</p>
+                            <p class="mb-0">Table provides visualizes Database records from City model (db table), so Django models make sense here.</p>
+                            <p class="mb-0">
+                                As well as Django Template Language, which is used to generate html page using inheritance,
+                                "include", "extend", "url", "static" template tags and context processors.
+                            </p>
+                            <p class="mb-2">Django application is ran under Daphne as a separate service.</p>
+                        </div>
+                        <div class="tab-pane fade" id="drf_feature" role="tabpanel" aria-labelledby="drf-feature-tab">
+                            <p class="mb-0">DRF handles API requests and does it well.</p>
+                            <p class="mb-0">It allows to create API views using various number of base classes and simplifies developer work.</p>
+                            <p class="mb-2">See <a href="{% url 'drf-swagger-ui' %}" target="_blank">DRF Swagger page</a> for details.</p>
+                        </div>
+                        <div class="tab-pane fade" id="postgres_feature" role="tabpanel" aria-labelledby="postgres-feature-tab">
+                            <p class="mb-0">PostgreSQL is used as a database for Django.</p>
+                            <p class="mb-2">We may use any other RDBM like MySQL, MSSQL, Sqlite.</p>
+                        </div>
+                        <div class="tab-pane fade" id="datatables_feature" role="tabpanel" aria-labelledby="datatables-feature-tab">
+                            <p class="mb-2">Datatables allows to visualize well structured data and bring such functionality like paging, ordering, filtering into tables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
