@@ -10,6 +10,7 @@ services:
       - daphne
     volumes:
       - static_files:/project/demo/staticfiles/
+      - ${VOLUME_NGINX_CERTS}:/etc/nginx/certificates/
 
   daphne:
     image: demo_main_app
@@ -156,3 +157,6 @@ volumes:
   static_files:
   kafka_data:
   zookeeper_data:
+
+networks:
+  demo_network:
