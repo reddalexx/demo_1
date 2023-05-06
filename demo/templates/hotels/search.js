@@ -58,7 +58,7 @@ $(document).ready(function () {
     var hotels_table = $('#hotels_grid');
     hotels_datatable = hotels_table.DataTable(hotels_grid_options);
 
-    let ws_url = 'ws://' + window.location.host + '/fastapi/ws';
+    let ws_url = '{{ ws_protocol }}://' + window.location.host + '/fastapi/ws';
     var ws = new WebSocket(ws_url);
     ws.onmessage = function(event) {
         const msg = $.parseJSON(event.data);

@@ -8,7 +8,7 @@ source ../../.env
 
 rm -f nginx.conf
 
-if [ "${NGINX_USE_SSL}" = true ] ; then
+if [ "${USE_HTTPS}" = true ] ; then
     envsubst < "nginx-https-template.conf" > "nginx.conf"
 else
     envsubst < "nginx-http-template.conf" > "nginx.conf"

@@ -18,6 +18,7 @@ services:
     environment:
       HOST: "${HOST}"
       DJANGO_DEBUG: "${DJANGO_DEBUG}"
+      USE_HTTPS: "${USE_HTTPS}"
       DB_HOST: "${DB_HOST}"
       DB_PORT: "${DB_PORT}"
       DB_NAME: "${DB_NAME}"
@@ -68,6 +69,7 @@ services:
       restart_policy:
         condition: on-failure
     environment:
+      USE_HTTPS: "${USE_HTTPS}"
       DAPHNE_URL: "${DAPHNE_URL}"
       REDIS_URL: "${REDIS_URL}"
       CELERY_BROKER_URL: "${REDIS_URL}"
