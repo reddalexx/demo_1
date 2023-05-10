@@ -233,7 +233,8 @@
         };
 
         $(document).ready(function () {
-            var active_menu_item = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+            var href = window.location.href.replace(/\/$/, "")
+            var active_menu_item = href.substring(href.lastIndexOf('/') + 1);
             var $el = $('.navbar-nav a#nav-' + active_menu_item);
             $el = $el.length ? $el : $('.navbar-nav a#nav-more');
             $el.addClass('active')
