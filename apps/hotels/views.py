@@ -22,7 +22,6 @@ class HotelsSearchFormView(FormView):
         ctx = super().get_context_data(**kwargs)
         ctx['is_detail'] = True
         ctx['selected_hotels_url'] = reverse('hotels:selected-hotels')
-        ctx['ws_protocol'] = 'wss' if os.environ.get('USE_HTTPS', 'false') in ('true', True) else 'ws'
         return ctx
 
 

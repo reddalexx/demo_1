@@ -12,28 +12,28 @@ services:
       - jupyter
     volumes:
       - static_files:/project/demo/staticfiles/
-      - ${VOLUME_NGINX_CONF}:/etc/nginx/conf.d/
-      - ${VOLUME_NGINX_INCL}:/etc/nginx/include/
-      - ${VOLUME_NGINX_CERT}:/etc/nginx/certificates/
+      - /demo/nginx/conf:/etc/nginx/conf.d/
+      - /demo/nginx/include:/etc/nginx/include/
+      - /demo/nginx/certificates:/etc/nginx/certificates/
 
   daphne:
     image: demo_main_app
     command: bash start.sh daphne
     environment:
-      HOST: "${HOST}"
-      DJANGO_DEBUG: "${DJANGO_DEBUG}"
-      USE_HTTPS: "${USE_HTTPS}"
-      DB_HOST: "${DB_HOST}"
-      DB_PORT: "${DB_PORT}"
-      DB_NAME: "${DB_NAME}"
-      DB_USER: "${DB_USER}"
-      DB_PASSWORD: "${DB_PASSWORD}"
-      WEBDAV_USER: "${WEBDAV_USER}"
-      WEBDAV_PASSWORD: "${WEBDAV_PASSWORD}"
-      WEBDAV_HOST: "${WEBDAV_HOST}"
-      WEBDAV_PORT: "${WEBDAV_PORT}"
-      ADMINER_URL: "${ADMINER_URL}"
-      JUPYTER_URL: "${JUPYTER_URL}"
+      HOST: "localhost"
+      DJANGO_DEBUG: "false"
+      USE_HTTPS: "false"
+      DB_HOST: "db"
+      DB_PORT: "5432"
+      DB_NAME: "demo1"
+      DB_USER: "demo1"
+      DB_PASSWORD: "demo1"
+      WEBDAV_USER: "webdav_user"
+      WEBDAV_PASSWORD: "webdav_password"
+      WEBDAV_HOST: "webdav"
+      WEBDAV_PORT: "80"
+      ADMINER_URL: "/adminer"
+      JUPYTER_URL: "/jupyter"
 #    ports:
 #      - "3355:3355"
     depends_on:
@@ -46,21 +46,21 @@ services:
     image: demo_main_app
     command: python manage.py consumer
     environment:
-      DB_HOST: "${DB_HOST}"
-      DB_PORT: "${DB_PORT}"
-      DB_NAME: "${DB_NAME}"
-      DB_USER: "${DB_USER}"
-      DB_PASSWORD: "${DB_PASSWORD}"
-      KAFKA_URL: "${KAFKA_URL}"
+      DB_HOST: "db"
+      DB_PORT: "5432"
+      DB_NAME: "demo1"
+      DB_USER: "demo1"
+      DB_PASSWORD: "demo1"
+      KAFKA_URL: "kafka:9092"
     depends_on:
       - db
       - kafka
 
   jupyter:
     image: jupyter/minimal-notebook
-    command: "start-notebook.sh --NotebookApp.token=${JUPYTER_TOKEN} --NotebookApp.base_url=${JUPYTER_URL}"
+    command: "start-notebook.sh --NotebookApp.token=jupyter_token --NotebookApp.base_url=/jupyter"
     environment:
-      JUPYTER_PORT: "${JUPYTER_PORT}"
+      JUPYTER_PORT: "8888"
 #    ports:
 #      - "8888:8888"
 
@@ -70,16 +70,16 @@ services:
       restart_policy:
         condition: on-failure
     environment:
-      USE_HTTPS: "${USE_HTTPS}"
-      DAPHNE_URL: "${DAPHNE_URL}"
-      REDIS_URL: "${REDIS_URL}"
-      CELERY_BROKER_URL: "${REDIS_URL}"
-      CELERY_BACKEND_URL: "${REDIS_URL}"
-      KAFKA_URL: "${KAFKA_URL}"
+      USE_HTTPS: "false"
+      DAPHNE_URL: "daphne:3355"
+      REDIS_URL: "redis://redis:6379/0"
+      CELERY_BROKER_URL: "redis://redis:6379/0"
+      CELERY_BACKEND_URL: "redis://redis:6379/0"
+      KAFKA_URL: "kafka:9092"
 #    ports:
 #      - "8112:8112"
 #    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8112"]
-    command: gunicorn app.main:app -b 0.0.0.0:${FASTAPI_PORT} --keep-alive=30 -w 1 --threads 1 -k uvicorn.workers.UvicornWorker -t 180 --log-level INFO
+    command: gunicorn app.main:app -b 0.0.0.0:8112 --keep-alive=30 -w 1 --threads 1 -k uvicorn.workers.UvicornWorker -t 180 --log-level INFO
     depends_on:
       - kafka
 
@@ -89,9 +89,9 @@ services:
       restart_policy:
         condition: on-failure
     environment:
-      REDIS_URL: "${REDIS_URL}"
-      CELERY_BROKER_URL: "${REDIS_URL}"
-      CELERY_BACKEND_URL: "${REDIS_URL}"
+      REDIS_URL: "redis://redis:6379/0"
+      CELERY_BROKER_URL: "redis://redis:6379/0"
+      CELERY_BACKEND_URL: "redis://redis:6379/0"
     command: celery -A app.tasks worker --loglevel=INFO
     depends_on:
       - redis
@@ -102,9 +102,9 @@ services:
       restart_policy:
         condition: on-failure
     environment:
-      POSTGRES_USER: "${DB_USER}"
-      POSTGRES_PASSWORD: "${DB_PASSWORD}"
-      POSTGRES_DB: "${DB_NAME}"
+      POSTGRES_USER: "demo1"
+      POSTGRES_PASSWORD: "demo1"
+      POSTGRES_DB: "demo1"
     volumes:
       - db:/var/lib/postgresql/data
     ports:
@@ -128,7 +128,7 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: kafka
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_CREATE_TOPICS: "${KAFKA_TOPIC}:1:1"
+      KAFKA_CREATE_TOPICS: "demo:1:1"
       KAFKA_HEAP_OPTS: "-Xmx256M -Xms128M"
     depends_on:
       - zookeeper
@@ -140,12 +140,12 @@ services:
     image: bytemark/webdav
     environment:
       AUTH_TYPE: Basic
-      USERNAME: "${WEBDAV_USER}"
-      PASSWORD: "${WEBDAV_PASSWORD}"
+      USERNAME: "webdav_user"
+      PASSWORD: "webdav_password"
     volumes:
-      - ${VOLUME_WEBDAV}:/var/lib/dav
+      - /demo/webdav:/var/lib/dav
     ports:
-      - "${WEBDAV_PUBLIC_PORT}:80"
+      - "8091:80"
 
   redis:
     image: redis

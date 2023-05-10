@@ -37,6 +37,11 @@ ALLOWED_HOSTS = [
     HOST,
 ]
 
+HTTP_PROTOCOL = 'https' if os.environ.get('USE_HTTPS', False) == 'true' else 'http'
+
+CSRF_TRUSTED_ORIGINS = [
+    f'{HTTP_PROTOCOL}://{HOST}'
+]
 
 # Application definition
 

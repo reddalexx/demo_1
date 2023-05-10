@@ -20,25 +20,26 @@ from django.views.generic import TemplateView
 
 from rest_framework.schemas import get_schema_view
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
 
     path('', TemplateView.as_view(template_name="main/pages/home.html"), name='home'),
-    path('about', TemplateView.as_view(template_name="main/pages/about.html"), name='about'),
-    path('architecture', TemplateView.as_view(template_name="main/pages/architecture.html"), name='architecture'),
-    path('features', TemplateView.as_view(template_name="main/pages/features.html"), name='features'),
-    path('team', TemplateView.as_view(template_name="main/pages/team.html"), name='team'),
-    path('quotes', TemplateView.as_view(template_name="main/pages/quotes.html"), name='quotes'),
-    path('contact', TemplateView.as_view(template_name="main/pages/contact.html"), name='contact'),
-    path('404', TemplateView.as_view(template_name="main/pages/404.html"), name='not_found'),
-    path('50x', TemplateView.as_view(template_name="main/pages/50x.html"), name='error'),
+    path('about/', TemplateView.as_view(template_name="main/pages/about.html"), name='about'),
+    path('architecture/', TemplateView.as_view(template_name="main/pages/architecture.html"), name='architecture'),
+    path('features/', TemplateView.as_view(template_name="main/pages/features.html"), name='features'),
+    path('team/', TemplateView.as_view(template_name="main/pages/team.html"), name='team'),
+    path('quotes/', TemplateView.as_view(template_name="main/pages/quotes.html"), name='quotes'),
+    path('contact/', TemplateView.as_view(template_name="main/pages/contact.html"), name='contact'),
+    path('404/', TemplateView.as_view(template_name="main/pages/404.html"), name='not_found'),
+    path('50x/', TemplateView.as_view(template_name="main/pages/50x.html"), name='error'),
 
-    path('dashboard', TemplateView.as_view(template_name="dashboard/index.html"), name='dashboard'),
+    path('dashboard/', TemplateView.as_view(template_name="dashboard/index.html"), name='dashboard'),
 
+    path('', include(('apps.common.urls', 'common'))),
     path('geo/', include(('apps.geo.urls', 'geo'))),
     path('hotels/', include(('apps.hotels.urls', 'hotels'))),
+    path('user/', include(('apps.user.urls', 'user'))),
 
     path('api/drf/openapi/',
          get_schema_view(title="Demo DRF API", description="DRF API", authentication_classes=[]),

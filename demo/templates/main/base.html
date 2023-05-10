@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Alex Redkin Demo</title>
+    <title>> AR demo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -91,8 +91,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
         <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
-            <img src="{% static 'main_theme/img/logo2.png' %}" alt="logo" class="logo">
-<!--            <h2 class="m-0 text-primary">Alex Redkin</h2>-->
+            <img src="{% static 'main_theme/img/logo-demo-grey.png' %}" alt="logo" class="logo">
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -111,15 +110,16 @@
                         <a href="{% url 'quotes' %}" class="dropdown-item">Quotes</a>
                         <a href="{% url 'not_found' %}" class="dropdown-item">404 Page</a>
                         <a href="{% url 'error' %}" class="dropdown-item">50x Page</a>
+                        <a href="{% url 'common:todo' %}" class="dropdown-item">Todo</a>
                     </div>
                 </div>
                 <a id="nav-contact" href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href="#!"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href="https://www.linkedin.com/in/alex-redkin-ba851a101/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2 disabled" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-2 disabled" href="#!"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-square rounded-circle bg-light text-primary me-0 disabled" href="#!"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </nav>
@@ -137,10 +137,10 @@
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>reddalexx@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="#!"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href="https://www.linkedin.com/in/alex-redkin-ba851a101/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2 disabled" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2 disabled" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2 disabled" href="#!"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -161,8 +161,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Newsletter</h5>
                     <p>Subscribe for updates</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <div id="subscribe" class="position-relative w-100">
+                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
                     </div>
                 </div>
@@ -170,7 +170,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
     <!-- Copyright Start -->
     <div class="container-fluid py-4" style="background: #000000;">
@@ -188,10 +187,26 @@
     </div>
     <!-- Copyright End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal_alert" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    {% csrf_token %}
 
     {% block extra_js %}
     <!-- JavaScript Libraries -->
@@ -209,11 +224,46 @@
     <script src="{% static 'main_theme/js/main.js' %}"></script>
 
     <script type="text/javascript">
+        function modal_alert(title, body) {
+            $el = $('#modal_alert');
+            $el.modal('hide');
+            $('#modal_alert .modal-title').html(title);
+            $('#modal_alert .modal-body p').html(body);
+            $el.modal('show');
+        };
+
         $(document).ready(function () {
             var active_menu_item = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
             var $el = $('.navbar-nav a#nav-' + active_menu_item);
             $el = $el.length ? $el : $('.navbar-nav a#nav-more');
             $el.addClass('active')
+
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            $("#subscribe button").click(function(e) {
+                email = $('#subscribe input').val();
+                var $this = $(this);
+                $this.prop('disabled', true);
+                $.ajax({
+                    type: "POST",
+                    url: "{% url 'user:subscribe' %}",
+                    data: JSON.stringify( {"email": email} ),
+                    headers: {'X-CSRFToken': csrftoken},
+                    contentType: "application/json",
+                    processData: false,
+                    success: function(data) {
+                        modal_alert('SUCCESS', 'Successfully subscribed');
+                        setTimeout(function() {
+                            $this.prop('disabled', false);
+                        }, 2000);
+                    },
+                    error: function(data) {
+                        modal_alert('FAILURE', 'Something went wrong, try to repeat later');
+                        setTimeout(function() {
+                            $this.prop('disabled', false);
+                        }, 2000);
+                    }
+                });
+            })
         })
     </script>
 

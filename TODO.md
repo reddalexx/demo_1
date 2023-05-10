@@ -1,0 +1,20 @@
+# TODO:
+- add authentication to main UI/dashboard UI
+- add DRF API authentication
+- add FastAPI authentication (http+ws)
+- demo with WebDav (f.e. load user photos, use django-filebrowser)
+- demo with Flask
+- demo with Pandas computations
+- demo with ML (smth simple - training, classification)
+- impl websockets in Django/daphne via django-channels + authentication
+- automating deployment with k8s
+- add unit tests
+- let's document every function/method/class
+- create documentation (use pydoc, sphinx, etc)
+- scale application - add workers (f.e. for celery)
+- log everything into elasticsearch, use kibana to view logs
+- demo Celery beat tasks
+- demo python code profiling (cProfile, pycallgraph)
+- demo DjangoQL
+- demo nosql DB (MongoDB/pymongo)
+- demo FTS (Full Txt Search) in PostgreSQL / Elasticsearch

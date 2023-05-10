@@ -10,3 +10,6 @@
 .bg-semi-dark {
   background-color: #343333 !important;
 }
+.disabled {
+  filter: brightness(90%);
+}

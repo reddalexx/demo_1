@@ -35,29 +35,30 @@
                             <h1 class="display-5 mb-4">Contact Me</h1>
                         </div>
                         <p class="mb-4">I can help to create a web application from scratch, develop existing one, add new features to your project and bring effective solutions.</p>
-                        <form>
+                        <form id="contact-me">
+                            {% csrf_token %}
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px" required></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
@@ -72,5 +73,43 @@
         </div>
     </div>
     <!-- Contact End -->
+
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        $("#contact-me button").click(function(e) {
+            var $this = $(this);
+            $this.prop('disabled', true);
+            var data = {};
+            $('#contact-me .form-control').each(function(_, el){
+                var $el = $(el);
+                data[$el.attr('id')] = $el.val()
+            })
+            $.ajax({
+                type: "POST",
+                url: "{% url 'user:contact-me' %}",
+                data: JSON.stringify( data ),
+                headers: {'X-CSRFToken': csrftoken},
+                contentType: "application/json",
+                processData: false,
+                success: function(data) {
+                    modal_alert('SUCCESS', 'Successfully sent :)');
+                    setTimeout(function() {
+                        $this.prop('disabled', false);
+                    }, 2000);
+                },
+                error: function(data) {
+                    modal_alert('FAILURE', 'Something went wrong, try to repeat later');
+                }
+            });
+        })
+    })
+</script>
 
 {% endblock %}

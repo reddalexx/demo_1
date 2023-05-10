@@ -4,6 +4,6 @@ COPY ./.deploy/docker/build/main/requirements.txt /project/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /project/requirements.txt
 COPY ./.deploy/docker/build/main/start.sh /project
 COPY ./manage.py /project
-COPY ./apps /project/apps
-COPY ./demo /project/demo
+COPY ./apps/ /project/apps/
+COPY ./demo/ /project/demo/
 #RUN python manage.py collectstatic --noinput
