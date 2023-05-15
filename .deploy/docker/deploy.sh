@@ -23,4 +23,4 @@ envsubst < "docker-compose-template.yml" > "docker-compose.yml"
 
 sudo docker stack deploy --compose-file docker-compose.yml demo
 
-#rm -f docker-compose.yml
+rm -f docker-compose.yml

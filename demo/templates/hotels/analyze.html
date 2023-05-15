@@ -3,7 +3,15 @@
 
 {% block extra_css %}
     <style>
-        .text-center {text-align: center}
+        table th, table td {
+            text-align: center;
+        }
+        .tl {
+            text-align: left;
+        }
+        .vam {
+            vertical-align: middle !important;
+        }
     </style>
 {% endblock %}
 
@@ -54,19 +62,36 @@
             <div class="card-body">
                 <p>FastAPI works under Gunicorn(Uvicorn) server and accepts user request to parse certain page.</p>
                 <p>User request data includes <code>city[str]</code> and <code>page[int]</code> parameters.</p>
-                <p>Firstly Scraper needs to get Hotel list page according to a user request data, usually one page includes 30 items (hotels).</p>
-                <div>So the 2nd step will deal with 30 http requests to fetch html content for those 30 webpages, and here we have 3 options for use:
+
+                <h4>1st step</h4>
+                <p>Firstly Scraper needs to get Hotel list page according to a user request data, usually one page includes 30 items (hotels),
+                    and this step should take the same time for any approach as there is nothing to do in parallel or concurrently.</p>
+
+                <h4>2nd step</h4>
+                <div>Here we will deal with 30 http requests to fetch html content for those 30 web pages, and have 3 options for use:
                     <ul>
-                        <li>do it <b>sequentially</b></li>
-                        <li>use async/await syntax within <b>asyncio</b></li>
-                        <li>use <b>multithreading</b> (also a good fit for I/O bound operations)</li>
-                        <li>or take advantages of <b>multiprocessing</b> to parallelize this step</li>
+                        <li>do it <b>sequentially</b>;</li>
+                        <li>use async/await syntax within <b>asyncio</b>;</li>
+                        <li>use <b>multithreading</b> (also a good fit for I/O bound operations), and we are able to opt number of work threads, play with this parameter;</li>
+                        <li>or take advantages of <b>multiprocessing</b> to parallelize this step.</li>
                     </ul>
                 </div>
-                <div>The 3rd step is CPU-consuming operation because it requires some computations to extract target data from html and it might be performed in 2 ways:
+
+                <h4>3rd step</h4>
+                <div>It is CPU consuming operation because it requires some computations to extract target data from html,
+                    and it might be performed in 2 ways:
                     <ul>
-                        <li>parse extracted html <b>sequentially</b> - i.e. process pages one by one</li>
-                        <li>or speed up this process using <b>multiprocessing</b></li>
+                        <li>parse extracted html <b>sequentially</b> - i.e. process pages one by one;</li>
+                        <li>or speed up this process using <b>multiprocessing</b> and process all pages in parallel.</li>
+                    </ul>
+                </div>
+
+                <h4>Resources</h4>
+                <div>It is very important which resources are used for such kind of work that uses threads and processes,
+                    because f.e. the more CPU cores test machine has, the better results you'll get.
+                    <ul>
+                        <li>OS: Ubuntu 22.04</li>
+                        <li>CPU: 8 cores</li>
                     </ul>
                 </div>
             </div>
@@ -76,11 +101,12 @@
         <div class="card">
             <h3 class="card-header">Measure and Analyze timing</h3>
             <div class="card-body">
-                <table class="table table-striped">
+                <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>Approach for step #2</th>
-                            <th>Use multiprocessing for step #3</th>
+                            <th>Step #2 approach</th>
+                            <th>Threads #</th>
+                            <th style="text">Step #3 multiprocessing **</th>
                             <th>Step 1 time</th>
                             <th>Step 2 time</th>
                             <th>Step 3 time</th>
@@ -88,55 +114,65 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-danger">
-                            <td>Sequential</td>
-                            <td class="text-center">No</td>
-                            <td>2.18</td>
-                            <td>33.80</td>
-                            <td>3.34</td>
-                            <td>39.32</td>
+                        <tr>
+                            <td colspan="2" rowspan="2" class="tl">Sequential</td>
+                            <td>No</td>
+                            <td rowspan="9" class="vam">3.55</td>
+                            <td rowspan="2" class="vam table-danger">39.91</td>
+                            <td class="table-danger">3.37</td>
+                            <td class="table-danger">46.83</td>
                         </tr>
                         <tr>
-                            <td>Multithreading</td>
-                            <td class="text-center">No</td>
-                            <td>2.19</td>
-                            <td>7.09</td>
-                            <td>3.37</td>
-                            <td>12.65</td>
+                            <td rowspan="7" class="vam">Yes</td>
+                            <td rowspan="6" class="vam">1.15</td>
+                            <td>44.61</td>
                         </tr>
                         <tr>
-                            <td>Multithreading</td>
-                            <td class="text-center">Yes</td>
-                            <td>2.18</td>
-                            <td>7.07</td>
-                            <td>1.15</td>
-                            <td>10.32</td>
+                            <td rowspan="5" class="tl">Multithreading</td>
+                            <td>8</td>
+                            <td>7.46</td>
+                            <td>12.16</td>
                         </tr>
                         <tr>
-                            <td>Multiprocessing</td>
-                            <td class="text-center">Yes</td>
-                            <td>2.20</td>
-                            <td class="text-center" colspan="2">8.09</td>
-                            <td>10.29</td>
+                            <td>auto (8+4) *</td>
+                            <td>6.69</td>
+                            <td>11.39</td>
                         </tr>
                         <tr>
-                            <td>asyncio+aiohttp</td>
-                            <td class="text-center">No</td>
-                            <td>2.15</td>
-                            <td>1.90</td>
-                            <td>3.36</td>
-                            <td>7.41</td>
+                            <td>16</td>
+                            <td>6.23</td>
+                            <td>10.93</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>6.71</td>
+                            <td>11.41</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>6.99</td>
+                            <td>11.69</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="tl">Multiprocessing **</td>
+                            <td colspan="2">8.09</td>
+                            <td>11.59</td>
                         </tr>
                         <tr class="table-success">
-                            <td>asyncio+aiohttp</td>
-                            <td class="text-center">Yes</td>
-                            <td>2.19</td>
-                            <td>1.95</td>
-                            <td>1.14</td>
-                            <td>5.28</td>
+                            <td colspan="2" class="tl">Asyncio + aiohttp</td>
+                            <td>Yes</td>
+                            <td>3.77</td>
+                            <td>1.15</td>
+                            <td>8.47</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div>
+                    <p>* - default number of workers (threads) is <code>min(32, os.cpu_count() + 4)</code>, i.e. 8+4=12, see [<a href="https://docs.python.org/3/library/concurrent.futures.html">source</a>]</p>
+                    <p>** - default number of workers (processes) <code>will default to the number of processors on the machine</code>, see [<a href="https://docs.python.org/3/library/concurrent.futures.html">source</a>]</p>
+                    <p>*** - results represent average value from 50 runs</p>
+                </div>
             </div>
         </div>
     </div>
@@ -147,6 +183,9 @@
                 <p><b>Asyncio</b> + <b>multiprocessing</b> looks a right choice
                 to build fast and effective application for scraping data from multiple webpages concurrently.</p>
                 <p>Asyncio fits for I/O bound tasks, and multiprocessing - for CPU-consuming things.</p>
+                <p>On the other hand I would say that it is not necessary to use Asyncio everywhere, f.e. for existing applications it would be easier
+                    to make async IO/bound operations via <b>multithreading</b> as it gives almost the same advantages, but it is easier to plugin it into existing code,
+                   especially if it doesn't use async-await syntax.</p>
             </div>
         </div>
     </div>
@@ -154,10 +193,9 @@
     <div class="col-md-12 col-xl-12">
         <div class="alert alert-info" role="alert">
             <span>There were used the same parameters <code>city = "Dubai"</code> and <code>page = 1</code> for parsing, see <a href="{% url 'hotels:search' %}" class="alert-link">this form</a>.</span><br />
-            <span>These metrics represent average time from 3 runs for each step.</span>
         </div>
         <div class="alert alert-warning" role="alert">
-            Note that these metrics depend on internet connection speed and machine CPU - so may vary for different users.
+            Note that these metrics depend on internet connection speed and machine CPU - so may vary for different machines.
         </div>
 
         <a href="{% url 'hotels:search' %}"><button class="btn btn-success">Try it</button></a>
