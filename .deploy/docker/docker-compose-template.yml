@@ -29,6 +29,7 @@ services:
       DB_NAME: "${DB_NAME}"
       DB_USER: "${DB_USER}"
       DB_PASSWORD: "${DB_PASSWORD}"
+      REDIS_URL: "${REDIS_URL}"
       WEBDAV_USER: "${WEBDAV_USER}"
       WEBDAV_PASSWORD: "${WEBDAV_PASSWORD}"
       WEBDAV_HOST: "${WEBDAV_HOST}"

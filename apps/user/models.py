@@ -12,11 +12,11 @@ class ContactMe(models.Model):
     message = models.TextField()
     reviewed = models.BooleanField(default=False, db_index=True)
 
-    def __str__(self):
-        return f'{self.date}: {self.email} ({self.reviewed})'
-
     class Meta:
         verbose_name_plural = 'Contact Me'
+
+    def __str__(self):
+        return f'{self.date}: {self.email} ({self.reviewed})'
 
 
 class Subscribe(models.Model):
@@ -24,6 +24,9 @@ class Subscribe(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=SET_NULL)
     email = models.EmailField(db_index=True)
     subscribed = models.BooleanField(default=False, db_index=True)
+
+    class Meta:
+        unique_together = ('user', 'email')
 
     def __str__(self):
         return f'{self.date}: {self.email} ({self.subscribed})'

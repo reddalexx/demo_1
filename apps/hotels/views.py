@@ -1,6 +1,3 @@
-import os
-
-from django.conf import settings
 from django.db.models import F
 from django.urls import reverse
 from django.views.generic import TemplateView

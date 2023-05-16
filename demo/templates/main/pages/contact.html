@@ -2,6 +2,16 @@
 {% extends "main/base.html"  %}
 {% load static %}
 
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+        label.error {
+            padding-top: 1px;
+            color: red;
+        }
+    </style>
+{% endblock %}
+
 {% block main_content %}
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5">
@@ -83,9 +93,10 @@
     $(document).ready(function () {
 
         const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-        $("#contact-me button").click(function(e) {
-            var $this = $(this);
-            $this.prop('disabled', true);
+        $("#contact-me").submit(function(e) {
+            e.preventDefault();
+            var $btn = $(this).find('button');
+            $btn.prop('disabled', true);
             var data = {};
             $('#contact-me .form-control').each(function(_, el){
                 var $el = $(el);
@@ -101,11 +112,14 @@
                 success: function(data) {
                     modal_alert('SUCCESS', 'Successfully sent :)');
                     setTimeout(function() {
-                        $this.prop('disabled', false);
-                    }, 2000);
+                        $btn.prop('disabled', false);
+                    }, 5000);
                 },
                 error: function(data) {
                     modal_alert('FAILURE', 'Something went wrong, try to repeat later');
+                    setTimeout(function() {
+                        $btn.prop('disabled', false);
+                    }, 3000);
                 }
             });
         })
