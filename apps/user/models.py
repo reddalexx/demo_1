@@ -15,6 +15,9 @@ class ContactMe(models.Model):
     def __str__(self):
         return f'{self.date}: {self.email} ({self.reviewed})'
 
+    class Meta:
+        verbose_name_plural = 'Contact Me'
+
 
 class Subscribe(models.Model):
     date = models.DateTimeField(auto_now_add=True)

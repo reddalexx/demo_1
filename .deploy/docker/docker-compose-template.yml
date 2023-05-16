@@ -13,6 +13,7 @@ services:
     volumes:
       - static_files:/project/demo/staticfiles/
       - ${VOLUME_NGINX_CONF}:/etc/nginx/conf.d/
+      - ${VOLUME_NGINX_HEAD}:/etc/nginx/headers/
       - ${VOLUME_NGINX_INCL}:/etc/nginx/include/
       - ${VOLUME_NGINX_CERT}:/etc/nginx/certificates/
 
@@ -112,6 +113,8 @@ services:
 
   adminer:
     image: adminer
+    environment:
+      ADMINER_DESIGN: "mvt"
     deploy:
       restart_policy:
         condition: on-failure

@@ -10,12 +10,17 @@ sudo mkdir -p "${VOLUME_WEBDAV}"
 # setup NGINX files
 sudo mkdir -p "${VOLUME_NGINX_CONF}"
 sudo mkdir -p "${VOLUME_NGINX_INCL}"
+sudo mkdir -p "${VOLUME_NGINX_HEAD}"
 sudo mkdir -p "${VOLUME_NGINX_CERT}"
 
 pushd ./build/nginx || exit
-envsubst < "routes-template.conf" > "${VOLUME_NGINX_INCL}/routes.conf"
-[ "${USE_HTTPS}" = true ] && PROTOCOL_SUFFIX='s'
-envsubst < "http${PROTOCOL_SUFFIX}-template.conf" > "${VOLUME_NGINX_CONF}/nginx.conf"
+envsubst < "nginx.template.conf" > "${VOLUME_NGINX_CONF}/nginx.conf"
+envsubst < "routes.template.conf" > "${VOLUME_NGINX_INCL}/routes.conf"
+envsubst < "proxy-headers.template.conf" > "${VOLUME_NGINX_HEAD}/proxy.conf"
+envsubst < "ws-headers.template.conf" > "${VOLUME_NGINX_HEAD}/ws.conf"
+if [ "${USE_HTTPS}" = true ]; then
+  envsubst < "nginx_ssl.template.conf" > "${VOLUME_NGINX_INCL}/ssl.conf"
+fi
 popd || exit
 
 # setup docker compose file
