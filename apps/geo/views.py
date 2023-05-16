@@ -29,7 +29,7 @@ class CityViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        if self.action in ('detail', 'list'):
+        if self.action in ('retrieve', 'list'):
             qs = qs.select_related('country').annotate(country_name=F('country__name'), country_iso3=F('country__iso3'))
         return qs
 
@@ -39,7 +39,7 @@ class CountryListView(TemplateView):
 
 
 class CountryViewSet(viewsets.ModelViewSet):
-    queryset = Country.objects.all()
+    queryset = Country.objects.order_by('name')
     serializer_class = CountrySerializer
 
 

@@ -11,7 +11,7 @@ def handler404(request, exception):
 
 
 def handler50x(request, exception=None):
-    return render(request, 'main/pages/50x.html', {'status_code': exception.status_code})
+    return render(request, 'main/pages/50x.html', {'status_code': exception.status_code if exception else 500})
 
 
 class TodoView(TemplateView):
