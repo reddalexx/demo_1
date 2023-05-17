@@ -1,12 +1,6 @@
 from django.urls import path
-from rest_framework import routers
 
 from apps.user.views import ContactMeView, SubscribeView
-
-
-# router = routers.DefaultRouter()
-# router.register('contact-me', ContactMeView)
-# router.register('subscribe',SubscribeView)
 
 
 urlpatterns = [

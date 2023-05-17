@@ -42,7 +42,7 @@ urlpatterns = [
     path('user/', include(('apps.user.urls', 'user'))),
 
     path('api/drf/openapi/',
-         get_schema_view(title="Demo DRF API", description="DRF API", authentication_classes=[]),
+         get_schema_view(title="Demo DRF API", description="DRF API", authentication_classes=[], version='1.0.0'),
          name='drf-openapi-schema'),
     path('api/drf/swagger/',
          TemplateView.as_view(template_name='swagger/drf.html',

@@ -8,7 +8,7 @@ from apps.geo.serializers import CountrySerializer
 from apps.geo.views import CountryListView, ChartsView, CityListView
 
 
-class CountryTest(TestCase):
+class TestCountry(TestCase):
     fixtures = ['demo/data/fixtures/2_countries.json']
 
     def test_countries_exist(self):
