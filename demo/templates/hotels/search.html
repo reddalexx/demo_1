@@ -12,31 +12,6 @@
     {{ block.super }}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.2/css/select.dataTables.min.css">
-    <style>
-        .child-status-value {
-            text-align: center;
-        }
-        #tasks_grid td {
-            padding: 0 5px;
-        }
-        .hidden {
-            display: none;
-        }
-        .tasks-loading, .results-loading {
-            margin-left: 20px;
-            font-size: 10px;
-        }
-        .save-btn {
-            float: right;
-            margin: 0 10px;
-        }
-        .select-checkbox:before, .select-checkbox:after {
-            top: auto !important;
-        }
-        .modal {
-            left: auto !important
-        }
-    </style>
 {% endblock %}
 
 {% block main_content %}

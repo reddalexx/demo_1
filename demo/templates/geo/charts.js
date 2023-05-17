@@ -57,13 +57,11 @@ $(document).ready(function () {
               horizontal: true
             }
         }
-//        base_options.tooltip = {
-//            custom: function({series, seriesIndex, dataPointIndex, w}) {
-//                return '<div class="arrow_box" style="padding: 3px; background-color: ' + w.config.colors[seriesIndex] + '">' +
-//                    '<span>' + w.config.labels[seriesIndex] + ': ' + parseInt(series[seriesIndex]).toLocaleString() + '</span></div>'
-//            }
-//        }
         draw_chart(base_options, selector, data_url)
     };
+
+    draw_country_chart('pie', '#countries-area-chart', '{% url "geo:drf-api-country-chart" %}?q=area');
+    draw_country_chart('donut', '#countries-population-chart', '{% url "geo:drf-api-country-chart" %}?q=population');
+    draw_country_cities_chart('bar', '#country-cities-chart', '{% url "geo:drf-api-country-cities-chart" %}');
 
 })

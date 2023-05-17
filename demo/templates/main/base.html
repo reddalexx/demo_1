@@ -31,14 +31,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{% static 'main_theme/css/style.css' %}" rel="stylesheet">
-    <link href="{% static 'style.css' %}" rel="stylesheet">
-
-    <style>
-        .page-header {
-            background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url({% static "main_theme/img/carousel-3.jpg" %}) center 20% no-repeat;
-            background-size: cover;
-        }
-    </style>
+    <link href="{% static 'custom_style.css' %}" rel="stylesheet">
 
     {% block extra_css %}{% endblock %}
 </head>
@@ -51,7 +44,6 @@
         </div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark px-5">
@@ -102,7 +94,7 @@
                 <a id="nav-about" href="{% url 'about' %}" class="nav-item nav-link">About</a>
                 <a id="nav-architecture" href="{% url 'architecture' %}" class="nav-item nav-link">Architecture</a>
                 <a id="nav-features" href="{% url 'features' %}" class="nav-item nav-link">Features</a>
-                <a id="nav-dashboard" href="{% url 'dashboard' %}" class="nav-item nav-link" style="color: darkslateblue;">Dashboard</a>
+                <a id="nav-dashboard" href="{% url 'dashboard' %}" class="nav-item nav-link"><span style="padding: 4px 5px; border: 1px var(--primary) dotted;">Dashboard</span></span></a>
                 <div class="nav-item dropdown">
                     <a id="nav-more" href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">

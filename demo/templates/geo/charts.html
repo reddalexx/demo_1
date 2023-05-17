@@ -59,12 +59,13 @@
                             <p class="mb-2">See <a href="{% url 'drf-swagger-ui' %}" target="_blank">DRF Swagger page</a> for details.</p>
                         </div>
                         <div class="tab-pane fade" id="postgres_feature" role="tabpanel" aria-labelledby="postgres-feature-tab">
-                            <p class="mb-0">PostgreSQL is used as a database for Django.</p>
+                            <p class="mb-0">PostgreSQL is used as a database for Django in this project.</p>
                             <p class="mb-2">We may use any other RDBM like MySQL, MSSQL, Sqlite.</p>
                         </div>
                         <div class="tab-pane fade" id="apexcharts_feature" role="tabpanel" aria-labelledby="apexcharts-feature-tab">
                             <p class="mb-0">Apexcharts just simplifies our life when we want to visualize some data via charts.</p>
                             <p class="mb-2">It is easy to plugin and use apexcharts creating amazing content.</p>
+                            <p class="mb-2">See <a href="https://apexcharts.com/" target="_blank">https://apexcharts.com/</a> for details.</p>
                         </div>
                     </div>
                 </div>
@@ -115,13 +116,5 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script type="text/javascript">
     {% include "geo/charts.js" %}
-
-    $(document).ready(function () {
-        draw_country_chart('pie', '#countries-area-chart', '{% url "geo:drf-api-country-chart" %}?q=area');
-        draw_country_chart('donut', '#countries-population-chart', '{% url "geo:drf-api-country-chart" %}?q=population');
-        draw_country_cities_chart('bar', '#country-cities-chart', '{% url "geo:drf-api-country-cities-chart" %}');
-  })
-
 </script>
-
 {% endblock %}

@@ -1,20 +1,9 @@
-<!DOCTYPE html>
 {% extends "main/base.html"  %}
 {% load static %}
 
-{% block extra_css %}
-    {{ block.super }}
-    <style>
-        label.error {
-            padding-top: 1px;
-            color: red;
-        }
-    </style>
-{% endblock %}
-
 {% block main_content %}
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid main-page-header py-5">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
             <nav aria-label="breadcrumb animated slideInDown">

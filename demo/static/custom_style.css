@@ -1,0 +1,104 @@
+/* main UI */
+
+.text-green {
+  color: #65b530
+}
+.text-16 {
+  font-size: 16px;
+}
+.text-32 {
+  font-size: 32px;
+}
+.bg-semi-dark {
+  background-color: #343333 !important;
+}
+.disabled {
+  filter: brightness(90%);
+}
+
+/* Features page, features block in home page */
+.todo i.fa-eye {
+    background-color: #e3dd30;
+    border-color: #e3dd30;
+}
+.a-todo {
+    background-color: #e3dd30;
+    border-color: #e3dd30;
+}
+/* background image for pages */
+.main-page-header {
+    background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(/static/main_theme/img/carousel-3.jpg) center 20% no-repeat;
+    background-size: cover;
+}
+
+/* background image for header for error pages */
+.error-page-header {
+    background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(/static/main_theme/img/builder.jpg) center 50% no-repeat;
+    background-size: cover;
+}
+
+/* about page */
+.p-links p:hover {
+    color: var(--bs-gray-dark);
+}
+.explain-img-div img {
+    filter: brightness(0.9);
+}
+img.brightness-70 {
+    filter: brightness(0.7);
+}
+
+/* Dashboard UI */
+
+/* hotels: analyze page */
+table#analyze th, table#analyze td {
+    text-align: center;
+}
+.tl {
+    text-align: left;
+}
+.vam {
+    vertical-align: middle !important;
+}
+
+/* hotels: overview page */
+.problem-def p {
+    font-size: 15px;
+}
+.problem-def-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+}
+.problem-def-right img {
+    width: 100%;
+}
+.fastapi-img {
+    background-color: #203068;
+}
+
+/* hotels: search page */
+.child-status-value {
+    text-align: center;
+}
+#tasks_grid td {
+    padding: 0 5px;
+}
+.hidden {
+    display: none;
+}
+.tasks-loading, .results-loading {
+    margin-left: 20px;
+    font-size: 10px;
+}
+.save-btn {
+    float: right;
+    margin: 0 10px;
+}
+.select-checkbox:before, .select-checkbox:after {
+    top: auto !important;
+}
+.modal {
+    left: auto !important
+}

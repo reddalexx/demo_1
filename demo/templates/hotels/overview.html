@@ -1,29 +1,6 @@
 {% extends "dashboard/base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <style>
-        .problem-def p {
-            font-size: 15px;
-        }
-        .problem-def-right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ddd;
-        }
-        .problem-def-right img {
-            width: 100%;
-        }
-        .fastapi-img {
-            background-color: #203068;
-        }
-        div p:last-child {
-            margin-bottom: 0
-        }
-    </style>
-{% endblock %}
-
 {% block page_name %}Overview{% endblock %}
 
 {% block breadcrumb_items %}
@@ -49,7 +26,7 @@
                         <p>So if the aim is parsing 10s or 100s or even more website pages - it may take huge amount of time.</p>
                         <p>This is the place where concurrency and parallelism should help.</p>
                         <p>Here is a good article about <a target="_blank" href="https://oxylabs.io/blog/concurrency-vs-parallelism">concurrency vs parallelism</a>.</p>
-                        <p>Let's consider asyncio, aiohttp for asynchronous requests, as well as multithreading and multiprocessing.</p>
+                        <p class="mb-0">Let's consider asyncio, aiohttp for asynchronous requests, as well as multithreading and multiprocessing.</p>
                     </div>
                     <div class="col-xl-4 col-md-4 problem-def-right">
                         <img style="" src="{% static 'dashboard_theme/custom/web-scraping.png' %}" />
@@ -67,7 +44,7 @@
                 <p>Let's take <a target="_blank" href="https://fastapi.tiangolo.com/">FastAPI</a> framework as it's very fast, intuitive and easy to code.</p>
                 <p>The main thing you need to run a FastAPI application in a remote server or local machine is an ASGI server program like Uvicorn.</p>
                 <p><a target="_blank" href="https://fastapi.tiangolo.com/deployment/server-workers/">Uvicorn + Gunicorn</a> is a good option for a server to handle FastAPI-based applications.</p>
-                <p>It is easy to use directly of via Docker containers.</p>
+                <p class="mb-0">It is easy to use directly of via Docker containers.</p>
             </div>
             <img class="img-fluid card-img-bottom fastapi-img" src="{% static 'dashboard_theme/custom/fastapi.png' %}">
         </div>
@@ -105,7 +82,7 @@
                 <p>But the Python Global Interpreter Lock (GIL) allows running a single thread at a time, even the machine has multiple processor,
                     anyway multithreading perfectly helps to solve I/O bound operations.</p>
                 <p>Let's use <a target="_blank" href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> standard python module, it provides a high-level interface for asynchronously executing callables.</p>
-                <p>P.S.: See <a target="_blank" href="https://www.javatpoint.com/preemptive-vs-cooperative-multitasking#:~:text=Preemptive%20multitasking%20forces%20apps%20to,all%20of%20the%20processor%20resources.">this article</a> to learn differences between <b>preemptive multitasking</b> and <b>cooperative multitasking</b>.</p>
+                <p class="mb-0">P.S.: See <a target="_blank" href="https://www.javatpoint.com/preemptive-vs-cooperative-multitasking#:~:text=Preemptive%20multitasking%20forces%20apps%20to,all%20of%20the%20processor%20resources.">this article</a> to learn differences between <b>preemptive multitasking</b> and <b>cooperative multitasking</b>.</p>
             </div>
             <img class="img-fluid card-img-bottom" src="{% static 'dashboard_theme/custom/multithreading.jpg' %}">
         </div>
@@ -119,10 +96,16 @@
                 <p class="mb-2">MultiProcessing is process-based parallelism and thi technique perfectly suits for CPU bound operations.</p>
                 <p>Multiprocessing refers to a system that has more than two central processing units (CPUs).</p>
                 <p>Every additional CPU added to a system increases its speed, power and memory. This allows users to run multiple processes simultaneously.</p>
-                <p>Let's use the same <a target="_blank" href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> as it implements a simple, intuitive, and frankly a great API to deal with processes as well as threads.</p>
+                <p class="mb-0">Let's use the same <a target="_blank" href="https://docs.python.org/3/library/concurrent.futures.html">concurrent.futures</a> as it implements a simple, intuitive, and frankly a great API to deal with processes as well as threads.</p>
             </div>
             <img style="border-top: #ccc solid 1px;" class="img-fluid card-img-bottom" src="{% static 'dashboard_theme/custom/speed.jpg' %}">
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-12 col-xl-12">
+        <a class="btn btn-lg btn-primary" href="{% url 'hotels:search' %}"><i class="feather mr-2 icon-thumbs-up"></i>Try it</a>
+    </div>
+</div>
+
 {% endblock %}

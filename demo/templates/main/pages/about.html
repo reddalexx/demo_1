@@ -1,24 +1,9 @@
 {% extends "main/base.html"  %}
 {% load static %}
 
-{% block extra_css %}
-    <style>
-        .p-links p:hover {
-            color: var(--bs-gray-dark);
-        }
-        .explain-img-div img {
-            filter: brightness(0.9);
-        }
-        img.brightness-70 {
-            filter: brightness(0.7);
-        }
-
-    </style>
-{% endblock %}
-
 {% block main_content %}
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid main-page-header py-5">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">About</h1>
             <nav aria-label="breadcrumb animated slideInDown">

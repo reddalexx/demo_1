@@ -1,18 +1,9 @@
 {% extends "main/base.html"  %}
 {% load static %}
 
-{% block extra_css %}
-    <style>
-        .page-header {
-            background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url({% static "main_theme/img/builder.jpg" %}) center 50% no-repeat;
-            background-size: cover;
-        }
-    </style>
-{% endblock %}
-
 {% block main_content %}
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5">
+    <div class="container-fluid main-page-header error-page-header py-5 mb-5">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">50x Error</h1>
             <nav aria-label="breadcrumb animated slideInDown">

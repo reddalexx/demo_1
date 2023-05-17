@@ -10,18 +10,20 @@
 {% block main_content %}
     {% include "geo/_tech_stack.html" %}
 
-    <div class="row">
-        <div class="table-responsive">
-        <table id="grid" class="hover row-border">
-            <thead style="background: lightgrey">
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>ISO3</th>
-                    <th>Population</th>
-                </tr>
-            </thead>
-        </table>
+    <div class="col-md-12 col-lg-12">
+        <div class="row">
+            <div class="table-responsive">
+            <table id="grid" class="hover row-border">
+                <thead style="background: lightgrey">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>ISO3</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+            </table>
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -46,4 +48,3 @@
         })
     </script>
 {% endblock %}
-

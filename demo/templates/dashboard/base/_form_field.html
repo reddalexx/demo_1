@@ -1,7 +1,6 @@
 {% load project_tags %}
 
 <div class="row form-group col-md-6{% if field.errors %} has-error{% endif %}{% if field.field.required %} required{% endif %}">
-
     {% if field|get_field_type == 'booleanfield' %}
       <div class="form-check">
         {{ field|add_class:"form-check-input" }}
@@ -19,5 +18,4 @@
         {% endfor %}
       </ul>
     {% endif %}
-
 </div>

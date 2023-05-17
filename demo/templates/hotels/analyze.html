@@ -1,20 +1,6 @@
 {% extends "dashboard/base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <style>
-        table th, table td {
-            text-align: center;
-        }
-        .tl {
-            text-align: left;
-        }
-        .vam {
-            vertical-align: middle !important;
-        }
-    </style>
-{% endblock %}
-
 {% block page_name %}Test and Analyze{% endblock %}
 
 {% block breadcrumb_items %}
@@ -101,7 +87,7 @@
         <div class="card">
             <h3 class="card-header">Measure and Analyze timing</h3>
             <div class="card-body">
-                <table class="table table-striped table-bordered">
+                <table id="analyze" class="table table-striped table-bordered">
                     <thead>
                         <tr>
                             <th>Step #2 approach</th>
@@ -198,7 +184,7 @@
             Note that these metrics depend on internet connection speed and machine CPU - so may vary for different machines.
         </div>
 
-        <a href="{% url 'hotels:search' %}"><button class="btn btn-success">Try it</button></a>
+        <a class="btn btn-lg btn-primary" href="{% url 'hotels:search' %}"><i class="feather mr-2 icon-thumbs-up"></i>Try it</a>
     </div>
 
 </div>

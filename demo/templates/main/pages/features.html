@@ -1,23 +1,9 @@
 {% extends "main/base.html"  %}
 {% load static %}
 
-{% block extra_css %}
-{{ block.super }}
-<style>
-    .todo i.fa-eye {
-        background-color: #e3dd30;
-        border-color: #e3dd30;
-    }
-    .a-todo {
-        background-color: #e3dd30;
-        border-color: #e3dd30;
-    }
-</style>
-{% endblock %}
-
 {% block main_content %}
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5">
+    <div class="container-fluid main-page-header py-5">
         <div class="container py-5">
             <h1 class="display-3 text-white mb-3 animated slideInDown">Features</h1>
             <nav aria-label="breadcrumb animated slideInDown">
@@ -48,7 +34,7 @@
             <div class="row g-4 portfolio-container">
                 <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/django.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/django.jpg' %}" alt="Django">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Django</p>
                             <h5 class="lh-base mb-0">Back-end server side web framework.</h5>
@@ -65,7 +51,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/drf.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/drf.png' %}" alt="DRF">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">RESTful API</p>
                             <h5 class="lh-base mb-0">Django REST framework is a powerful and flexible toolkit for building Web APIs</h5>
@@ -80,9 +66,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.5s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/celery.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/celery.jpg' %}" alt="Celery">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Celery</p>
                             <h5 class="lh-base mb-0">Celery is used to run the tasks asynchronously</h5>
@@ -97,9 +83,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/aiohttp_and_asyncio.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/aiohttp_and_asyncio.png' %}" alt="AsyncIO & Aiohttp">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">AsyncIO</p>
                             <h5 class="lh-base mb-0">Asynchronous programming with coroutine-based concurrency.</h5>
@@ -114,9 +100,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/fastapi.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/fastapi.png' %}" alt="FastAPI">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">FastAPI</p>
                             <h5 class="lh-base mb-0">High performance, easy to learn, fast to code, ready for production</h5>
@@ -131,9 +117,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend done wow fadeInUp" data-wow-delay="0.5s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/kafka.jpg' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/kafka.jpg' %}" alt="Kafka">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Kafka</p>
                             <h5 class="lh-base mb-0">Apache Kafka is an open-source distributed event streaming platform</h5>
@@ -150,7 +136,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item backend todo wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/pandas.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/pandas.png' %}" alt="Pandas">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Pandas</p>
                             <h5 class="lh-base mb-0">High performance for data processing</h5>
@@ -167,7 +153,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/websockets.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/websockets.png' %}" alt="Websockets">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">WebSockets</p>
                             <h5 class="lh-base mb-0">helps to web application more interactive</h5>
@@ -184,7 +170,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/swagger.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/swagger.png' %}" alt="Swagger">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Swagger UI</p>
                             <h5 class="lh-base mb-0">Visualize your API</h5>
@@ -201,7 +187,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/redis.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/redis.png' %}" alt="Redis">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Redis</p>
                             <h5 class="lh-base mb-0">Caching data is one way to relieve stress on the server</h5>
@@ -216,9 +202,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/htmlcssjs.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/htmlcssjs.png' %}" alt="HTML/CSS/JS">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Frontend</p>
                             <h5 class="lh-base mb-0">HTML, CSS, Javascript</h5>
@@ -235,7 +221,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/bootstrap.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/bootstrap.png' %}" alt="Bootstrap 4/5">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Frontend</p>
                             <h5 class="lh-base mb-0">Bootstrap-4 Templates</h5>
@@ -250,9 +236,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/datatables.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/datatables.png' %}" alt="Datatables">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Frontend</p>
                             <h5 class="lh-base mb-0">Datatables</h5>
@@ -267,9 +253,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-4 col-md-6 portfolio-item frontend done wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/apexchart.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/apexchart.png' %}" alt="Apexcharts">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Frontend</p>
                             <h5 class="lh-base mb-0">Apexcharts</h5>
@@ -284,9 +270,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.5s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/sql_profiling.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/sql_profiling.png' %}" alt="SQL Profiling">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">SQL</p>
                             <h5 class="lh-base mb-0">Profiling and Optimization</h5>
@@ -303,7 +289,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" src="{% static 'main_theme/img/nginx.png' %}" alt="">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/nginx.png' %}" alt="Nginx">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Nginx</p>
                             <h5 class="lh-base mb-0">Web serving, reverse proxying, caching, load balancing, etc.</h5>
@@ -318,7 +304,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
                         <img class="img-fluid w-100" src="{% static 'main_theme/img/jupyter_mid.png' %}" alt="jupyter">
                         <div class="text-center p-4">
@@ -335,7 +321,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.5s">
                     <div class="portfolio-inner">
                         <img class="img-fluid w-100" src="{% static 'main_theme/img/multi_mid.png' %}" alt="multiprocessing vs multithreading">
                         <div class="text-center p-4">
