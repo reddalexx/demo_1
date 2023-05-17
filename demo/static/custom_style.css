@@ -48,6 +48,12 @@ img.brightness-70 {
     filter: brightness(0.7);
 }
 
+/* tbd page */
+.todo-blockquote {
+    border-left: 0.25rem solid #e2e5e8;
+    padding: 0.5rem 1rem;
+}
+
 /* Dashboard UI */
 
 /* hotels: analyze page */

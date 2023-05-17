@@ -8,7 +8,7 @@
 - demo with ML (smth simple - training, classification)
 - impl websockets in Django/daphne via django-channels + authentication
 - automating deployment with k8s
-- add unit tests
+- widen unit tests
 - let's document every function/method/class
 - create documentation (use pydoc, sphinx, etc)
 - scale application - add workers (f.e. for celery)
@@ -18,3 +18,4 @@
 - demo DjangoQL
 - demo nosql DB (MongoDB/pymongo)
 - demo FTS (Full Txt Search) in PostgreSQL / Elasticsearch
+- impl logging Nginx into ClickHouse, Grafana dashboard for Nginx logs
