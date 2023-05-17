@@ -14,14 +14,14 @@ class TestCountry(TestCase):
     def test_countries_exist(self):
         self.assertTrue(Country.objects.count())
 
-    def test_country_list_template(self):
+    def test_list_template(self):
         url = reverse('geo:country-list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, CountryListView.template_name)
         self.assertContains(response, 'Countries')
 
-    def test_country_update(self):
+    def test_update(self):
         country = Country.objects.filter(id=1)
         self.assertTrue(country.exists())
 
@@ -37,21 +37,26 @@ class TestCountry(TestCase):
                              target_status_code=200, fetch_redirect_response=True)
         self.assertEqual(Country.objects.get(pk=1).name, new_name)
 
-    def test_country_list_api(self):
+    def test_list_api(self):
         url = reverse('geo:drf-api-country-list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), Country.objects.count())
         self.assertDictEqual(response.data[0], CountrySerializer(Country.objects.get(pk=1)).data)
 
-    def test_country_detail_api(self):
+    def test_detail_api(self):
         country = Country.objects.get(id=1)
         url = reverse('geo:drf-api-country-detail', kwargs={'pk': country.id})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertDictEqual(response.data, CountrySerializer(country).data)
 
-    def test_country_create_api(self):
+    def test_detail_api_wrong_id(self):
+        url = reverse('geo:drf-api-country-detail', kwargs={'pk': 9999})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
+
+    def test_create_api(self):
         country = Country.objects.filter(id=1)
         country_values = country.values()[0]
         new_name = 'FAKE'
@@ -62,7 +67,7 @@ class TestCountry(TestCase):
         self.assertEqual(response.status_code, 403)
         # for now API is blocked because it requires authentication class
 
-    def test_country_update_api(self):
+    def test_update_api(self):
         country = Country.objects.get(id=1)
         url = reverse('geo:drf-api-country-detail', kwargs={'pk': country.id})
         response = self.client.patch(url, data={'name', 'FAKE'})
@@ -73,7 +78,7 @@ class TestCountry(TestCase):
         self.assertEqual(response.status_code, 403)
         # for now API is blocked because it requires authentication class
 
-    def test_country_delete_api(self):
+    def test_delete_api(self):
         country = Country.objects.get(id=1)
         url = reverse('geo:drf-api-country-detail', kwargs={'pk': country.id})
         response = self.client.delete(url)
@@ -87,14 +92,14 @@ class CityTest(TestCase):
     def test_cities_exist(self):
         self.assertTrue(City.objects.count())
 
-    def test_city_list_template(self):
+    def test_list_template(self):
         url = reverse('geo:city-list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, CityListView.template_name)
         self.assertContains(response, 'Cities')
 
-    def test_city_update(self):
+    def test_update(self):
         city = City.objects.filter(id=1)
         city_values = city.values()[0]
 
@@ -119,21 +124,26 @@ class CityTest(TestCase):
                              target_status_code=200, fetch_redirect_response=True)
         self.assertEqual(City.objects.get(pk=1).name, new_name)
 
-    def test_city_list_api(self):
+    def test_list_api(self):
         url = reverse('geo:drf-api-city-list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), City.objects.count())
         self.assertEqual(response.data[0]['name'], City.objects.get(pk=1).name)
 
-    def test_city_detail_api(self):
+    def test_detail_api(self):
         city = City.objects.get(id=1)
         url = reverse('geo:drf-api-city-detail', kwargs={'pk': city.id})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.data['name'], city.name)
 
-    def test_city_create_api(self):
+    def test_detail_api_wrong_id(self):
+        url = reverse('geo:drf-api-city-detail', kwargs={'pk': 9999})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 404)
+
+    def test_create_api(self):
         city = City.objects.filter(id=1)
         city_values = city.values()[0]
         new_name = 'FAKE'
@@ -144,7 +154,7 @@ class CityTest(TestCase):
         self.assertEqual(response.status_code, 403)
         # for now API is blocked because it requires authentication class
 
-    def test_city_update_api(self):
+    def test_update_api(self):
         city = City.objects.get(id=1)
         url = reverse('geo:drf-api-city-detail', kwargs={'pk': city.id})
         response = self.client.patch(url, data={'name', 'FAKE'})
@@ -155,7 +165,7 @@ class CityTest(TestCase):
         self.assertEqual(response.status_code, 403)
         # for now API is blocked because it requires authentication class
 
-    def test_city_delete_api(self):
+    def test_delete_api(self):
         city = City.objects.get(id=1)
         url = reverse('geo:drf-api-city-detail', kwargs={'pk': city.id})
         response = self.client.delete(url)
@@ -172,7 +182,7 @@ class ChartsTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, ChartsView.template_name)
 
-    def test_country_chart_by_area_api(self):
+    def test_chart_by_area_api(self):
         url = reverse('geo:drf-api-country-chart')
         response = self.client.get(url + '?q=area')
         self.assertEqual(response.status_code, 200)
@@ -181,7 +191,7 @@ class ChartsTest(TestCase):
         self.assertEqual(response.data['labels'][0], biggest_country.name)
         self.assertIn('colors', response.data)
 
-    def test_country_chart_by_population_api(self):
+    def test_chart_by_population_api(self):
         url = reverse('geo:drf-api-country-chart')
         response = self.client.get(url + '?q=population')
         self.assertEqual(response.status_code, 200)
@@ -190,7 +200,7 @@ class ChartsTest(TestCase):
         self.assertEqual(response.data['labels'][0], biggest_country.name)
         self.assertIn('colors', response.data)
 
-    def test_country_cities_chart_api(self):
+    def test_cities_chart_api(self):
         url = reverse('geo:drf-api-country-cities-chart')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)

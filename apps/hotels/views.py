@@ -40,7 +40,7 @@ class SelectedHotelsViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         qs = super().get_queryset()
-        if self.action in ('detail', 'list'):
+        if self.action in ('retrieve', 'list'):
             qs = qs \
                 .select_related('city', 'city__country') \
                 .annotate(city_name=F('city__name'),
