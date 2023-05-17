@@ -1,12 +1,13 @@
 from django.urls import path, include
 from rest_framework import routers
 
-from apps.geo.views import CountryViewSet, CityViewSet, CityListView,CityUpdateView, CountryListView, \
-    CountryUpdateView, CountryChartView, CountryCitiesChartView, ChartsView
+from apps.geo.views import CountryViewSet, CityViewSet, CityListView, CityUpdateView, CountryListView, \
+    FilterableCityViewSet, CountryUpdateView, CountryChartView, CountryCitiesChartView, ChartsView
 
 
 router = routers.DefaultRouter()
 router.register(r'cities', CityViewSet, 'drf-api-city')
+router.register(r'cities-search', FilterableCityViewSet, 'drf-api-city-search')
 router.register(r'countries', CountryViewSet, 'drf-api-country')
 
 urlpatterns = [

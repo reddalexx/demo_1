@@ -2,7 +2,10 @@ from django.views.generic import UpdateView, TemplateView
 from django.db.models import F, Sum, Count
 from django.urls import reverse
 
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, views
+from rest_framework.filters import SearchFilter, OrderingFilter
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 
 from apps.common.utils import get_hex_colors
@@ -32,6 +35,21 @@ class CityViewSet(viewsets.ModelViewSet):
         if self.action in ('retrieve', 'list'):
             qs = qs.select_related('country').annotate(country_name=F('country__name'), country_iso3=F('country__iso3'))
         return qs
+
+
+class CityPagination(PageNumberPagination):
+    page_size = 20
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+
+
+class FilterableCityViewSet(CityViewSet):
+    http_method_names = ['get']
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ['name', 'country__name', 'country__iso3']
+    search_fields = ['name', 'country__name', 'country__iso3']
+    ordering_fields = ['name', 'country__name', 'country__iso3', 'population']
+    pagination_class = CityPagination
 
 
 class CountryListView(TemplateView):

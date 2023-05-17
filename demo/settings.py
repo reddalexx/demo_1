@@ -56,6 +56,7 @@ INSTALLED_APPS = [
 
     'django_extensions',
     'rest_framework',
+    'django_filters',
     'corsheaders',
     'silk',
 
@@ -192,7 +193,11 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ],
-    'DEFAULT_SCHEMA_CLASS': 'apps.common.schemas.CustomAutoSchema'
+    'DEFAULT_SCHEMA_CLASS': 'apps.common.schemas.CustomAutoSchema',
+    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 20
 }
 
 ADMINER_URL = os.environ.get('ADMINER_URL', 'http://localhost:8080')
