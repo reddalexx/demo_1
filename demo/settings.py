@@ -198,6 +198,7 @@ REST_FRAMEWORK = {
 ADMINER_URL = os.environ.get('ADMINER_URL', 'http://localhost:8080')
 JUPYTER_URL = os.environ.get('JUPYTER_URL', 'http://localhost:8888')
 
+REDIS_KEYS_PREFIX = ''
 
 CORS_ALLOWED_ORIGINS = [
     # "{0.scheme}://{0.netloc}".format(urlsplit(FASTAPI_URL)),

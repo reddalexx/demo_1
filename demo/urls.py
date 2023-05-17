@@ -49,7 +49,6 @@ urlpatterns = [
                               extra_context={'schema_url': 'drf-openapi-schema'}),
          name='drf-swagger-ui'),
     path('silk/', include('silk.urls', namespace='silk')),
-
 ]
 
 handler404 = 'apps.common.views.handler404'
