@@ -37,10 +37,17 @@
         $(document).ready(function () {
             $('#grid').DataTable({
                 ajax: {
-                    url: "{% url "geo:drf-api-city-list" %}",
-                    dataSrc: ""
+                    url: "{% url "geo:drf-api-city-list" %}?format=datatables",
+                    dataSrc: "data"
                 },
+                lengthMenu: [
+                    [10, 15, 20, 50, -1],
+                    [10, 15, 20, 50, 'All'],
+                ],
+                pageLength: 15,
                 order: [[1, 'asc']],
+                serverSide: true,
+                processing: true,
                 columns: [
                     { data: 'id', className: "text-right",
                       render: function(data, type, full, meta) {

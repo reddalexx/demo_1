@@ -37,8 +37,11 @@
                             <p class="mb-2">Django application is ran under Daphne as a separate service.</p>
                         </div>
                         <div class="tab-pane fade" id="drf_feature" role="tabpanel" aria-labelledby="drf-feature-tab">
-                            <p class="mb-0">DRF handles API requests and does it well.</p>
+                            <p class="mb-0"><a href="https://www.django-rest-framework.org/" target="_blank">Django REST framework</a> handles API requests and does it well.</p>
                             <p class="mb-0">It allows to create API views using various number of base classes and simplifies developer work.</p>
+                            <p class="mb-0">In order to implement <b>server-side filtering, ordering and pagination</b> and handle <i>Datatables</i> API requests better,
+                              we used <a href="https://django-rest-framework-datatables.readthedocs.io/en/latest/" target="_blank">django-rest-framework-datatables</a>,
+                              which is seamless integration between Django REST framework and Datatables.</p>
                             <p class="mb-2">See <a href="{% url 'drf-swagger-ui' %}" target="_blank">DRF Swagger page</a> for details.</p>
                         </div>
                         <div class="tab-pane fade" id="postgres_feature" role="tabpanel" aria-labelledby="postgres-feature-tab">

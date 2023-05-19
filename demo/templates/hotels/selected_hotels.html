@@ -39,10 +39,17 @@
         $(document).ready(function () {
             $('#grid').DataTable({
                 ajax: {
-                    url: "{% url "hotels:drf-api-hotel-list" %}",
-                    dataSrc: ""
+                    url: "{% url "hotels:drf-api-hotel-list" %}?format=datatables",
+                    dataSrc: "data"
                 },
+                lengthMenu: [
+                    [10, 15, 20, 50, -1],
+                    [10, 15, 20, 50, 'All'],
+                ],
+                pageLength: 15,
                 order: [[1, 'asc']],
+                serverSide: true,
+                processing: true,
                 columns: [
                     { data: 'id', className: "text-right",
                       render: function(data, type, row, meta) {

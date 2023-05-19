@@ -41,9 +41,14 @@ class CityPagination(PageNumberPagination):
     page_size = 20
     page_size_query_param = 'page_size'
     max_page_size = 100
+    # TODO: customize
 
 
 class FilterableCityViewSet(CityViewSet):
+    """
+    Just additional sample view that allows to use DRF's SearchFilter, OrderingFilter and django-filter's DjangoFilterBackend
+    for server-side requests processing, as well as custom server-side pagination, based on DRF's PageNumberPagination
+    """
     http_method_names = ['get']
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['name', 'country__name', 'country__iso3']
