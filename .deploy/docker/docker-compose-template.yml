@@ -86,6 +86,7 @@ services:
       WEBDAV_PORT: "${WEBDAV_PORT}"
       ADMINER_URL: "${ADMINER_URL}"
       JUPYTER_URL: "${JUPYTER_URL}"
+      GRAFANA_URL: "${GRAFANA_URL}"
 #    ports:
 #      - "3355:3355"
     depends_on:
