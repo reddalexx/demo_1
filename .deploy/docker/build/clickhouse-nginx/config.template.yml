@@ -1,0 +1,32 @@
+settings:
+    interval: 5
+    log_path: /logs/access.log
+    seek_from_end: false
+clickhouse:
+    db: ${CLICKHOUSE_DB}
+    table: ${CLICKHOUSE_NGINX_TABLE}
+    host: clickhouse
+    port: ${CLICKHOUSE_PORT}
+    credentials:
+        user: ${CLICKHOUSE_USER}
+        password: ${CLICKHOUSE_PASSWORD}
+    columns:
+        RemoteAddr: remote_addr
+        RemoteUser: remote_user
+        TimeLocal: time_local
+        RequestMethod: request_method
+        Request: request_uri
+        Status: status
+        BytesSent: bytes_sent
+        HttpReferer: http_referer
+        HttpUserAgent: http_user_agent
+        RequestTime: request_time
+        UpstreamConnectTime: upstream_connect_time
+        UpstreamHeaderTime: upstream_header_time
+        UpstreamResponseTime: upstream_response_time
+#        Https: scheme
+        ConnectionsWaiting: connections_waiting
+        ConnectionsActive: connections_active
+nginx:
+    log_type: main
+    log_format: ${DOLLAR}remote_addr - ${DOLLAR}remote_user [${DOLLAR}time_local] "${DOLLAR}request_method" "${DOLLAR}request_uri" ${DOLLAR}status ${DOLLAR}bytes_sent "${DOLLAR}http_referer" "${DOLLAR}http_user_agent" rt="${DOLLAR}request_time" uct="${DOLLAR}upstream_connect_time" uht="${DOLLAR}upstream_header_time" urt="${DOLLAR}upstream_response_time" cw=${DOLLAR}connections_waiting ca=${DOLLAR}connections_active

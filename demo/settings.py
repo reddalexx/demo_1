@@ -209,6 +209,7 @@ REST_FRAMEWORK = {
 
 ADMINER_URL = os.environ.get('ADMINER_URL', 'http://localhost:8080')
 JUPYTER_URL = os.environ.get('JUPYTER_URL', 'http://localhost:8888')
+GRAFANA_URL = os.environ.get('GRAFANA_URL', 'http://localhost:3000')
 
 REDIS_KEYS_PREFIX = ''
 
