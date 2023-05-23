@@ -77,7 +77,7 @@
                         <p>- Event-driven approach is represented by event Producer in FastAPI view, Kafka as message broker and Consumer service.</p>
                         <p>- And finally there are some other useful pages like Django
                             <a href="{% url 'admin:index' %}">Admin site</a>, <a href="{{ settings.ADMINER_URL }}">Adminer</a> DBM,
-                            <a href="{% url 'silk:summary' %}">Silk</a> profiler, <a href="{{ settings.JUPYTER_URL }}">JupiterLab</a>,
+                            <a href="{% url 'silk:summary' %}">Silk</a> profiler, <a href="{{ settings.GRAFANA_URL }}">Grafana</a> dashboard, <a href="{{ settings.JUPYTER_URL }}">JupiterLab</a>
                             and Swagger-based API docs for both <a href="{% url 'drf-swagger-ui' %}">DRF</a> and <a href="/fastapi/docs">FastAPI</a> endpoints.</p>
                     </div>
                 </div>
@@ -104,6 +104,14 @@
                         </div>
                         <div class="col-lg-6 col-md-6 ps-1 pt-1">
                             <img class="img-fluid" src="{% static 'main_theme/img/UI-jupyter.png' %}" alt="UI-jupyter">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 pe-1 pt-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-adminer.png' %}" alt="UI-adminer">
+                        </div>
+                        <div class="col-lg-6 col-md-6 ps-1 pt-1">
+                            <img class="img-fluid" src="{% static 'main_theme/img/UI-grafana.png' %}" alt="UI-grafana">
                         </div>
                     </div>
                 </div>

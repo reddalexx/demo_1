@@ -75,6 +75,10 @@
                         <div class="service">
                             <a class="btn btn-link" href="">Jupyter (Interactive Computing)</a>
                         </div>
+                        <div class="service">
+                            <a class="btn btn-link" href="">Clickhouse + Grafana</a>
+                            <p class="ps-4 collapse">Collect NGINX access logs in OLAP database and visualize in Grafana dashboard.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,28 +130,28 @@
                                 <td>demo_daphne</td>
                                 <td>custom</td>
                                 <td>demo_main_app:latest</td>
-                                <td>1.32GB</td>
+                                <td>1.34GB</td>
                                 <td>3355</td>
                             </tr>
                             <tr>
                                 <td>demo_fastapi</td>
                                 <td>custom</td>
                                 <td>demo_fastapi:latest</td>
-                                <td>957MB</td>
+                                <td>958MB</td>
                                 <td>8112</td>
                             </tr>
                             <tr>
                                 <td>demo_celery</td>
                                 <td>custom</td>
                                 <td>demo_fastapi:latest</td>
-                                <td>957MB</td>
+                                <td>958MB</td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>demo_consumer</td>
                                 <td>custom</td>
                                 <td>demo_main_app:latest</td>
-                                <td>1.32GB</td>
+                                <td>1.34GB</td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -196,8 +200,30 @@
                                 <td>demo_jupyter</td>
                                 <td>native</td>
                                 <td>jupyter/minimal-notebook:latest</td>
-                                <td>1.48GB</td>
+                                <td>1.47GB</td>
                                 <td>8888</td>
+                            </tr>
+
+                            <tr>
+                                <td>demo_nginx-clickhouse</td>
+                                <td>native</td>
+                                <td>mintance/nginx-clickhouse:latest</td>
+                                <td>12.5MB</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>demo_clickhouse</td>
+                                <td>native</td>
+                                <td>yandex/clickhouse-server:latest</td>
+                                <td>826MB</td>
+                                <td>9000, 8123</td>
+                            </tr>
+                            <tr>
+                                <td>demo_grafana</td>
+                                <td>native</td>
+                                <td>grafana/grafana:latest</td>
+                                <td>309MB</td>
+                                <td>3000</td>
                             </tr>
                         </tbody>
                     </table>
