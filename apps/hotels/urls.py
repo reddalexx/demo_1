@@ -12,7 +12,7 @@ urlpatterns = [
     path('api/drf/', include(router.urls)),
 
     path('selected-hotels/', SelectedHotelsView.as_view(), name='selected-hotels'),
-    path('search', HotelsSearchFormView.as_view(), name='search'),
-    path('overview', OverviewView.as_view(), name='overview'),
-    path('analyze', AnalyzeView.as_view(), name='analyze'),
+    path('search/', HotelsSearchFormView.as_view(), name='search'),
+    path('overview/', OverviewView.as_view(), name='overview'),
+    path('analyze/', AnalyzeView.as_view(), name='analyze'),
 ]

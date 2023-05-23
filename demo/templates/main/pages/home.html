@@ -13,7 +13,7 @@
                             <div class="col-12 col-lg-8 text-center">
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Python's elegance and simplicity</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">- Fast development, key features, rich standard library and ecosystem make it a great option for web development.</p>
-                                <a href="#!" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="#facts" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="https://survey.stackoverflow.co/2022/#section-most-popular-technologies-programming-scripting-and-markup-languages" target="_blank" class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Source</a>
                             </div>
                         </div>
@@ -28,7 +28,7 @@
                             <div class="col-12 col-lg-8 text-center">
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Best coding practices</h1>
                                 <p class="fs-5 text-white mb-4 pb-2">- Smart frameworks like Django, Flask, FastAPI make it easier to build better web apps more quickly and with less code.</p>
-                                <a href="#!" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="#key_services" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="https://www.djangoproject.com/" target="_blank" class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight">Source</a>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                             <div class="col-12 col-lg-8 text-center">
                                 <h1 class="display-3 text-white animated slideInDown mb-4">Smart Solutions for Delivery</h1>
                                 <p class="fs-5 fw-medium text-white mb-4 pb-2">- Docker, Jenkins, AWS CodeDeploy and other modern CI/CD engines allow to deliver new features to Customers quickly.</p>
-                                <a href="#!" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
+                                <a href="#docker" class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                                 <a href="https://www.cloudways.com/blog/continuous-deployment-tools/" class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight" target="_blank">Source</a>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
 
     <!-- Facts Start -->
     <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container" id="facts">
             <div class="row g-4 text-green">
                 <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
                     <div class="h-100 bg-dark bg-semi-dark p-4 p-xl-5">
@@ -129,7 +129,10 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="https://microservices.io/patterns/microservices.html" target="_blank" class="btn btn-primary rounded-pill py-3 px-5">Explore More</a>
+                        <div class="mt-2">
+                            <a href="{% url 'architecture' %}" class="btn btn-primary rounded-pill py-3 px-5">Explore More</a>
+                            <a href="https://microservices.io/patterns/microservices.html" target="_blank" class="btn btn-outline-secondary rounded-pill py-3 px-5 ms-2">Source</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -138,7 +141,7 @@
     <!-- About End -->
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="key_services">
         <div class="container">
             <div class="text-center">
                 <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
@@ -146,44 +149,47 @@
             </div>
             <div class="row g-0 service-row">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="service-item border h-100 p-5">
+                    <div class="service-item grey border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
                             <i class="fa fa-database text-green text-32"></i>
                         </div>
                         <h4 class="mb-3">Django + DRF + daphne</h4>
                         <p class="mb-4">as web framework and API engine</p>
-                        <a class="btn" href="https://www.djangoproject.com/" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        <a class="btn" href="https://www.djangoproject.com/" target="_blank"><i class="fa fa-book me-3"></i>Source</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="service-item border h-100 p-5">
+                    <div class="service-item grey border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
                             <i class="fa fa-file-alt text-green text-32"></i>
                         </div>
                         <h4 class="mb-3">FastAPI + Gunicorn[Uvicorn]</h4>
                         <p class="mb-4">as a secondary web/API engine</p>
-                        <a class="btn" href="https://fastapi.tiangolo.com/nl/" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        <a class="btn" href="https://fastapi.tiangolo.com/nl/" target="_blank"><i class="fa fa-book me-3"></i>Source</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="service-item border h-100 p-5">
+                    <div class="service-item grey border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
                             <i class="fa fa-chart-line text-green text-32"></i>
                         </div>
                         <h4 class="mb-3">Asyncio, Multithreading, Multiprocessing, Celery</h4>
                         <p class="mb-4">for asynchronous tasks, to take advantages of concurrency and parallelism</p>
-                        <a class="btn" href="https://docs.python.org/3/library/asyncio.html" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        <a class="btn" href="https://docs.python.org/3/library/asyncio.html" target="_blank"><i class="fa fa-book me-3"></i>Source</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="service-item border h-100 p-5">
+                    <div class="service-item grey border h-100 p-5">
                         <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
                             <i class="fa fa-clock text-green text-32"></i>
                         </div>
                         <h4 class="mb-3">Kafka</h4>
                         <p class="mb-4">as a distributed streaming platform for event-driven applications</p>
-                        <a class="btn" href="https://www.ibm.com/se-en/topics/apache-kafka" target="_blank"><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                        <a class="btn" href="https://www.ibm.com/se-en/topics/apache-kafka" target="_blank"><i class="fa fa-book me-3"></i>Source</a>
                     </div>
+                </div>
+                <div class="text-center">
+                    <a href="{% url 'about' %}" class="btn btn-outline-primary rounded-pill py-3 px-5 mb-5">Explore More</a>
                 </div>
             </div>
         </div>
@@ -191,7 +197,7 @@
     <!-- Service End -->
 
     <!-- Docker Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="docker">
         <div class="container feature px-lg-0">
             <div class="row g-0 mx-lg-0">
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -245,7 +251,10 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="https://www.docker.com/" target="_blank" style="margin-top: 40px" class="btn btn-primary rounded-pill py-3 px-5">Read Source</a>
+                        <div class="mt-5">
+                            <a href="{% url 'architecture' %}#docker" class="btn btn-primary rounded-pill py-3 px-5">Explore More</a>
+                            <a href="https://www.docker.com/" target="_blank" class="btn btn-outline-secondary rounded-pill py-3 px-5 ms-2">Read Source</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
@@ -294,14 +303,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" style="margin: 35px 0 36px 0" src="{% static 'main_theme/img/drf.png' %}" alt="DRF">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/drf.png' %}" alt="DRF">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">RESTful API</p>
-                            <h5 class="lh-base mb-0">Django REST framework is a powerful and flexible toolkit for building Web APIs</h5>
+                            <h5 class="lh-base mb-0">Powerful and flexible toolkit for building Web APIs.</h5>
                         </div>
                         <div class="portfolio-text text-center bg-white p-4">
                             <p class="text-primary mb-2">Django REST framework</p>
-                            <h5 class="lh-base mb-3">DRF brings flexibility and high level of customizations for API</h5>
+                            <h5 class="lh-base mb-3">DRF brings flexibility and high level of customizations for API.</h5>
                             <div class="d-flex justify-content-center">
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'geo:country-list' %}"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://www.django-rest-framework.org/" target="_blank"><i class="fa fa-link"></i></a>
@@ -314,13 +323,13 @@
                         <img class="img-fluid w-100" src="{% static 'main_theme/img/fastapi.png' %}" alt="FastAPI">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">FastAPI</p>
-                            <h5 class="lh-base mb-0">High performance, easy to learn, fast to code, ready for production</h5>
+                            <h5 class="lh-base mb-0">High performance, easy to learn, fast to code, ready for production.</h5>
                         </div>
                         <div class="portfolio-text text-center bg-white p-4">
                             <p class="text-primary mb-2">FastAPI Framework</p>
-                            <h5 class="lh-base mb-3">FastAPI is a modern, fast (high-performance), web framework for building APIs</h5>
+                            <h5 class="lh-base mb-3">Modern, fast (high-performance), web framework for building APIs.</h5>
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-3.jpg' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:search' %}"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://fastapi.tiangolo.com/" target="_blank"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
@@ -328,7 +337,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-inner">
-                        <img class="img-fluid w-100" style="margin: 30px 0 30px 0" src="{% static 'main_theme/img/pandas.png' %}" alt="Pandas">
+                        <img class="img-fluid w-100" src="{% static 'main_theme/img/pandas.png' %}" alt="Pandas">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Pandas</p>
                             <h5 class="lh-base mb-0">High performance for data processing</h5>
@@ -337,24 +346,24 @@
                             <p class="text-primary mb-2">Pandas</p>
                             <h5 class="lh-base mb-3">is a fast, powerful, flexible and easy to use tool for data analysis </h5>
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-4.jpg' %}"><i class="fa fa-eye"></i></a>
+<!--                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#!"><i class="fa fa-eye"></i></a>-->
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://pandas.pydata.org/" target="_blank"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 portfolio-item backend wow fadeInUp" data-wow-delay="0.3s">
                     <div class="portfolio-inner">
                         <img class="img-fluid w-100" src="{% static 'main_theme/img/websockets.png' %}" alt="Websockets">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">WebSockets</p>
-                            <h5 class="lh-base mb-0">Django-channels augments Django to bring WebSocket, long-poll HTTP.</h5>
+                            <h5 class="lh-base mb-0">Continuous communication between a client and server.</h5>
                         </div>
                         <div class="portfolio-text text-center bg-white p-4">
-                            <p class="text-primary mb-2">Django Channels</p>
-                            <h5 class="lh-base mb-3">extends Django abilities beyond HTTP - to handle WebSockets, chat protocols, IoT protocols, and more</h5>
+                            <p class="text-primary mb-2">Websockets</p>
+                            <h5 class="lh-base mb-3">extends abilities beyond HTTP - to handle WebSockets, chat protocols, IoT protocols, and more</h5>
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-5.jpg' %}"><i class="fa fa-eye"></i></a>
+                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% url 'hotels:overview' %}"><i class="fa fa-eye"></i></a>
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://channels.readthedocs.io/en/stable/" target="_blank"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
@@ -371,18 +380,21 @@
                             <p class="text-primary mb-2">Bootstrap 4</p>
                             <h5 class="lh-base mb-3">Free Bootstrap4 template</h5>
                             <div class="d-flex justify-content-center">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="{% static 'main_theme/img/portfolio-6.jpg' %}"><i class="fa fa-eye"></i></a>
+<!--                                <a class="btn btn-square btn-primary rounded-circle mx-1" href="#!"><i class="fa fa-eye"></i></a>-->
                                 <a class="btn btn-square btn-primary rounded-circle mx-1" href="https://themewagon.com/" target="_blank"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <a href="{% url 'features' %}" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-5">Explore More</a>
+            </div>
         </div>
     </div>
     <!-- Features End -->
 
-    <!-- Quote Start -->
+    <!-- PEP20 Start -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container quote px-lg-0">
             <div class="row g-0 mx-lg-0">
@@ -421,7 +433,7 @@
             </div>
         </div>
     </div>
-    <!-- Quote End -->
+    <!-- PEP20 End -->
 
 
     <!-- Team Start -->
@@ -497,10 +509,12 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <a href="{% url 'team' %}" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-5">Explore More</a>
+            </div>
         </div>
     </div>
     <!-- Team End -->
-
 
     <!-- Quote Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -525,6 +539,9 @@
                     <h4>Harry Potter</h4>
                     <span class="text-primary">Lead Wizard</span>
                 </div>
+            </div>
+            <div class="text-center">
+                <a href="{% url 'quotes' %}" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-5">Explore More</a>
             </div>
         </div>
     </div>

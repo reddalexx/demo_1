@@ -15,6 +15,17 @@
 .disabled {
   filter: brightness(90%);
 }
+.service-item.grey a {
+  color: #9B9B9B !important;
+  background: #fff !important;
+  border: #9B9B9B solid 1px !important;
+}
+.service-item.grey i.fa-book {
+  color: #9B9B9B !important;
+}
+.service-item.grey:hover .btn {
+    width: 120px !important;
+}
 
 /* Features page, features block in home page */
 .todo i.fa-eye {
