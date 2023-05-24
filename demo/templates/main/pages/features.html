@@ -19,7 +19,7 @@
 
     <!-- Features Start -->
     <div class="container-xxl py-5">
-        <div class="container">
+        <div class="container" id="features">
             <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-12 text-center">
                     <ul class="list-inline mb-5" id="portfolio-flters">
@@ -326,7 +326,7 @@
                         <img class="img-fluid w-100" src="{% static 'main_theme/img/multi_mid.png' %}" alt="multiprocessing vs multithreading">
                         <div class="text-center p-4">
                             <p class="text-primary mb-2">Multiprocessing & multithreading</p>
-                            <h5 class="lh-base mb-0">Parallelism and concurrency.</h5>
+                            <h5 class="lh-base mb-0">Parallelism and concurrency for solving complex tasks.</h5>
                         </div>
                         <div class="portfolio-text text-center bg-white p-4">
                             <p class="text-primary mb-2">Parallelism vs concurrency.</p>
@@ -373,8 +373,10 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center">
+                <a href="{% url 'hotels:overview' %}" class="btn btn-outline-primary rounded-pill py-3 px-5 mt-5">Explore More</a>
+            </div>
         </div>
     </div>
     <!-- Features End -->
-    <div class="container-fluid py-5 mb-5"></div>
 {% endblock %}
