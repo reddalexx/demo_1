@@ -18,4 +18,3 @@
 - demo DjangoQL
 - demo nosql DB (MongoDB/pymongo)
 - demo FTS (Full Txt Search) in PostgreSQL / Elasticsearch
-- impl logging Nginx into ClickHouse, Grafana dashboard for Nginx logs
