@@ -24,7 +24,7 @@ envsubst < "routes.template.conf" > "${VOLUME_NGINX_INCL}/routes.conf"
 envsubst < "proxy-headers.template.conf" > "${VOLUME_NGINX_HEAD}/proxy.conf"
 envsubst < "ws-headers.template.conf" > "${VOLUME_NGINX_HEAD}/ws.conf"
 if [ "${USE_HTTPS}" = true ]; then
-  envsubst < "server_ssl.template.conf" > "${VOLUME_NGINX_INCL}/ssl.conf"
+  envsubst < "server-ssl.template.conf" > "${VOLUME_NGINX_INCL}/ssl.conf"
 fi
 popd || exit
 
