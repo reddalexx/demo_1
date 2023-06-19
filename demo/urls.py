@@ -23,6 +23,7 @@ from rest_framework.schemas import get_schema_view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('jet/', include('jet.urls', 'jet')),  # Django JET URLS
+    path('accounts/', include('allauth.urls')),    # django-allauth urls
 
     path('', TemplateView.as_view(template_name="main/pages/home.html"), name='home'),
     path('about/', TemplateView.as_view(template_name="main/pages/about.html"), name='about'),

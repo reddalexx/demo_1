@@ -8,7 +8,7 @@ class HotelsRequest(BaseModel):
 
 
 class HotelData(BaseModel):
-    id: int
+    id: int | None
     name: str
     description: Optional[str]
     url: str

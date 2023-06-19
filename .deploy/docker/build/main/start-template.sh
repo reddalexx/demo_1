@@ -10,6 +10,9 @@ if [[ "${DOLLAR}{ROLE}" == "daphne" ]]; then
   echo ">>> Start django migrations..."
   python manage.py migrate --noinput
 
+  echo ">>> Set default site..."
+  python manage.py set_default_site --name ar_demo --domain ${HOST}
+
   echo ">>> Install initial data from fixtures..."
   python manage.py loaddata demo/data/fixtures/*.json
 

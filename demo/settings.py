@@ -31,6 +31,8 @@ SECRET_KEY = 'django-insecure-o4x-%o@9=2y*18oj#1mgx4hq$==@x91rr)(9mdmxnpvt^s!i#_
 DEBUG = os.environ.get('DJANGO_DEBUG', 'true') == 'true'
 DEBUG_SQL = os.environ.get('DJANGO_DEBUG_SQL', 'false') == 'true'
 
+SITE_ID = 1
+
 HOST = os.environ.get('HOST', 'localhost')
 
 ALLOWED_HOSTS = [
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
 
     'django_extensions',
@@ -60,6 +63,11 @@ INSTALLED_APPS = [
     'rest_framework_datatables',
     'corsheaders',
     'silk',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.google',
 
     'apps.common',
     'apps.geo',
@@ -135,6 +143,31 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+
+# django-allauth: Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': os.getenv('SOCIAL_GOOGLE_CLIENT_ID'),
+            'secret': os.getenv('SOCIAL_GOOGLE_SECRET'),
+            'key': ''
+        }
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

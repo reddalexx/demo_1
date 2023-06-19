@@ -8,6 +8,7 @@ import requests
 import re
 import string
 import bs4
+from functools import partial
 
 from .utils import a_named_timeit, named_timeit
 
@@ -17,7 +18,7 @@ class TripAdviserHotelsSearch:
     Just a holder for collection of methods for scrape TripAdvisor site data
     """
 
-    hotel_name_re = re.compile(r'\s+\d+\.\s+')
+    hotel_name_re = re.compile(r'\s*\d+\.\s+')
     host = 'https://www.tripadvisor.com'
     items_per_page = 30
     max_workers = 5
@@ -95,14 +96,35 @@ class TripAdviserHotelsSearch:
         Get initial data from hotel list page - i.e. ID, url, hotel name
         """
         data = []
-        for a in soup.select("div.listing_title>a"):
-            data.append(
-                {
-                    "id": a.attrs.get('id', '').split("_")[-1],
-                    "url": self.host + a.attrs['href'],
-                    "name": self.hotel_name_re.sub('', a.text),
-                }
-            )
+
+        json_data_container = soup.select('div[data-hotels-data]')
+        if json_data_container:
+            if len(json_data_container) != 1:
+                raise RuntimeError('Hotels data container Not found')
+            try:
+                _data = json.loads(json_data_container[0].attrs['data-hotels-data'])['hotels']
+            except KeyError:
+                raise RuntimeError('Hotels data container has wrong structure')
+
+            for item in _data:
+                data.append(
+                    {
+                        'id': item['id'],
+                        'name': item['name'],
+                        'url': self.host + item['detailUrl'],
+                        'rating': item['bubbleRating'],
+                        'reviews': item['numReviews'],
+                    }
+                )
+        else:
+            for a in soup.select('div[data-automation]>a[href^="/Hotel_Review"]'):
+                data.append(
+                    {
+                        "id": a.attrs.get('id', '').split("_")[-1] or None,
+                        "url": self.host + a.attrs['href'],
+                        "name": self.hotel_name_re.sub('', a.text),
+                    }
+                )
         return data
 
     @staticmethod
@@ -114,7 +136,10 @@ class TripAdviserHotelsSearch:
             if descr_search:
                 return descr_search.groups()[0]
 
-    def parse_hotel_page(self, html: str, initial_data: dict) -> dict:
+    def parse_hotel_page(self, html: str, initial_data: tuple | dict) -> dict:
+        if isinstance(initial_data, tuple):
+            initial_data = dict(initial_data)
+
         soup = bs4.BeautifulSoup(html, 'html.parser')
 
         description = self.get_description(soup)
@@ -211,20 +236,37 @@ class TripAdviserHotelsSearch:
         return total_results, hotels_initial_data
 
     @named_timeit(name='Step 3: parse/extract')
-    def post_process_extracted_data(self, htmls: list[str], hotel_initial_data: list[dict],
-                                    post_process_with_multiproc: bool = True):
+    def sync_post_process_extracted_data(self, htmls: list[str], hotel_initial_data: list[dict],
+                                         post_process_with_multiproc: bool = True):
         if post_process_with_multiproc:
             with concurrent.futures.ProcessPoolExecutor(max_workers=self.max_workers) as executor:
-                hotels_data = list(executor.map(self.parse_hotel_page, htmls, hotel_initial_data))
+                return list(executor.map(self.parse_hotel_page, htmls, hotel_initial_data))
         else:
-            hotels_data = [self.parse_hotel_page(html, hotel_initial_data[n]) for n, html in enumerate(htmls)]
-        return hotels_data
+            return [self.parse_hotel_page(html, hotel_initial_data[n]) for n, html in enumerate(htmls)]
+
+    async def async_process_record(self, html, init_data, loop, executor):
+        record = await loop.run_in_executor(
+            executor, self.parse_hotel_page, html, tuple(init_data.items())
+        )
+        return record
+
+    @a_named_timeit(name='Step 3: parse/extract')
+    async def async_post_process_extracted_data(self, htmls: list[str], hotel_initial_data: list[dict]):
+        loop = asyncio.get_running_loop()
+        with concurrent.futures.ProcessPoolExecutor(max_workers=self.max_workers) as executor:
+            res = await asyncio.gather(
+                *[self.async_process_record(html, init_data, loop, executor) for html, init_data in zip(htmls, hotel_initial_data)]
+            )
+        return res
 
     @a_named_timeit(name='Total')
-    async def async_scrape(self, query: str, page: int = 1, post_process_with_multiproc: bool = True):
-        total_results, hotels_initial_data = self.get_initial_hotels_data(query, page)
+    async def async_scrape(self, query: str, page: int = 1):
+        loop = asyncio.get_running_loop()
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            total_results, hotels_initial_data = await loop.run_in_executor(
+                executor, partial(self.get_initial_hotels_data, query, page))
         htmls = await self.asyncio_get_html_pages(hotels_initial_data)
-        return self.post_process_extracted_data(htmls, hotels_initial_data, post_process_with_multiproc)
+        return await self.async_post_process_extracted_data(htmls, hotels_initial_data)
 
     @named_timeit(name='Total')
     def sync_scrape(self, query: str, page: int = 1, method: str = 'mt', post_process_with_multiproc: bool = True):
@@ -237,4 +279,4 @@ class TripAdviserHotelsSearch:
         else:
             htmls = self.seq_get_html_pages(hotels_initial_data)
 
-        return self.post_process_extracted_data(htmls, hotels_initial_data, post_process_with_multiproc)
+        return self.sync_post_process_extracted_data(htmls, hotels_initial_data, post_process_with_multiproc)

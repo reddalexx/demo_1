@@ -1,0 +1,56 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+
+{% block content %}
+
+<h4 class="f-w-400">{% trans "Sign Up" %}</h4>
+<hr>
+
+<form method="POST" action="{% url 'account_signup' %}">
+  {% csrf_token %}
+
+  {% for field in form %}
+    {% if field.is_hidden %}
+      {{ field }}
+    {% else %}
+      {% include "account/_form_field.html" with field=field only %}
+    {% endif %}
+  {% endfor %}
+
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+
+  <button class="btn btn-primary btn-block mb-4" type="submit">{% trans "Sign Up" %}</button>
+  <hr>
+  <p class="mb-0 text-muted">Already have an account? <a href="{{ login_url }}" class="f-w-400">Sign in</a></p>
+
+<!--  {% get_providers as socialaccount_providers %}-->
+
+<!--  {% if socialaccount_providers %}-->
+<!--  <p class="mb-0 text-muted">{% blocktrans with site.name as site_name %}Please sign in with one-->
+<!--    of your existing third party accounts. Or, <a href="{{ signup_url }}" class="f-w-400">sign up</a>-->
+<!--    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>-->
+
+<!--  <div class="socialaccount_ballot">-->
+
+<!--    <ul class="socialaccount_providers">-->
+<!--      {% include "socialaccount/snippets/provider_list.html" with process="login" %}-->
+<!--    </ul>-->
+
+<!--    <div class="login-or">{% trans 'or' %}</div>-->
+
+<!--  </div>-->
+
+<!--  {% include "socialaccount/snippets/login_extra.html" %}-->
+
+<!--  {% else %}-->
+<!--  {% endif %}-->
+
+</form>
+
+{% endblock %}

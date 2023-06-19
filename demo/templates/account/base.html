@@ -1,0 +1,82 @@
+{% load static i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>{% block head_title %}{% endblock %}</title>
+	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 11]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="">
+	<meta name="author" content="Alex Redkin" />
+	<!-- Favicon icon -->
+	<link rel="icon" href="{% static 'main_theme/img/favicon-32x32.ico' %}" type="image/x-icon">
+
+	<!-- vendor css -->
+	<link rel="stylesheet" href="{% static 'dashboard_theme/css/style.css' %}">
+
+	{% block extra_head %}{% endblock %}
+
+</head>
+
+<body>
+{% block body %}
+
+	<div class="auth-wrapper">
+		<div class="auth-content text-center">
+			<img src="{% static 'main_theme/img/logo-demo-white.png' %}" alt="logo" class="img-fluid mb-4">
+			<div class="card borderless">
+				<div class="row align-items-center ">
+					<div class="col-md-12">
+						<div class="card-body">
+
+<!--							{% if messages %}-->
+<!--								{% for message in messages %}-->
+<!--								<div class="alert alert-info" role="alert">{{ message }}</div>-->
+<!--								{% endfor %}-->
+<!--							{% endif %}-->
+
+							{% if form.errors %}
+								{% for error_list in form.errors.values %}
+							        {% for error_data in error_list.data %}
+								        {% for error in error_data %}
+											<div class="alert alert-danger" role="alert">{{ error }}</div>
+										{% endfor %}
+									{% endfor %}
+								{% endfor %}
+							{% endif %}
+
+							{% block content %}
+							{% endblock %}
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block extra_body %}
+{% endblock %}
+
+</body>
+
+<!-- Required Js -->
+<script src="{% static 'dashboard_theme/js/vendor-all.min.js' %}"></script>
+<script src="{% static 'dashboard_theme/js/plugins/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'dashboard_theme/js/pcoded.min.js' %}"></script>
+
+</html>
